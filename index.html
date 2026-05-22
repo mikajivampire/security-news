@@ -512,9 +512,9 @@
     <button class="filter-btn f-high" onclick="filterCards('high', this)">▲ HIGH</button>
     <button class="filter-btn f-medium" onclick="filterCards('medium', this)">● MED</button>
     <button class="filter-btn f-low" onclick="filterCards('low', this)">▼ LOW</button>
-    <button class="filter-btn" onclick="filterCards('製造', this)">製造</button>
-    <button class="filter-btn" onclick="filterCards('IT・インフラ', this)">IT・インフラ</button>
-    <button class="filter-btn" onclick="filterCards('政府・公共', this)">政府・公共</button>
+    <button class="filter-btn" onclick="filterCards('インシデント', this)">🔴 インシデント</button>
+    <button class="filter-btn" onclick="filterCards('脆弱性', this)">🛡 脆弱性</button>
+    <button class="filter-btn" onclick="filterCards('レポート', this)">📊 レポート</button>
     <button class="filter-btn" onclick="filterCards('医療', this)">医療</button>
   </div>
 </div>
@@ -551,7 +551,7 @@
   <div class="news-grid" id="news-grid">
 
     <!-- CARD 1: Palo Alto PAN-OS CVE-2026-0300 -->
-    <article class="card high" data-severity="high" data-tags="IT・インフラ 政府・公共">
+    <article class="card high" data-severity="high" data-tags="脆弱性">
       <div class="severity">
         <div class="sev-icon">!</div>
         <div class="sev-label">HIGH</div>
@@ -575,7 +575,7 @@
     </article>
 
     <!-- CARD 2: Microsoft Defender BlueHammer CVE-2026-41091 -->
-    <article class="card high" data-severity="high" data-tags="IT・インフラ">
+    <article class="card high" data-severity="high" data-tags="脆弱性">
       <div class="severity">
         <div class="sev-icon">!</div>
         <div class="sev-label">HIGH</div>
@@ -599,7 +599,7 @@
     </article>
 
     <!-- CARD 3: NGINX CVE-2026-42945 -->
-    <article class="card high" data-severity="high" data-tags="IT・インフラ">
+    <article class="card high" data-severity="high" data-tags="脆弱性">
       <div class="severity">
         <div class="sev-icon">!</div>
         <div class="sev-label">HIGH</div>
@@ -622,7 +622,7 @@
     </article>
 
     <!-- CARD 4: GitHub breach via TanStack supply chain -->
-    <article class="card high" data-severity="high" data-tags="IT・インフラ">
+    <article class="card high" data-severity="high" data-tags="インシデント">
       <div class="severity">
         <div class="sev-icon">!</div>
         <div class="sev-label">HIGH</div>
@@ -646,7 +646,7 @@
     </article>
 
     <!-- CARD 5: Windows BitLocker YellowKey CVE-2026-45585 -->
-    <article class="card high" data-severity="high" data-tags="IT・インフラ">
+    <article class="card high" data-severity="high" data-tags="脆弱性">
       <div class="severity">
         <div class="sev-icon">!</div>
         <div class="sev-label">HIGH</div>
@@ -670,7 +670,7 @@
     </article>
 
     <!-- CARD 6: Linux Fragnesia CVE-2026-46300 -->
-    <article class="card high" data-severity="high" data-tags="IT・インフラ">
+    <article class="card high" data-severity="high" data-tags="脆弱性">
       <div class="severity">
         <div class="sev-icon">!</div>
         <div class="sev-label">HIGH</div>
@@ -693,7 +693,7 @@
     </article>
 
     <!-- CARD 7: Ivanti EPMM CVE-2026-6973 -->
-    <article class="card medium" data-severity="medium" data-tags="IT・インフラ">
+    <article class="card medium" data-severity="medium" data-tags="脆弱性">
       <div class="severity">
         <div class="sev-icon">~</div>
         <div class="sev-label">MEDIUM</div>
@@ -717,7 +717,7 @@
     </article>
 
     <!-- CARD 8: CISA China-nexus covert networks AA26-113A -->
-    <article class="card medium" data-severity="medium" data-tags="政府・公共 IT・インフラ">
+    <article class="card medium" data-severity="medium" data-tags="インシデント">
       <div class="severity">
         <div class="sev-icon">~</div>
         <div class="sev-label">MEDIUM</div>
@@ -741,7 +741,7 @@
     </article>
 
     <!-- CARD 9: Chinese APT Showboat Linux backdoor -->
-    <article class="card medium" data-severity="medium" data-tags="IT・インフラ">
+    <article class="card medium" data-severity="medium" data-tags="インシデント">
       <div class="severity">
         <div class="sev-icon">~</div>
         <div class="sev-label">MEDIUM</div>
@@ -764,7 +764,7 @@
     </article>
 
     <!-- CARD 10: Verizon DBIR 2026 -->
-    <article class="card low" data-severity="low" data-tags="その他">
+    <article class="card low" data-severity="low" data-tags="レポート">
       <div class="severity">
         <div class="sev-icon">▼</div>
         <div class="sev-label">LOW</div>
@@ -787,7 +787,7 @@
     </article>
 
     <!-- CARD 11: Apache HTTP Server JVNVU#99705957 -->
-    <article class="card low" data-severity="low" data-tags="IT・インフラ">
+    <article class="card low" data-severity="low" data-tags="脆弱性">
       <div class="severity">
         <div class="sev-icon">▼</div>
         <div class="sev-label">LOW</div>
@@ -811,7 +811,7 @@
     </article>
 
     <!-- CARD 12: Apache Tomcat JVNVU#90271471 -->
-    <article class="card low" data-severity="low" data-tags="IT・インフラ">
+    <article class="card low" data-severity="low" data-tags="脆弱性">
       <div class="severity">
         <div class="sev-icon">▼</div>
         <div class="sev-label">LOW</div>
