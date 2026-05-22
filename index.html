@@ -853,6 +853,19 @@
   setInterval(updateClock, 1000);
   updateClock();
 
+  // Sort cards by date (newest first)
+  function sortCardsByDate() {
+    const grid = document.getElementById('news-grid');
+    const cards = Array.from(grid.querySelectorAll('.card'));
+    cards.sort((a, b) => {
+      const tsA = a.querySelector('.timestamp')?.textContent.trim().replace(/\s+/g, ' ') || '';
+      const tsB = b.querySelector('.timestamp')?.textContent.trim().replace(/\s+/g, ' ') || '';
+      return tsB.localeCompare(tsA);
+    });
+    cards.forEach(card => grid.appendChild(card));
+  }
+  sortCardsByDate();
+
   // Filter
   function filterCards(key, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
