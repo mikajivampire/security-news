@@ -256,7 +256,7 @@
     .filter-btn.f-high.active       { border-color: var(--red);    color: var(--red);    background: var(--red-bg);    box-shadow: 0 0 8px var(--red-glow); }
     .filter-btn.f-medium.active     { border-color: var(--yellow); color: var(--yellow); background: var(--yellow-bg); }
     .filter-btn.f-low.active        { border-color: var(--low);    color: var(--low);    background: var(--low-bg); }
-    .filter-btn.f-product.active    { border-color: var(--prod);   color: var(--prod);   background: var(--prod-bg); }
+    .filter-btn.f-logistics.active  { border-color: #ff9800; color: #ff9800; background: #1a0f00; }
     .filter-btn.f-regulation.active { border-color: var(--purple); color: var(--purple); background: var(--purple-bg); }
 
     .filter-sep {
@@ -586,8 +586,8 @@
     <button class="filter-btn" onclick="filterCards('インシデント', this)">🔴 インシデント</button>
     <button class="filter-btn" onclick="filterCards('脆弱性', this)">🛡 脆弱性</button>
     <button class="filter-btn" onclick="filterCards('レポート', this)">📊 レポート</button>
+    <button class="filter-btn f-logistics" onclick="filterCards('物流', this)">🚚 物流</button>
     <div class="filter-sep"></div>
-    <button class="filter-btn f-product" onclick="filterCards('セキュリティ製品', this)">🔧 セキュリティ製品</button>
     <button class="filter-btn f-regulation" onclick="filterCards('規格等', this)">📋 規格等</button>
   </div>
 </div>
@@ -959,7 +959,7 @@
   updateClock();
 
   // ─── 定数・状態 ───
-  const SPECIAL_TAGS = ['セキュリティ製品', '規格等'];
+  const SPECIAL_TAGS = ['規格等'];
   const PAGE_SIZE = 10;
   let currentFilter = 'all';
   let currentPage   = 1;
