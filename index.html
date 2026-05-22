@@ -27,6 +27,12 @@
       --yellow-bg:   #1a1500;
       --low:         #00acc1;
       --low-bg:      #00131a;
+      --purple:      #ce93d8;
+      --purple-dim:  #9c27b0;
+      --purple-bg:   #1a0826;
+      --prod:        #4fc3f7;
+      --prod-dim:    #0277bd;
+      --prod-bg:     #001a26;
       --text:        #c8d8e8;
       --text-dim:    #4a6070;
       --text-mid:    #7a9ab0;
@@ -237,9 +243,18 @@
       box-shadow: 0 0 8px rgba(0,230,118,0.15);
     }
 
-    .filter-btn.f-high.active   { border-color: var(--red);    color: var(--red);    background: var(--red-bg);    box-shadow: 0 0 8px var(--red-glow); }
-    .filter-btn.f-medium.active { border-color: var(--yellow); color: var(--yellow); background: var(--yellow-bg); }
-    .filter-btn.f-low.active    { border-color: var(--low);    color: var(--low);    background: var(--low-bg); }
+    .filter-btn.f-high.active       { border-color: var(--red);    color: var(--red);    background: var(--red-bg);    box-shadow: 0 0 8px var(--red-glow); }
+    .filter-btn.f-medium.active     { border-color: var(--yellow); color: var(--yellow); background: var(--yellow-bg); }
+    .filter-btn.f-low.active        { border-color: var(--low);    color: var(--low);    background: var(--low-bg); }
+    .filter-btn.f-product.active    { border-color: var(--prod);   color: var(--prod);   background: var(--prod-bg); }
+    .filter-btn.f-regulation.active { border-color: var(--purple); color: var(--purple); background: var(--purple-bg); }
+
+    .filter-sep {
+      width: 1px;
+      height: 20px;
+      background: var(--border-hi);
+      margin: 0 4px;
+    }
 
     /* ─── TICKER ─── */
     .ticker-wrap {
@@ -326,6 +341,13 @@
 
     .card.high:hover  { box-shadow: inset 0 0 40px rgba(255,23,68,0.04); }
     .card.medium:hover{ box-shadow: inset 0 0 40px rgba(255,234,0,0.03); }
+
+    .card.regulation  { border-left-color: var(--purple); }
+    .card.product     { border-left-color: var(--prod); }
+    .card.regulation .sev-icon { color: var(--purple); border-color: var(--purple-dim); background: var(--purple-bg); }
+    .card.product    .sev-icon { color: var(--prod);   border-color: var(--prod-dim);   background: var(--prod-bg); }
+    .card.regulation .sev-label { color: var(--purple); }
+    .card.product    .sev-label { color: var(--prod); }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(6px); }
@@ -515,7 +537,9 @@
     <button class="filter-btn" onclick="filterCards('インシデント', this)">🔴 インシデント</button>
     <button class="filter-btn" onclick="filterCards('脆弱性', this)">🛡 脆弱性</button>
     <button class="filter-btn" onclick="filterCards('レポート', this)">📊 レポート</button>
-    <button class="filter-btn" onclick="filterCards('医療', this)">医療</button>
+    <div class="filter-sep"></div>
+    <button class="filter-btn f-product" onclick="filterCards('セキュリティ製品', this)">🔧 セキュリティ製品</button>
+    <button class="filter-btn f-regulation" onclick="filterCards('規格等', this)">📋 規格等</button>
   </div>
 </div>
 
@@ -834,6 +858,30 @@
       </div>
     </article>
 
+
+    <!-- CARD: 経済産業省 サプライチェーンセキュリティ対策評価制度 -->
+    <article class="card regulation" data-severity="regulation" data-tags="規格等">
+      <div class="severity">
+        <div class="sev-icon">§</div>
+        <div class="sev-label">規格等</div>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">経済産業省</span>
+          <span class="tag">サプライチェーン</span>
+          <span class="tag">評価制度</span>
+          <span class="timestamp">2026-05-01 &nbsp;00:00</span>
+        </div>
+        <div class="card-title">経済産業省「サプライチェーンセキュリティ対策評価制度」— ITシステム・製品・サービスのサプライチェーン全体のセキュリティリスクを評価する制度を整備</div>
+        <div class="card-summary">
+          経済産業省は、ITシステム・製品・サービスのサプライチェーン全体を通じたセキュリティリスクを評価・管理するための評価制度の構築を推進している。調達段階から運用・廃棄まで一貫したセキュリティ確保を目的とし、国際的な標準化動向（ISO/IEC 27036等）との整合を図りながら制度設計が進められている。重要インフラ事業者や政府調達案件への適用が検討されており、サプライヤーへのセキュリティ要求事項の提示や第三者評価の活用が企業に求められる見込み。
+        </div>
+      </div>
+      <div class="card-action">
+        <a class="read-link" href="https://www.meti.go.jp/policy/netsecurity/suplychain.html" target="_blank" rel="noopener noreferrer">READ →</a>
+      </div>
+    </article>
+
   </div>
 </main>
 
@@ -853,16 +901,28 @@
   setInterval(updateClock, 1000);
   updateClock();
 
-  // Sort cards by date (newest first)
+  // ALLビューで非表示にする特殊カテゴリ
+  const SPECIAL_TAGS = ['セキュリティ製品', '規格等'];
+
+  function isSpecialCard(card) {
+    const tags = card.dataset.tags || '';
+    return SPECIAL_TAGS.some(t => tags.includes(t));
+  }
+
+  // Sort cards by date (newest first)、特殊カードは末尾に
   function sortCardsByDate() {
     const grid = document.getElementById('news-grid');
     const cards = Array.from(grid.querySelectorAll('.card'));
     cards.sort((a, b) => {
+      const aSpec = isSpecialCard(a), bSpec = isSpecialCard(b);
+      if (aSpec !== bSpec) return aSpec ? 1 : -1;
       const tsA = a.querySelector('.timestamp')?.textContent.trim().replace(/\s+/g, ' ') || '';
       const tsB = b.querySelector('.timestamp')?.textContent.trim().replace(/\s+/g, ' ') || '';
       return tsB.localeCompare(tsA);
     });
     cards.forEach(card => grid.appendChild(card));
+    // 初期表示：特殊カードは非表示
+    cards.forEach(card => { if (isSpecialCard(card)) card.style.display = 'none'; });
   }
   sortCardsByDate();
 
@@ -870,13 +930,22 @@
   function filterCards(key, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    document.querySelectorAll('.card').forEach(card => {
+    document.querySelectorAll('#news-grid .card').forEach(card => {
+      const tags     = card.dataset.tags || '';
+      const severity = card.dataset.severity || '';
+      const special  = isSpecialCard(card);
       if (key === 'all') {
-        card.style.display = '';
+        // ALLでは特殊カードを除外
+        card.style.display = special ? 'none' : '';
+      } else if (SPECIAL_TAGS.includes(key)) {
+        // 特殊カテゴリフィルター：そのタグだけ表示
+        card.style.display = tags.includes(key) ? '' : 'none';
       } else if (['high','medium','low'].includes(key)) {
-        card.style.display = card.dataset.severity === key ? '' : 'none';
+        // 重要度フィルター：特殊カードは除外
+        card.style.display = (!special && severity === key) ? '' : 'none';
       } else {
-        card.style.display = card.dataset.tags.includes(key) ? '' : 'none';
+        // タグフィルター（インシデント/脆弱性/レポート）：特殊カードは除外
+        card.style.display = (!special && tags.includes(key)) ? '' : 'none';
       }
     });
   }
