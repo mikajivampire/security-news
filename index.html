@@ -161,38 +161,48 @@
       font-family: var(--mono);
     }
 
-    .stats-row {
-      display: flex;
-      gap: clamp(20px, 3vw, 48px);
-      flex-wrap: wrap;
-    }
+    /* ─── LEVEL DROPDOWN ─── */
+    .dropdown-wrap { position: relative; }
 
-    .stat {
-      display: flex;
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      background: var(--bg2);
+      border: 1px solid var(--border-hi);
+      z-index: 300;
+      min-width: 130px;
       flex-direction: column;
-      align-items: center;
-      gap: 3px;
-      min-width: 52px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
     }
 
-    .stat-val {
+    .dropdown-menu.open { display: flex; }
+
+    .dropdown-item {
       font-family: var(--mono);
-      font-size: 1.8rem;
-      font-weight: 400;
-      color: var(--green);
-      line-height: 1;
+      font-size: 0.72rem;
+      padding: 9px 16px;
+      border: none;
+      border-bottom: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-mid);
+      cursor: pointer;
+      letter-spacing: 0.06em;
+      text-align: left;
+      transition: all 0.15s;
     }
 
-    .stat-val.red    { color: var(--red);    text-shadow: 0 0 16px rgba(255,23,68,0.5); }
-    .stat-val.yellow { color: var(--yellow); text-shadow: 0 0 16px rgba(255,234,0,0.4); }
+    .dropdown-item:last-child { border-bottom: none; }
 
-    .stat-label {
-      font-size: 0.6rem;
-      color: var(--text-dim);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-family: var(--mono);
-    }
+    .dropdown-item:hover          { background: var(--bg3); color: var(--green); }
+    .dropdown-item.f-high:hover   { color: var(--red); }
+    .dropdown-item.f-medium:hover { color: var(--yellow); }
+    .dropdown-item.f-low:hover    { color: var(--low); }
+
+    .dropdown-item.f-high.active   { color: var(--red);    background: var(--red-bg); }
+    .dropdown-item.f-medium.active { color: var(--yellow); background: var(--yellow-bg); }
+    .dropdown-item.f-low.active    { color: var(--low);    background: var(--low-bg); }
 
     /* ─── FILTER BAR ─── */
     .filter-bar {
@@ -489,7 +499,6 @@
         margin-top: 4px;
       }
       .timestamp { display: none; }
-      .stats-row { gap: 20px; }
       .hero-inner { flex-direction: column; align-items: flex-start; }
     }
   </style>
@@ -517,12 +526,6 @@
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
       <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-05-22 09:00</span></div>
     </div>
-    <div class="stats-row">
-      <div class="stat"><span class="stat-val red">7</span><span class="stat-label">HIGH</span></div>
-      <div class="stat"><span class="stat-val yellow">3</span><span class="stat-label">MEDIUM</span></div>
-      <div class="stat"><span class="stat-val">12</span><span class="stat-label">TOTAL</span></div>
-      <div class="stat"><span class="stat-val">3</span><span class="stat-label">SECTORS</span></div>
-    </div>
   </div>
 </section>
 
@@ -530,10 +533,15 @@
 <div class="filter-bar">
   <div class="filter-bar-inner">
     <span class="filter-label">FILTER //</span>
-    <button class="filter-btn active" onclick="filterCards('all', this)">ALL</button>
-    <button class="filter-btn f-high" onclick="filterCards('high', this)">▲ HIGH</button>
-    <button class="filter-btn f-medium" onclick="filterCards('medium', this)">● MED</button>
-    <button class="filter-btn f-low" onclick="filterCards('low', this)">▼ LOW</button>
+    <button class="filter-btn active" id="btn-all" onclick="filterCards('all', this)">ALL</button>
+    <div class="dropdown-wrap">
+      <button class="filter-btn" id="level-btn" onclick="toggleLevelMenu(event)">レベル ▾</button>
+      <div class="dropdown-menu" id="level-menu">
+        <button class="dropdown-item f-high"   onclick="filterLevel('high',   this)">▲ HIGH</button>
+        <button class="dropdown-item f-medium" onclick="filterLevel('medium', this)">● MED</button>
+        <button class="dropdown-item f-low"    onclick="filterLevel('low',    this)">▼ LOW</button>
+      </div>
+    </div>
     <button class="filter-btn" onclick="filterCards('インシデント', this)">🔴 インシデント</button>
     <button class="filter-btn" onclick="filterCards('脆弱性', this)">🛡 脆弱性</button>
     <button class="filter-btn" onclick="filterCards('レポート', this)">📊 レポート</button>
@@ -926,23 +934,52 @@
   }
   sortCardsByDate();
 
+  // レベルドロップダウン
+  function toggleLevelMenu(e) {
+    e.stopPropagation();
+    document.getElementById('level-menu').classList.toggle('open');
+  }
+
+  function filterLevel(key, item) {
+    document.getElementById('level-menu').classList.remove('open');
+    // 全ボタンのactiveをリセット
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active', 'f-high', 'f-medium', 'f-low'));
+    document.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+    // レベルボタンの表示更新
+    const labels = { high: '▲ HIGH', medium: '● MED', low: '▼ LOW' };
+    const cls    = { high: 'f-high', medium: 'f-medium', low: 'f-low' };
+    const btn = document.getElementById('level-btn');
+    btn.textContent = 'レベル: ' + labels[key];
+    btn.classList.add('active', cls[key]);
+    // カードフィルタリング
+    document.querySelectorAll('#news-grid .card').forEach(card => {
+      const special = isSpecialCard(card);
+      card.style.display = (!special && card.dataset.severity === key) ? '' : 'none';
+    });
+  }
+
+  // 外クリックでドロップダウンを閉じる
+  document.addEventListener('click', () => {
+    document.getElementById('level-menu')?.classList.remove('open');
+  });
+
   // Filter
   function filterCards(key, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active', 'f-high', 'f-medium', 'f-low'));
+    document.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('active'));
+    // レベルボタンのラベルをリセット
+    const levelBtn = document.getElementById('level-btn');
+    levelBtn.textContent = 'レベル ▾';
     btn.classList.add('active');
     document.querySelectorAll('#news-grid .card').forEach(card => {
       const tags     = card.dataset.tags || '';
       const severity = card.dataset.severity || '';
       const special  = isSpecialCard(card);
       if (key === 'all') {
-        // ALLでは特殊カードを除外
         card.style.display = special ? 'none' : '';
       } else if (SPECIAL_TAGS.includes(key)) {
-        // 特殊カテゴリフィルター：そのタグだけ表示
         card.style.display = tags.includes(key) ? '' : 'none';
-      } else if (['high','medium','low'].includes(key)) {
-        // 重要度フィルター：特殊カードは除外
-        card.style.display = (!special && severity === key) ? '' : 'none';
       } else {
         // タグフィルター（インシデント/脆弱性/レポート）：特殊カードは除外
         card.style.display = (!special && tags.includes(key)) ? '' : 'none';
