@@ -535,7 +535,7 @@
     <span class="filter-label">FILTER //</span>
     <button class="filter-btn active" id="btn-all" onclick="filterCards('all', this)">ALL</button>
     <div class="dropdown-wrap">
-      <button class="filter-btn" id="level-btn" onclick="toggleLevelMenu(event)">レベル ▾</button>
+      <button class="filter-btn" id="level-btn" onclick="toggleLevelMenu(event)">重要度 ▾</button>
       <div class="dropdown-menu" id="level-menu">
         <button class="dropdown-item f-high"   onclick="filterLevel('high',   this)">▲ HIGH</button>
         <button class="dropdown-item f-medium" onclick="filterLevel('medium', this)">● MED</button>
@@ -950,7 +950,7 @@
     const labels = { high: '▲ HIGH', medium: '● MED', low: '▼ LOW' };
     const cls    = { high: 'f-high', medium: 'f-medium', low: 'f-low' };
     const btn = document.getElementById('level-btn');
-    btn.textContent = 'レベル: ' + labels[key];
+    btn.textContent = '重要度: ' + labels[key];
     btn.classList.add('active', cls[key]);
     // カードフィルタリング
     document.querySelectorAll('#news-grid .card').forEach(card => {
@@ -970,7 +970,7 @@
     document.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('active'));
     // レベルボタンのラベルをリセット
     const levelBtn = document.getElementById('level-btn');
-    levelBtn.textContent = 'レベル ▾';
+    levelBtn.textContent = '重要度 ▾';
     btn.classList.add('active');
     document.querySelectorAll('#news-grid .card').forEach(card => {
       const tags     = card.dataset.tags || '';
