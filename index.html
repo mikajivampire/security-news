@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-05-23 15:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-05-23 17:00</span></div>
     </div>
   </div>
 </section>
@@ -674,6 +674,9 @@
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Microsoft Exchange OWA ゼロデイ CVE-2026-42897 CVSS 8.1 永続パッチ未提供・CISA KEV追加 — 細工メールで任意JS実行・連邦機関5月29日期限</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Microsoft「Fox Tempest」マルウェア署名サービス摘発 — 1,000件超の偽コード署名証明書・Rhysida・Akira・INC・Qilin・BlackByte・Lummaらランサムウェアに悪用</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Windows BitLocker「YellowKey」CVE-2026-45585 PoC公開 — USB起動でTPM保護ドライブに無断アクセス・Windows 11/Server 2022/2025影響・完全パッチ未適用</span>
+      <span class="ticker-item"><span class="med">● REPORT</span> &nbsp;Verizon DBIR 2026（5/19）— 脆弱性エクスプロイトが19年で初めてパスワード窃取を上回り侵害の31%に・KEV修正率26%に低下・サードパーティ関与60%増・AIが攻撃窓口を数か月→数時間に短縮</span>
+      <span class="ticker-item"><span class="med">● REPORT</span> &nbsp;Microsoft 深刻脆弱性2倍増（BleepingComputer 5/21）— 78→157件急増・Azure 重大脆弱性 4→37件・権限昇格（EoP）が全CVEの40%・AI脆弱性探索加速で「静かな権限昇格」戦術へ移行</span>
+      <span class="ticker-item"><span class="med">● REPORT</span> &nbsp;IPA「情報セキュリティ10大脅威 2026 個人編」ハンドブック公開（5/21）— AI悪用詐欺・フィッシング横行・インターネットバンキング不正利用が4年ぶり復活・組織編3位に「AIのサイバーリスク」が初登場</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Drupal コア SQLi CVE-2026-9082 CISA KEV追加・悪用確認（5/22）— PostgreSQL使用サイトで匿名リモートRCE可能・Imperva が65か国6,000件超のサイトで15,000件超の攻撃試行を観測・連邦機関6月5日期限</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;GitHub 内部リポジトリ3,800件侵害 — TanStack npm サプライチェーンワーム TeamPCP「Mini Shai-Hulud」・悪意ある Nx Console VS Code 拡張（18分）経由・Claude Code設定・AWS・1Password窃取・Grafana Labs/OpenAI も被害</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;オランダ FIOD が Stark Industries / WorkTitans サーバー800台押収・2名逮捕（5/22）— NoName057(16) DDoS・ランサムウェア・偽情報キャンペーンを支援した親ロシア犯罪ホスティングインフラ解体</span>
@@ -692,12 +695,87 @@
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Microsoft Exchange OWA ゼロデイ CVE-2026-42897 CVSS 8.1 永続パッチ未提供・CISA KEV追加 — 細工メールで任意JS実行・連邦機関5月29日期限</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Microsoft「Fox Tempest」マルウェア署名サービス摘発 — 1,000件超の偽コード署名証明書・Rhysida・Akira・INC・Qilin・BlackByte・Lummaらランサムウェアに悪用</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Windows BitLocker「YellowKey」CVE-2026-45585 PoC公開 — USB起動でTPM保護ドライブに無断アクセス・Windows 11/Server 2022/2025影響・完全パッチ未適用</span>
+      <span class="ticker-item"><span class="med">● REPORT</span> &nbsp;Verizon DBIR 2026（5/19）— 脆弱性エクスプロイトが19年で初めてパスワード窃取を上回り侵害の31%に・KEV修正率26%に低下・サードパーティ関与60%増・AIが攻撃窓口を数か月→数時間に短縮</span>
+      <span class="ticker-item"><span class="med">● REPORT</span> &nbsp;Microsoft 深刻脆弱性2倍増（BleepingComputer 5/21）— 78→157件急増・Azure 重大脆弱性 4→37件・権限昇格（EoP）が全CVEの40%・AI脆弱性探索加速で「静かな権限昇格」戦術へ移行</span>
+      <span class="ticker-item"><span class="med">● REPORT</span> &nbsp;IPA「情報セキュリティ10大脅威 2026 個人編」ハンドブック公開（5/21）— AI悪用詐欺・フィッシング横行・インターネットバンキング不正利用が4年ぶり復活・組織編3位に「AIのサイバーリスク」が初登場</span>
     </div>
   </div>
 
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARD: IPA 情報セキュリティ10大脅威 2026 個人編ハンドブック -->
+    <article class="card medium" data-severity="medium" data-tags="レポート">
+      <div class="severity"><div class="sev-icon">●</div><div class="sev-label">MEDIUM</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">国内動向</span>
+          <span class="tag">IPA</span>
+          <span class="tag">個人向け</span>
+          <span class="timestamp">2026-05-21 &nbsp;09:00</span>
+        </div>
+        <div class="card-title">IPA「情報セキュリティ10大脅威 2026 [個人編]」ハンドブック・対策マッピングシートを公開（5月21日）— AI 悪用詐欺・フィッシング横行・インターネットバンキング不正利用が4年ぶり復活・組織編3位に「AIのサイバーリスク」が初登場</div>
+        <div class="card-summary">
+          <ul>
+            <li>IPA が「情報セキュリティ10大脅威 2026 [個人編]」ハンドブックと対策マッピングシートを5月21日に公開・脅威は五十音順で掲載（約250名の専門家による10大脅威選考会が2025年のインシデント動向をもとに選定）</li>
+            <li>インターネットバンキングの不正利用が4年ぶりに個人編に復活・AI を悪用したフィッシング・詐欺・偽情報拡散への警戒が前版より強化</li>
+            <li>組織編（1月公開済み）ではランサム攻撃（1位・4連覇）・サプライチェーン攻撃（2位）・「AIの利用をめぐるサイバーリスク」（3位・初登場）が上位に</li>
+          </ul>
+        </div>
+        <div class="card-detail">独立行政法人情報処理推進機構（IPA）は2026年5月21日、「情報セキュリティ10大脅威 2026 [個人編]」ハンドブックおよび対策マッピングシートを公式サイトで公開した。個人編の脅威は五十音順で提示され、AI を悪用したフィッシング・詐欺・偽情報拡散への警戒を促す内容が充実している。今版の特徴として、インターネットバンキングの不正利用が4年ぶりに個人編に復活した点が挙げられる。組織編（1月公開）では「ランサム攻撃による被害」が4年連続1位、「サプライチェーン・委託先を狙った攻撃」が2位、「AIの利用をめぐるサイバーリスク」が3位（初登場）を獲得。約250名の専門家が2025年のインシデント事例をもとに審議・投票で決定した。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.ipa.go.jp/security/10threats/10threats2026.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: BleepingComputer Microsoft Critical Vulnerabilities Doubled 2026 -->
+    <article class="card high" data-severity="high" data-tags="レポート">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脅威動向</span>
+          <span class="tag">Microsoft</span>
+          <span class="tag">BleepingComputer</span>
+          <span class="timestamp">2026-05-21 &nbsp;10:00</span>
+        </div>
+        <div class="card-title">2025年の Microsoft 深刻脆弱性が前年比約2倍（78件→157件）に急増 — Azure 重大脆弱性は 4→37件・権限昇格が全CVEの40%・情報漏洩73%増・AI支援の脆弱性探索が多年減少トレンドを逆転</div>
+        <div class="card-summary">
+          <ul>
+            <li>2025年に Microsoft が公開した深刻（Critical）脆弱性は157件（前年比約2倍、前年78件）・総CVE数は1,273件でやや減少傾向の中、深刻度内訳が悪化という「見かけの安定・実質の劣化」が判明</li>
+            <li>権限昇格（EoP）が全CVEの40%を占め、情報漏洩脆弱性は73%増・Azure/Dynamics 365 の重大脆弱性が4件→37件に急増・Windows Server 脆弱性780件うち50件が重大</li>
+            <li>攻撃者はブルートフォースを避け正規ユーザーとして「静かな権限昇格」戦術へ移行・特権削減・ID 可視化・継続的リスク評価の強化が急務</li>
+          </ul>
+        </div>
+        <div class="card-detail">セキュリティ研究機関が5月21日に公開した Microsoft 脆弱性年次分析レポートによると、2025年に公開された深刻（Critical）脆弱性は157件で前年（78件）の約2倍に急増し、多年間の減少傾向が一転した。総CVE数1,273件（前年1,360件比でわずか減少）という表面的な安定とは裏腹に深刻度内訳が悪化している。権限昇格（EoP）が全CVEの40%を占め、情報漏洩脆弱性は前年比73%増。Azure・Dynamics 365 の重大脆弱性は4件から37件に急増し、エンタープライズクラウド環境のリスクが著しく高まっている。Windows Server の脆弱性は780件（うち50件が重大）。AI 支援による脆弱性探索の加速が主因と見られており、攻撃者は静かな権限昇格で正規ユーザーに偽装する戦術へ移行している。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/critical-microsoft-vulnerabilities-doubled-from-exposure-to-escalation/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Verizon DBIR 2026 Dark Reading vulnerability glut -->
+    <article class="card high" data-severity="high" data-tags="レポート">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脅威動向</span>
+          <span class="tag">DBIR</span>
+          <span class="tag">Dark Reading</span>
+          <span class="timestamp">2026-05-19 &nbsp;10:00</span>
+        </div>
+        <div class="card-title">Verizon DBIR 2026 — 脆弱性エクスプロイトが19年間で初めてパスワード窃取を上回り侵害の31%を占める — KEV修正率26%に低下・深刻脆弱性50%増・サードパーティ関与60%増・AI が悪用窓口を数か月から数時間に短縮</div>
+        <div class="card-summary">
+          <ul>
+            <li>Verizon DBIR 第19版（35,000件超インシデント・10,000件超侵害を分析）— 脆弱性エクスプロイトが侵害の31%を占め、認証情報窃取（13%）を19年の調査史上初めて上回った</li>
+            <li>CISA KEVに登録された重大脆弱性の組織修正率が26%に低下（前年38%）・深刻脆弱性は前年比50%増・平均修正日数は43日（前年32日）・AI 支援で攻撃者の脆弱性悪用が数か月から数時間に加速</li>
+            <li>サードパーティ・サプライチェーン経由の侵害が60%増（全体の48%・過去最高）・クラウドMFA未設定の修正率は23%にとどまる</li>
+          </ul>
+        </div>
+        <div class="card-detail">Verizon Business は5月19日、年次データ侵害調査レポート（DBIR）第19版を公開した。2024年11月〜2025年10月に発生した35,000件超のインシデントと10,000件超の確認済み侵害を分析した結果、脆弱性エクスプロイトが侵害の31%を占め、認証情報窃取（13%）を19年の調査史上初めて上回った。CISA KEVに登録された重大脆弱性の修正率は26%（前年38%から低下）、修正対象件数は前年比50%増、平均修正日数は43日（前年32日）に悪化。AI 支援による脆弱性探索の加速が攻撃者に利益をもたらしており、公表から悪用までの期間が大幅に短縮されている。サードパーティ・サプライチェーン経由の侵害は60%増加し全体の48%に達し過去最高水準を更新した。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.darkreading.com/threat-intelligence/verizon-dbir-enterprises-vulnerability-glut" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARD: Drupal CVE-2026-9082 CISA KEV -->
     <article class="card high" data-severity="high" data-tags="脆弱性">
