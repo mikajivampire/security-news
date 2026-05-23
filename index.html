@@ -440,11 +440,69 @@
       letter-spacing: 0.01em;
     }
 
+    /* ─── CARD EXPAND ─── */
+    .card {
+      cursor: pointer;
+    }
+    .card-action {
+      pointer-events: none;
+    }
+    .card-action a {
+      pointer-events: auto;
+    }
+
+    .expand-hint {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      margin-top: 10px;
+      transition: color 0.15s;
+      user-select: none;
+    }
+    .card:hover .expand-hint { color: var(--text-mid); }
+    .card.expanded .expand-hint { color: var(--green-dim); }
+
+    /* Bullet summary */
     .card-summary {
-      font-size: 0.88rem;
+      margin-top: 4px;
+    }
+    .card-summary ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .card-summary ul li {
+      font-size: 0.85rem;
       color: var(--text);
+      line-height: 1.6;
+      padding-left: 1.1em;
+      position: relative;
+    }
+    .card-summary ul li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: var(--green-dim);
+      font-size: 0.75rem;
+      top: 0.05em;
+    }
+
+    /* Detail (expanded) */
+    .card-detail {
+      display: none;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-mid);
       line-height: 1.85;
-      font-weight: 400;
+    }
+    .card.expanded .card-detail {
+      display: block;
     }
 
     /* Card action */
@@ -644,8 +702,16 @@
         </div>
         <div class="card-title">Ubiquiti UniFi OS に CVSS 10.0 の脆弱性3件（CVE-2026-34908/34909/34910）— 未認証リモートから任意コード実行・パストラバーサル・コマンドインジェクション・UCG・UDM・UNVR・UNAS 全シリーズ対象</div>
         <div class="card-summary">
+          <ul>
+            <li>UniFi OS に CVSS 10.0 の脆弱性3件（RCE・パストラバーサル・コマンドインジェクション）・5/22 に修正リリース</li>
+            <li>UCG・UDM・UNVR・UNAS 全シリーズが対象・未認証リモート攻撃者が特権なしで悪用可能</li>
+            <li>ファームウェアの即時更新が必須</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           Ubiquiti は5月22日、UniFi OS に最大深刻度 CVSS 10.0 の脆弱性3件を修正するセキュリティアップデートをリリースした。CVE-2026-34908（不適切なアクセス制御）・CVE-2026-34909（パストラバーサル）・CVE-2026-34910（コマンドインジェクション）はいずれも未認証リモート攻撃者が特権なしで悪用可能。UCG ゲートウェイ・UDM シリーズ・UNVR レコーダー・UNAS ストレージなど広範なハードウェアが影響を受けており、ファームウェアの即時更新が必須。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.bleepingcomputer.com/news/security/ubiquiti-patches-three-max-severity-unifi-os-vulnerabilities/" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -667,8 +733,16 @@
         </div>
         <div class="card-title">JPCERT/CC 注意喚起（at260015）— Palo Alto PAN-OS に認証バイパス脆弱性（CVE-2026-0265 CVSS 7.2）・Cloud Authentication Service 有効環境で未認証アクセス可能・研究者が5月18日週に技術詳細を開示予定</div>
         <div class="card-summary">
+          <ul>
+            <li>PAN-OS に CAS 有効環境で認証バイパスできる CVE-2026-0265（CVSS 7.2）・JPCERT/CC が注意喚起（at260015）</li>
+            <li>PA-Series・VM-Series・Panorama が対象・研究者が技術詳細の開示を予告しており PoC 公開後の悪用リスクが急上昇</li>
+            <li>Cloud NGFW・Prisma Access は対象外・対象環境は即時パッチ適用を推奨</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           JPCERT/CC は5月22日、Palo Alto Networks の PAN-OS に Cloud Authentication Service（CAS）が有効な場合に認証をバイパスできる脆弱性 CVE-2026-0265（CVSS 7.2）が存在すると注意喚起（at260015）を発出した。PA-Series・VM-Series ファイアウォールおよび Panorama（仮想・M-Series）が対象。HacktronAI の研究者 Harsh Jaiswal は複数企業の GlobalProtect ポータルで実証成功を報告し5月18日週に技術詳細を開示予定と予告しており、PoC 公開後の悪用リスクが急上昇する懸念がある。Cloud NGFW・Prisma Access は対象外。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.jpcert.or.jp/at/2026/at260015.html" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -690,8 +764,16 @@
         </div>
         <div class="card-title">Panasonic Avionics がデータ侵害に遭遇（5月22日）— 脅威アクター「CoinbaseCartel」が関与・機内エンターテインメントシステム大手・panasonic.aero ドメインが標的</div>
         <div class="card-summary">
+          <ul>
+            <li>Panasonic Avionics で脅威アクター「CoinbaseCartel」によるデータ侵害が発覚（5/22）</li>
+            <li>航空会社向け機内エンターテインメントシステム大手・panasonic.aero ドメインが標的</li>
+            <li>同日に複数の物流・輸送企業でも並行した攻撃が観測・製造・輸送セクターへの集中攻撃が懸念</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           2026年5月22日、航空機内エンターテインメントシステム大手の Panasonic Avionics Corporation でデータ侵害が発覚した。脅威アクター「CoinbaseCartel」が関与しており、被害ドメイン panasonic.aero が標的となった。同社は世界の主要航空会社向けに機内システムを提供しており、航空・旅行業界のサプライチェーンへの影響が懸念される。同日、A-Sonic Logistics など複数の物流・輸送企業でも攻撃が同時発生し、製造・輸送セクターへの集中的な攻撃が観測された。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.scworld.com/brief/data-breach-reported-by-panasonic-avionics" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -714,8 +796,16 @@
         </div>
         <div class="card-title">TrendAI Apex One にゼロデイ（CVE-2026-34926）— ディレクトリトラバーサルが実攻撃で悪用・CISA KEV 追加・JPCERT at260014 発出・連邦機関6月4日修正期限・全接続エージェントへ悪意コード配布の危険</div>
         <div class="card-summary">
+          <ul>
+            <li>Apex One のディレクトリトラバーサル CVE-2026-34926 が実攻撃で悪用・JPCERT/CC が注意喚起（at260014）</li>
+            <li>DBテーブル改ざん経由で接続エンドポイント全体への悪意コード配布が可能</li>
+            <li>CISA KEV 追加・連邦機関は 6/4 までの修正適用が義務付けられた</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           JPCERT/CC は5月21日、TrendAI Apex One オンプレミス版に相対パストラバーサル脆弱性 CVE-2026-34926 が存在し実際の攻撃に悪用されていると注意喚起（at260014）を発出した。攻撃者がサーバーのデータベーステーブルを改ざんして接続全エージェントへ悪意コードを配布できる。Apex One as a Service・TrendAI Vision One Endpoint Security にも複数の特権昇格脆弱性を同時公開。CISA は CVE-2026-34926 を KEV カタログに追加し、連邦機関に2026年6月4日までの修正を義務付けた。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.jpcert.or.jp/at/2026/at260014.html" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -737,8 +827,16 @@
         </div>
         <div class="card-title">Langflow CORS/CSRF 欠陥（CVE-2025-34291 CVSS 9.4）が CISA KEV 追加・悪用確認済み — AI アプリ構築基盤で任意コード実行・連邦機関6月4日修正期限</div>
         <div class="card-summary">
+          <ul>
+            <li>AI アプリ開発基盤 Langflow の CVE-2025-34291（CVSS 9.4）が CISA KEV に追加・悪用確認済み</li>
+            <li>CORS 設定不備・CSRF 保護欠如・コード実行エンドポイントの組み合わせで任意コード実行が可能</li>
+            <li>連邦機関は 6/4 までに修正必須・AI/MLOps 環境での即時パッチ適用が必要</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           CISA は5月21日、AI アプリ開発プラットフォーム Langflow の CVE-2025-34291（CVSS 9.4）を KEV カタログに追加した。過度に許可された CORS 設定・CSRF 保護の欠如・コード実行エンドポイントの3つが組み合わさったオリジン検証エラーで、悪意ある Web サイトから認証済みクロスオリジンリクエストを送信して任意コードを実行できる。Binding Operational Directive 22-01 に基づき連邦機関は6月4日までの修正が義務付けられており、AI/MLOps 環境で Langflow を使用するすべての組織で即時パッチ適用が必要。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.cisa.gov/news-events/alerts/2026/05/21/cisa-adds-two-known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -761,8 +859,16 @@
         </div>
         <div class="card-title">中国系APT「Webworm」が Discord・Microsoft Graph API を悪用した新型バックドア「EchoCreep」「GraphWorm」で EU5か国の政府機関を侵害 — ESET が詳細分析を公開</div>
         <div class="card-summary">
+          <ul>
+            <li>中国系 APT「Webworm」が EU5か国の政府機関を「EchoCreep」「GraphWorm」で侵害・ESET が詳細公開</li>
+            <li>Discord を C2 に使う EchoCreep と Microsoft Graph API を悪用する GraphWorm を組み合わせた長期潜伏型スパイ活動</li>
+            <li>マルウェアは GitHub に事前ステージング・現在も攻撃が継続中</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           ESET は5月20日、中国系 APT グループ Webworm がベルギー・イタリア・ポーランド・セルビア・スペインの政府機関を標的に、Discord を C2 に使う「EchoCreep」と Microsoft Graph API を悪用する「GraphWorm」の2種の新型バックドアを展開していたと発表した。EchoCreep は400件超の Discord メッセージを通じてコマンド送受信・ファイル窃取を行い、GraphWorm は OneDrive エンドポイントを悪用する。マルウェアや攻撃ツールは GitHub リポジトリに事前ステージングされており、長期潜伏型スパイ活動が継続中。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.darkreading.com/endpoint-security/chinas-webworm-discord-microsoft-graphs" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -784,8 +890,16 @@
         </div>
         <div class="card-title">Microsoft Defender 権限昇格脆弱性（CVE-2026-41091 CVSS 7.8）が実攻撃で悪用・CISA KEV 追加 — ローカル攻撃者が SYSTEM 権限を取得可能</div>
         <div class="card-summary">
+          <ul>
+            <li>Microsoft Defender の権限昇格 CVE-2026-41091（CVSS 7.8）が CISA KEV に追加・実攻撃で悪用確認済み</li>
+            <li>ローカルアクセスを持つ攻撃者がリンクフォロー悪用で SYSTEM レベルの権限を取得可能</li>
+            <li>Windows Defender を搭載するすべての組織で速やかな更新プログラム適用が推奨</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           CISA は5月20日、Microsoft Defender のリンクフォロー権限昇格脆弱性 CVE-2026-41091（CVSS 7.8）を KEV カタログに追加した。ローカルアクセスを持つ攻撃者がリンクフォローの不備を悪用して SYSTEM レベルの権限を取得でき、実際の攻撃での悪用が確認されている。Microsoft Defender のサービス拒否脆弱性 CVE-2026-45498（CVSS 4.0）も同日追加。Windows Defender を搭載するすべての組織は更新プログラムの適用状況を確認し、速やかに適用することが推奨される。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.cisa.gov/news-events/alerts/2026/05/20/cisa-adds-seven-known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -807,8 +921,16 @@
         </div>
         <div class="card-title">SonicWall Gen6 SSL-VPN パッチ不完全で MFA バイパス攻撃が多発 — CVE-2024-12802 のファームウェア更新のみでは不十分・LDAP 手動再設定が必須・ランサムウェア展開に悪用</div>
         <div class="card-summary">
+          <ul>
+            <li>SonicWall Gen6 SSL-VPN の CVE-2024-12802 はファームウェア更新のみでは MFA バイパスが防げない</li>
+            <li>UPN 経由の認証経路で MFA が適用されず、攻撃者がランサムウェアを展開する事例が急増（2月以降）</li>
+            <li>Gen6 シリーズは EOL 済み・LDAP サーバーの手動再設定が追加で必須</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           SonicWall Gen6 SSL-VPN アプライアンスにおいて、CVE-2024-12802 の修正ファームウェアをインストールするだけでは MFA バイパスを完全に防げないことが判明した。UPN ログイン形式での認証経路で MFA が適用されないため、攻撃者がブルートフォース後に MFA を回避してネットワーク内部に侵入しランサムウェアを展開している。SonicWall は LDAP サーバーの手動再設定が追加で必要と警告したが、Gen6 シリーズは2026年4月16日に EOL を迎えており正式サポートは終了済み。ReliaQuest は2026年2月以降に被害が急増していると報告。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.bleepingcomputer.com/news/security/hackers-bypass-sonicwall-vpn-mfa-due-to-incomplete-patching/" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -830,8 +952,16 @@
         </div>
         <div class="card-title">Foxconn ランサムウェア被害（Nitrogen）で Apple サーバー設計図の窃取が確認 — 8TB・1,100万ファイル超・Apple/NVIDIA/Google/Dell など大手顧客の機密文書含む</div>
         <div class="card-summary">
+          <ul>
+            <li>Nitrogen ランサムウェアによる Foxconn 北米拠点侵害で Apple のサーバー設計図30件超の窃取が確認</li>
+            <li>窃取データは 8TB・1,100万ファイル超・Apple/NVIDIA/Google/Dell の機密書類がダークウェブで公開中</li>
+            <li>Foxconn は北米工場の一時操業停止を確認・サプライチェーン全体への影響が懸念される</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           AppleInsider は5月20日、Nitrogen ランサムウェアが侵害した Foxconn 北米拠点（ウィスコンシン・テキサス）から窃取されたデータに Apple の実際のサーバー筐体・ブラケット設計図30件超が含まれることを独自確認した。窃取されたとされる合計8TB・1,100万ファイル超には Apple・NVIDIA・Google・Dell・Intel に関する機密書類が含まれダークウェブで公開中。Foxconn は北米工場の一時操業停止を確認済みだが全容は調査中。機密製品情報の拡散でサプライチェーン全体への影響が懸念されている。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://appleinsider.com/articles/26/05/20/apple-servers-schematics-stolen-in-may-2026-foxconn-cyberattack-appleinsider-confirms" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -854,8 +984,16 @@
         </div>
         <div class="card-title">Microsoft Exchange OWA ゼロデイ（CVE-2026-42897 CVSS 8.1）が実攻撃で悪用中・永続パッチ未提供 — 細工メールで認証済みセッションに任意 JavaScript を実行・CISA KEV 連邦機関5月29日期限</div>
         <div class="card-summary">
+          <ul>
+            <li>Exchange OWA の XSS ゼロデイ CVE-2026-42897（CVSS 8.1）が実攻撃で悪用中・永続パッチは未提供</li>
+            <li>細工メールを OWA で開いた際に任意 JavaScript が実行・セッショントークン窃取・メールボックス操作が可能</li>
+            <li>CISA KEV 追加・連邦機関の修正期限は 5/29・Exchange Server 2016/2019/SE が影響</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           Microsoft が5月14日に確認した Exchange Server の OWA XSS ゼロデイ CVE-2026-42897（CVSS 8.1）は5月19日時点でも永続パッチが未提供のままで、緩和策（EM サービス自動緩和）のみが公開されている。Exchange Server 2016・2019・SE の全バージョンが影響（Exchange Online は非対象）。細工メールを受信者が OWA で開いた際に任意の JavaScript が認証済みセッション内で実行され、セッショントークン窃取・メールボックス操作が可能。CISA は5月15日に KEV 追加、連邦機関の修正期限は5月29日。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.darkreading.com/vulnerabilities-threats/microsoft-exchange-zero-day-no-patch" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -877,8 +1015,16 @@
         </div>
         <div class="card-title">Microsoft が「Fox Tempest」マルウェア署名サービスを摘発 — 1,000件超の偽コード署名証明書・Rhysida・Akira・INC・Qilin・BlackByte・Lumma らのランサムウェアキャンペーンに悪用</div>
         <div class="card-summary">
+          <ul>
+            <li>Microsoft DCU が「Fox Tempest」による偽コード署名サービス（MSaaS）の基盤インフラを摘発</li>
+            <li>1,000件超の偽署名証明書が Rhysida・Akira・INC・Qilin・BlackByte・Lumma などのランサムウェアに悪用</li>
+            <li>Microsoft が証明書を全件失効・訴訟提起・Vanilla Tempest も共同被告として名指し</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           Microsoft Digital Crimes Unit（DCU）は5月19日、Microsoft のコード署名検証機能を悪用してマルウェアに正規の署名を付与するサービス（MSaaS）を運営していた脅威アクター「Fox Tempest」の基盤インフラを摘発したと公表した。Fox Tempest は1,000件超の偽コード署名証明書と数百の Azure テナントを生成し、Lumma Stealer・Oyster・Vidar などのマルウェアや Rhysida・Akira・INC・Qilin・BlackByte のランサムウェアキャンペーンに活用されていた。Microsoft は証明書全件を失効させ訴訟を提起。Vanilla Tempest も共同被告として名指しされている。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.microsoft.com/en-us/security/blog/2026/05/19/exposing-fox-tempest-a-malware-signing-service-operation/" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -901,8 +1047,16 @@
         </div>
         <div class="card-title">Windows BitLocker ゼロデイ「YellowKey」（CVE-2026-45585）PoC 公開 — USB 起動で TPM 単体保護ドライブへ無断アクセス・Windows 11 / Server 2022/2025 影響・完全パッチ未適用</div>
         <div class="card-summary">
+          <ul>
+            <li>BitLocker ゼロデイ「YellowKey」の PoC が公開・USB 起動で TPM 保護ドライブへ物理アクセスなしに侵入可能</li>
+            <li>Windows 11・Server 2022/2025 が影響対象・完全パッチはまだ未リリース</li>
+            <li>権限昇格ゼロデイ「GreenPlasma」も同時公開・Microsoft は緩和策のみ提供済み</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           匿名研究者「Nightmare Eclipse」が CVE-2026-45585（"YellowKey"）の PoC エクスプロイトを公開した。USB ドライブまたは EFI パーティションに細工した FsTx ファイルを配置し、WinRE 起動中に CTRL を保持することで TPM のみで保護された BitLocker ドライブへの非制限シェルアクセスが可能になる。同研究者は権限昇格ゼロデイ「GreenPlasma」も同時公開しており、Microsoft は CVE-2026-45585 として追跡・緩和策を共有済みだが完全なパッチはまだリリースされていない。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.bleepingcomputer.com/news/security/windows-bitlocker-zero-day-gives-access-to-protected-drives-poc-released/" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -923,8 +1077,16 @@
         </div>
         <div class="card-title">グローバル物流企業 A-Sonic Logistics が Payload ランサムウェアの被害に — 30か国以上で事業展開するフレートフォワーダーへのサイバー攻撃が5月22日に判明</div>
         <div class="card-summary">
+          <ul>
+            <li>30か国展開のフレートフォワーダー A-Sonic Logistics が Payload ランサムウェアの被害に</li>
+            <li>窃取データのリーク掲載が確認・国際貨物輸送・保税倉庫・通関業務に影響</li>
+            <li>同日に複数の物流・輸送関連企業でも同グループによる並行攻撃を確認</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           2026年5月22日、1993年創業のグローバルサプライチェーン管理サービス企業 A-Sonic Logistics が Payload ランサムウェアグループの被害に遭ったことが判明した。A-Sonic は30か国以上で国際貨物輸送・保税倉庫・通関業務を展開しており、窃取データのリーク掲載が確認された。同日にはドイツの海事材料メーカー G. Theodor Freese GmbH など複数の物流・輸送関連企業でも同じ Payload グループによる攻撃が並行して発生し、物流・輸送セクターへの集中的な攻撃が懸念されている。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.ransomware.live/activity/Transportation-Logistics" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -946,8 +1108,16 @@
         </div>
         <div class="card-title">ドイツの海事資材メーカー G. Theodor Freese が Payload ランサムウェアの被害に — 110年超の歴史を持つ船舶甲板・床材メーカーへのサイバー攻撃が判明</div>
         <div class="card-summary">
+          <ul>
+            <li>ドイツの海事材料メーカー G. Theodor Freese が Payload ランサムウェアの攻撃を受けた</li>
+            <li>110年超の歴史を持つ船舶甲板・床材製造業者・世界の海運・造船業界向けに製品を供給</li>
+            <li>同日に物流企業 A-Sonic Logistics など複数の輸送関連企業でも並行攻撃を確認</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           2026年5月22日、ドイツの海事専門材料メーカー G. Theodor Freese GmbH（gtf-freese.de）が Payload ランサムウェアグループの攻撃を受けたことが判明した。同社は110年超の歴史を持つ船舶甲板被覆・床材技術・建材保護・コーティングシステムの製造業者で、DIN ISO 9001 基準に適合した製品を世界の海運・造船業界に供給している。同日、物流企業 A-Sonic Logistics を含む複数の輸送関連企業への攻撃も確認されており、海事・物流セクターを狙ったランサムウェアグループの集中攻撃が懸念されている。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.breachsense.com/breaches/2026/may/" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -969,8 +1139,16 @@
         </div>
         <div class="card-title">FreightWaves「Freight Fraud Symposium 2026」開催（5月20日）— 米物流業界のサイバー被害$7.25億・AI 活用型フレート詐欺が物流業界の存亡の危機・FBI IC3 も警告</div>
         <div class="card-summary">
+          <ul>
+            <li>2025年の米国・カナダ物流業界のサイバー被害は約7.25億ドル・前年比60%増と FreightWaves が報告</li>
+            <li>AI 活用フィッシング・ディープフェイクなりすまし・デジタルサプライチェーン攻撃が急増</li>
+            <li>FBI が IC3 PSA を発出し警告・業界全体でのセキュリティ対策強化が急務</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           FreightWaves は5月20日、クリーブランドのロックの殿堂で「Freight Fraud Symposium 2026」を開催した。2025年の米国・カナダ物流業界のサイバー被害総額は約7.25億ドルに達し前年比60%増。AI を駆使したフィッシング・ディープフェイクによる業者なりすまし・書類偽造・デジタルサプライチェーン攻撃が急増している。FBI は同年4月30日に IC3 PSA（PSA260430）を発出し、なりすまし型サイバー貨物窃取の急増を警告。NMFTA の専門家らが物流業界全体でのセキュリティ対策強化の緊急性を訴えた。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.freightwaves.com/news/freightwaves-brings-freight-fraud-symposium-2026-to-rock-roll-hall-of-fame-to-tackle-the-industrys-biggest-threat" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -993,8 +1171,16 @@
         </div>
         <div class="card-title">経済産業省「SCS評価制度 制度構築方針」公表（2026年3月）— サプライチェーン強化に向けたセキュリティ対策評価制度、2026年度末の開始目指す</div>
         <div class="card-summary">
+          <ul>
+            <li>経済産業省が「SCS評価制度」の制度構築方針を公表（2026年3月27日）</li>
+            <li>第三者評価に基づく統一的なセキュリティ評価基準（★1〜★4）を設ける・2026年度末開始目標</li>
+            <li>中小企業向けに低コストでの★3・★4取得支援の仕組みも整備予定</li>
+          </ul>
+        </div>
+        <div class="card-detail">
           経済産業省・内閣官房国家サイバー統括室は2026年3月27日、「サプライチェーン強化に向けたセキュリティ対策評価制度（SCS評価制度）」の制度構築方針を公表した。取引先からの多様なセキュリティ要求に企業が対応しやすくするため、第三者評価に基づく統一的な評価基準（★1〜★4）を設ける制度で、2026年度末頃の制度開始を目標とする。中小企業向けには「サイバーセキュリティお助け隊サービス（新類型）」と連携し、低コストで★3・★4の取得を支援する仕組みも整備される予定。
         </div>
+        <div class="expand-hint">▾ 詳細を見る</div>
       </div>
       <div class="card-action">
         <a class="read-link" href="https://www.meti.go.jp/press/2025/03/20260327001/20260327001.html" target="_blank" rel="noopener noreferrer">READ →</a>
@@ -1136,6 +1322,18 @@
   // 外クリックでドロップダウンを閉じる
   document.addEventListener('click', () => {
     document.getElementById('level-menu')?.classList.remove('open');
+  });
+
+  // ─── カード展開（クリック） ───
+  document.getElementById('news-grid').addEventListener('click', e => {
+    if (e.target.closest('.card-action')) return;
+    const card = e.target.closest('.card');
+    if (!card) return;
+    const detail = card.querySelector('.card-detail');
+    if (!detail) return;
+    card.classList.toggle('expanded');
+    const hint = card.querySelector('.expand-hint');
+    if (hint) hint.textContent = card.classList.contains('expanded') ? '▴ 閉じる' : '▾ 詳細を見る';
   });
 
   // ─── 初期化 ───
