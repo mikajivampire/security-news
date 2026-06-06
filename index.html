@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-06-05 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-06-06 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,6 +656,13 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-06-06 新着 -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Miasma ワームが Microsoft Azure GitHub 73リポジトリを侵害（6/6）— Claude Code・Gemini CLI・VS Code設定ファイルでクレデンシャル窃取・105秒で無効化・Red Hat npm以来の大規模サプライチェーン攻撃拡大</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;ShinyHunters が歯科大手 DentaQuest から 260 万件データを窃取・公開（6/5）— Sun Life 子会社・234GB 流出・政府発行 ID・健康保険情報が対象・集団訴訟調査開始</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Everest Forms Pro CVE-2026-3300 CVSS 9.8 積極悪用（6/5）— 未認証で PHP eval() 直接実行・WordPress サイト完全乗っ取り・Wordfence が2万9千件超の攻撃をブロック</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Magecart が Stripe API を C2・窃取インフラに悪用する新型スキマー（6/4 Sansec 報告）— api.stripe.com のみで決済情報窃取・信頼ドメイン悪用で従来ブロック手法が無効</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;WP Maps Pro CVE-2026-8732 CVSS 9.8 積極悪用（6/5）— 未認証で管理者アカウント即時作成・Envato 15,800 超の商用プラグイン・Wordfence が24時間2,000件超ブロック</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;CISA・NSA・FBI・ファイブアイズが中国国家支援 APT のグローバルネットワーク侵害への共同アドバイザリを発表（6/2）— 通信・政府・重要インフラが主要標的・TTPs と IoC を公開</span>
       <!-- 2026-06-05 新着 (1/2) -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Cisco SD-WAN Manager CVE-2026-20245 ゼロデイが実悪用（6/5）— 2026年7番目の SD-WAN ゼロデイ・Mandiant 報告・netadmin→root 権限昇格・全デプロイ形態が影響・パッチ未提供</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Trellix（McAfee Enterprise + FireEye）が RansomHouse に GitHub ソースコードリポジトリを侵害（5/7）— EDR/XDR 検出ロジック流出・5万超の企業・政府顧客のセキュリティリスク拡大</span>
@@ -867,6 +874,140 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-06-06 新着 -->
+
+    <!-- CARD: Miasma worm Microsoft Azure GitHub 73 repos 2026-06-06 -->
+    <article class="card high" data-severity="high" data-tags="サプライチェーン|脆弱性">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">サプライチェーン</span><span class="tag">脆弱性</span>
+          <span class="timestamp">2026-06-06 09:00</span>
+        </div>
+        <div class="card-title">Miasma ワームが Microsoft Azure GitHub 組織73リポジトリを侵害（6月5日）— Claude Code・Gemini CLI・VS Code 設定ファイルでクレデンシャル窃取・105秒でリポジトリ無効化・Red Hat npm 以来の大規模サプライチェーン攻撃拡大</div>
+        <div class="card-summary">
+          <ul>
+            <li>Miasma ワーム（TeamPCP の Mini Shai-Hulud 変種）が6月5日に Microsoft の Azure・Azure-Samples・Microsoft・MicrosoftDocs の4つの GitHub 組織を侵害・侵害済みコントリビューターアカウントを悪用して Azure/durabletask リポジトリへ悪意あるコミットを挿入</li>
+            <li>GitHub は73リポジトリを105秒以内に無効化・開発者が Claude Code・Gemini CLI・Cursor・VS Code でリポジトリを開いた際に実行される設定ファイルにクレデンシャル窃取ペイロードを仕込む手口</li>
+            <li>6月1日の Red Hat npm 32件感染から npm・PyPI へ変異拡大・TanStack・Mistral AI・UiPath パッケージも侵害済み・直ちにリポジトリの依存関係と CI/CD 設定ファイルを点検推奨</li>
+          </ul>
+        </div>
+        <div class="card-detail">自己複製型Miasmaワームは6月1日のRed Hat npm侵害から進化し、MicrosoftのAzure GitHubリポジトリへ到達。侵害済みアカウントによる悪意あるコミットが、Claude Code・Gemini CLIなどAI開発ツールの設定ファイルを悪用してクレデンシャルを自動収集する。GitHubは73リポジトリを即時無効化したが被害範囲は調査継続中。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: DentaQuest data breach ShinyHunters 2.6M 2026-06-06 -->
+    <article class="card high" data-severity="high" data-tags="インシデント|データ侵害">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">データ侵害</span>
+          <span class="timestamp">2026-06-06 09:00</span>
+        </div>
+        <div class="card-title">ShinyHunters が歯科給付管理大手 DentaQuest から 260 万件データを窃取・公開（6月5日）— 234GB 流出・Sun Life 子会社・全米35百万人の歯科保険管理・政府発行 ID・健康保険情報が対象</div>
+        <div class="card-summary">
+          <ul>
+            <li>ShinyHunters が DentaQuest（Sun Life 子会社・全米35百万人の歯科保険を管理）から 234GB のデータを窃取・身代金交渉決裂後に公開・260 万アカウント分の氏名・メール・電話番号・政府発行 ID・健康保険情報・生年月日が流出</li>
+            <li>DentaQuest は6月2日にネットワークへの不正アクセスを確認・顧客サービスへの重大な支障はなしと発表するも ShinyHunters は Have I Been Pwned にデータを登録</li>
+            <li>Charter Communications・Canvas（Instructure）に続く ShinyHunters の連続侵害・Edelson Lechtzin LLP が集団訴訟調査を開始・患者は Have I Been Pwned でアカウント確認推奨</li>
+          </ul>
+        </div>
+        <div class="card-detail">DentaQuestはメディケイド・メディケア・雇用主向け歯科保険を全米50州で提供するSun Life子会社。ShinyHuntersは2026年にCharterの4,200万件、Canvasの2億7,500万件に続く大規模侵害を敢行。漏洩データには政府発行IDが含まれ変更困難なため長期リスクが高く、集団訴訟が相次いで提起される見通し。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/dentaquest-data-breach-exposed-info-of-26-million-accounts/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Everest Forms Pro CVE-2026-3300 CVSS 9.8 exploited 2026-06-06 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|WordPress">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">WordPress</span>
+          <span class="timestamp">2026-06-06 09:00</span>
+        </div>
+        <div class="card-title">WordPress Everest Forms Pro CVE-2026-3300（CVSS 9.8）が積極悪用 — 未認証で PHP eval() を直接実行・サイト完全乗っ取り・Wordfence が2万9千件超の攻撃をブロック・v1.9.13 でパッチ</div>
+        <div class="card-summary">
+          <ul>
+            <li>Everest Forms Pro プラグイン（約4,000 のアクティブインストール）の Calculation Addon が process_filter() でユーザー入力を PHP 文字列に直接結合して eval() 実行・未認証攻撃者が任意 PHP コードを実行しサイト完全乗っ取りが可能（CVSS 9.8）</li>
+            <li>Wordfence は4月13日から攻撃を観測・5月16日に単日17,900件超の急増・累計29,300件以上をブロック・主要ペイロードは "diksimarina" という管理者アカウントの作成</li>
+            <li>WPEverest がバージョン 1.9.13 でパッチ提供済み・1.9.12 以前を使用中のサイト管理者は即時更新必須・WebShell 設置や永続バックドアの確認も推奨</li>
+          </ul>
+        </div>
+        <div class="card-detail">Everest Forms Proの計算アドオンはユーザー送信フォームフィールド値を安全なサニタイズなしにPHP文字列として結合しeval()に渡す設計欠陥を持つ。攻撃者はこれを悪用してWebシェルを設置し永続バックドアを確立できる。インストール数は少ないが攻撃密度は非常に高く、5月16日の単日17,900件という急激な攻撃増加が観測されている。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/critical-everest-forms-pro-flaw-exploited-to-take-over-wordpress-sites/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Magecart Stripe API credit card skimmer 2026-06-06 -->
+    <article class="card high" data-severity="high" data-tags="インシデント|スキミング">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">スキミング</span>
+          <span class="timestamp">2026-06-06 09:00</span>
+        </div>
+        <div class="card-title">Magecart が Stripe API と Google Tag Manager を C2・窃取インフラに悪用する新型クレジットカードスキマーを展開 — 2025年12月から稼働・Magento／Adobe Commerce EC サイトを標的・信頼ドメインのみ使用で検出回避（Sansec 報告・6月4日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>新型 Magecart スキマーは攻撃者管理のドメインを一切使用せず googletagmanager.com と api.stripe.com のみでローダー・ペイロード・データ窃取を完結・ほぼすべての EC サイトがホワイトリストする2ドメインだけを悪用して従来のブロックリストを完全回避</li>
+            <li>カード番号・有効期限・CVV・請求先住所・メール・電話番号を XOR で難読化してローカル保存し定期的に Stripe 顧客オブジェクトのメタデータフィールドへ格納することで窃取・Sansec が発見した Stripe レコードは 2025年12月24日に作成</li>
+            <li>Magento／Adobe Commerce のチェックアウトページを標的・EC サイト管理者は Google Tag Manager タグの不審なエントリを確認し Stripe API アクティビティログの精査を推奨</li>
+          </ul>
+        </div>
+        <div class="card-detail">Sansecが発見したこのMagecartキャンペーンはStripeという決済業界の信頼基盤をそのままC2・窃取チャネルに転用する巧妙な手口。従来のドメインブロックリストやネットワーク監視は無効化され、決済フォームのJavaScriptコード監査とStripe APIアクティビティログの精査が唯一の検出手段となる。EC事業者は直ちにGTMタグの棚卸しを実施すべき。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/credit-card-theft-campaign-abuses-stripe-to-host-stolen-payment-info/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: WP Maps Pro CVE-2026-8732 CVSS 9.8 exploited 2026-06-06 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|WordPress">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">WordPress</span>
+          <span class="timestamp">2026-06-06 09:00</span>
+        </div>
+        <div class="card-title">WP Maps Pro WordPress プラグイン CVE-2026-8732（CVSS 9.8）が積極悪用 — 未認証攻撃者が1リクエストで管理者アカウントを即時作成・Envato 15,800超の商用プラグイン・Wordfence が24時間2,000件超の攻撃をブロック</div>
+        <div class="card-summary">
+          <ul>
+            <li>WP Maps Pro（Envato Market 15,800超販売）のベンダーサポート向け「一時アクセス機能」が wp_ajax_nopriv_ として登録されているため未認証ユーザーが呼び出し可能・単一 HTTP リクエストで管理者アカウントを即時作成しパスワード不要のログイン URL を攻撃者サーバーへ自動送出</li>
+            <li>影響バージョンは v6.1.0 以前・5月20日に v6.1.1 でパッチ提供済み・Wordfence は24時間で2,003件の攻撃をブロック・パッチ提供前から悪用が開始されたことが確認済み</li>
+            <li>完全なサイト乗っ取りが可能・管理者権限で任意 PHP コード実行・マルウェア設置・データ窃取が可能・サイト管理者は v6.1.1 への即時更新と管理者アカウント一覧の監査を実施すること</li>
+          </ul>
+        </div>
+        <div class="card-detail">WP Maps ProのwpGMP_Temp_Accessメカニズムはプラグインベンダーのリモートサポート用として設計されたが、認証チェックなしにwp_ajax_nopriv_で登録されているという致命的な実装ミス。攻撃者は1回のAJAXリクエストで管理者アカウントを作成後、外部C2サーバーへログインURLを送出。5月20日にv6.1.1でパッチ提供済みだが多くのサイトが未更新のまま被害を受けている。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/wp-maps-pro-bug-exploited-to-create-admin-accounts-on-wordpress-sites/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: CISA NSA FBI joint advisory PRC APT global networks 2026-06-06 (Task2 Report) -->
+    <article class="card high" data-severity="high" data-tags="レポート|APT">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">レポート</span><span class="tag">APT</span>
+          <span class="timestamp">2026-06-06 09:00</span>
+        </div>
+        <div class="card-title">CISA・NSA・FBI と国際パートナーが中国国家支援 APT によるグローバルネットワーク侵害への共同アドバイザリを発表（6月2日）— 世界規模の通信・政府・重要インフラへの継続的スパイ活動・TTPs と IoC を詳述</div>
+        <div class="card-summary">
+          <ul>
+            <li>CISA・NSA・FBI に英国・カナダ・オーストラリア・ニュージーランド（ファイブアイズ）が加わり、中国国家関与 APT による継続的なグローバルネットワーク侵害を共同で警告・通信事業者・政府機関・重要インフラを対象とした大規模スパイ活動と認定</li>
+            <li>アドバイザリでは APT の具体的な TTPs と侵害指標（IoC）を詳述・エッジデバイスの既知脆弱性悪用・ネットワーク偵察・長期潜伏（Living off the Land）が主要手法・被害組織が世界規模に広がる継続的脅威</li>
+            <li>FCEB 機関に対して緊急緩和措置の実施を指示・民間組織にも網羅的なログ収集・多要素認証強化・パッチ管理の徹底を強く推奨・IoC リストを用いた侵害調査の実施を促す</li>
+          </ul>
+        </div>
+        <div class="card-detail">CISAがNSA・FBI・ファイブアイズと共同で発表した今回の勧告は、中国国家支援APTによる組織的かつ継続的なグローバルスパイ活動を正式に文書化したもの。エッジネットワーク機器の未修正脆弱性を悪用した侵入と「土地利用型（LotL）」の検出困難な持続的活動に警鐘を鳴らし、各国政府・重要インフラ運営者に国際的な対抗措置の強化を訴えている。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.cisa.gov/news-events/news/cisa-and-partners-release-joint-advisory-countering-chinese-state-sponsored-actors-compromise" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARD: Cisco SD-WAN Manager CVE-2026-20245 zero-day 2026-06-05 -->
     <article class="card high" data-severity="high" data-tags="脆弱性|Cisco|ゼロデイ">
