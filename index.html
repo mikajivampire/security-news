@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-06-11 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-06-12 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,6 +656,16 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-06-12 新着 (1/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;ServiceNow が未認証 API 脆弱性による顧客データ侵害を公開（6/12）— requires_authentication=false の API が外部公開・IT チケット・従業員記録が露出・Australia リリース顧客直撃・6/5 緊急パッチ適用済み</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Microsoft Defender ゼロデイ「RoguePlanet」PoC 公開（6/12）— 最新 Windows 11/10 でレースコンディション悪用・SYSTEM 権限取得・パッチ未提供・Chaotic Eclipse が発表</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;LiteLLM CVE-2026-42271（CVSS 8.8）CISA KEV 追加・積極悪用 — MCP コマンドインジェクションが Starlette BadHost CVE-2026-48710 と連鎖・未認証 RCE・AI ゲートウェイ全体が危機（6/9）</span>
+      <span class="ticker-item"><span class="med">● REPORT</span> &nbsp;Zscaler「2026年フィッシング年次レポート」— 攻撃件数 20% 減も AI 活用の「量より質」型攻撃に転換・BEC が試行 2% で成功侵害の 21% を占める（Dark Reading 6/11）</span>
+      <!-- 2026-06-12 新着 (2/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;ServiceNow が未認証 API 脆弱性による顧客データ侵害を公開（6/12）— requires_authentication=false の API が外部公開・IT チケット・従業員記録が露出・Australia リリース顧客直撃・6/5 緊急パッチ適用済み</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Microsoft Defender ゼロデイ「RoguePlanet」PoC 公開（6/12）— 最新 Windows 11/10 でレースコンディション悪用・SYSTEM 権限取得・パッチ未提供・Chaotic Eclipse が発表</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;LiteLLM CVE-2026-42271（CVSS 8.8）CISA KEV 追加・積極悪用 — MCP コマンドインジェクションが Starlette BadHost CVE-2026-48710 と連鎖・未認証 RCE・AI ゲートウェイ全体が危機（6/9）</span>
+      <span class="ticker-item"><span class="med">● REPORT</span> &nbsp;Zscaler「2026年フィッシング年次レポート」— 攻撃件数 20% 減も AI 活用の「量より質」型攻撃に転換・BEC が試行 2% で成功侵害の 21% を占める（Dark Reading 6/11）</span>
       <!-- 2026-06-11 新着 (1/2) -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Oracle PeopleSoft CVE-2026-35273（CVSS 9.8）ゼロデイ — ShinyHunters が 100 組織超・300 インスタンスを侵害・被害の 68% が米国大学・6月10日にパッチ提供（6/11）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;ノッティンガム大学 ShinyHunters 被害 — 45.5 万件学生データ（学費・クレカ・パスポート）40GB 流出・Oracle PeopleSoft ゼロデイ悪用（6/11）</span>
@@ -932,6 +942,96 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-06-12 新着 -->
+
+    <!-- CARD: ServiceNow Unauthenticated API Security Incident 2026-06-12 -->
+    <article class="card high" data-severity="high" data-tags="インシデント|データ漏洩|API">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">データ漏洩</span><span class="tag">API</span>
+          <span class="timestamp">2026-06-12 09:00</span>
+        </div>
+        <div class="card-title">ServiceNow が未認証 API 脆弱性による顧客データ侵害を公開（6月12日）— /api/now/related_list_edit/create エンドポイントが認証不要で外部公開・IT チケット・従業員記録・機密文書が対象・Australia リリース顧客を直撃・6月5日に緊急パッチ適用済み</div>
+        <div class="card-summary">
+          <ul>
+            <li>ServiceNow の /api/now/related_list_edit/create エンドポイントが「requires_authentication=false」設定で外部公開されており、未認証攻撃者がテナント間で顧客インスタンスデータをクエリ可能だった。悪用は 6 月 2〜3 日に発生し、6 月 9 日に公式開示。</li>
+            <li>主に Australia プラットフォームリリース、または特定の設定変更を行った旧バージョン顧客が影響を受けた。IT ヘルプデスクチケット・従業員記録・機密内部文書など企業の機密情報が含まれる可能性がある。</li>
+            <li>ServiceNow は 6 月 5 日に全ホスト型インスタンスへ緊急パッチを適用済みで追加顧客対応は不要。ただし 6 月 2〜3 日前後のインスタンスログを確認し、不審な API アクティビティがないか検証することを推奨。</li>
+          </ul>
+        </div>
+        <div class="card-detail">ServiceNow が 6 月 9 日に顧客インスタンスデータへの不正アクセスを開示。未認証 API エンドポイントが悪用され、6 月 2〜3 日に Australia リリース顧客を中心に IT チケット・従業員記録などが流出した可能性。6 月 5 日に全ホスト型インスタンスへ緊急パッチ適用済みで CVE は未採番。6 月 12 日に調査続報を公開した。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/servicenow-discloses-security-incident-exposing-customer-data/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Microsoft Defender RoguePlanet Zero-Day 2026-06-12 -->
+    <article class="card high" data-severity="high" data-tags="ゼロデイ|Windows|特権昇格">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">ゼロデイ</span><span class="tag">Windows</span><span class="tag">特権昇格</span>
+          <span class="timestamp">2026-06-12 09:00</span>
+        </div>
+        <div class="card-title">Microsoft Defender 未修正ゼロデイ「RoguePlanet」PoC 公開 — 完全パッチ適用済み Windows 11/10 でレースコンディション悪用・標準ユーザーから SYSTEM 権限取得・Microsoft パッチ未提供（6月12日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>研究者 Chaotic Eclipse（Nightmare-Eclipse）が Microsoft Defender のファイル操作処理におけるレースコンディションを悪用する PoC「RoguePlanet」を公開。6 月 Patch Tuesday 直後に発表され、最新パッチ適用済み Windows 11・Windows 10 が対象。</li>
+            <li>標準ユーザー権限から SYSTEM レベルシェルへの昇格が可能で任意コード実行が実現する。研究者は一部環境で 100% の成功率を確認。レースコンディションのため環境依存があり、ISO マウント不可のサーバーには現状効果なし。</li>
+            <li>Microsoft からのパッチは未提供。緩和策として Defender リアルタイム保護設定の監視と、不審なプロセス起動の検知ルール強化を推奨。月次パッチでの修正を待つ必要がある。</li>
+          </ul>
+        </div>
+        <div class="card-detail">Chaotic Eclipse が公開した「RoguePlanet」は、最新パッチ適用済み Windows 11/10 の Microsoft Defender における未修正レースコンディションを悪用して SYSTEM 権限を取得するゼロデイ PoC。6 月 Patch Tuesday 直後に公開され Microsoft からのパッチはまだ提供されていない。デスクトップ環境では条件次第で成功率 100% が報告されており、対応が急務。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/microsoft/microsoft-defender-rogueplanet-zero-day-grants-system-privileges/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: LiteLLM CVE-2026-42271 CISA KEV 2026-06-12 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|RCE|CISA KEV|AI">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">RCE</span><span class="tag">CISA KEV</span><span class="tag">AI</span>
+          <span class="timestamp">2026-06-12 09:00</span>
+        </div>
+        <div class="card-title">LiteLLM CVE-2026-42271（CVSS 8.8）が CISA KEV 追加・積極悪用確認 — MCP テストエンドポイントのコマンドインジェクションが Starlette BadHost バイパス（CVE-2026-48710）と連鎖・未認証 RCE・AI ゲートウェイ基盤全体が危機（6月9日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>LiteLLM の MCP サーバープレビュー機能（POST /mcp-rest/test/connection・/mcp-rest/test/tools/list）にコマンドインジェクション CVE-2026-42271（CVSS 8.8）が発見され、6 月 9 日に CISA KEV 追加・悪用確認。コマンド・args・env フィールドを細工したリクエストで任意コマンド実行が可能。</li>
+            <li>Horizon3.ai が CVE-2026-48710（Starlette BadHost ホストヘッダーバイパス・CVSS 6.5）と連鎖させ、完全な未認証 RCE チェーンを実証。攻撃成功でモデルプロバイダー API キー・接続先 AI インフラへの横断侵害・機密情報流出が可能。</li>
+            <li>LiteLLM v1.83.7（5 月 8 日リリース）でパッチ提供済み。連邦機関の修正期限は 6 月 30 日。AI ゲートウェイを外部公開している組織は即時バージョンアップが必須。</li>
+          </ul>
+        </div>
+        <div class="card-detail">LiteLLM の MCP テスト機能に CVSS 8.8 のコマンドインジェクション CVE-2026-42271 が発見され、Starlette BadHost バイパス CVE-2026-48710 と連鎖して完全な未認証 RCE が可能な状態。6 月 9 日に CISA KEV 追加・悪用確認。AI ゲートウェイ経由でモデル API キーおよびダウンストリームシステムへの不正アクセスリスクがある。v1.83.7 で修正済み。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Zscaler Phishing Report 2026 Dark Reading 2026-06-12 -->
+    <article class="card medium" data-severity="medium" data-tags="レポート|フィッシング|AI脅威">
+      <div class="severity"><div class="sev-icon">●</div><div class="sev-label">MEDIUM</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">レポート</span><span class="tag">フィッシング</span><span class="tag">AI脅威</span>
+          <span class="timestamp">2026-06-12 09:00</span>
+        </div>
+        <div class="card-title">Zscaler「2026年フィッシング年次レポート」— 攻撃件数は前年比 20% 減も脅威リスクは上昇・AI 活用の「量より質」型標的型攻撃へ転換・BEC は試行 2% で成功侵害の 21% を占める（Dark Reading 6月11日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Zscaler の 2026 年フィッシング年次報告書によれば攻撃件数は前年比 20% 減少。しかし研究者は「減少」ではなく「再調整」と定義し、脅威アクターが大量散布型から AI 活用の高コンバージョン型標的型攻撃に移行していると分析。</li>
+            <li>ビジネスメール詐欺（BEC）は全フィッシング試行のわずか 2% を占めるに過ぎないが、成功した侵害全体の 21% を構成する最高効率の攻撃手法として突出。AI による高品質コンテンツ生成が奏功。</li>
+            <li>量より質への転換が鮮明になる中、従来のシグネチャベース検出の有効性が低下。AI 生成フィッシングの文体・構造は正規メールと区別困難で、行動分析・コンテキスト認識型の多層防御が不可欠。</li>
+          </ul>
+        </div>
+        <div class="card-detail">Zscaler の 2026 年フィッシングレポートが Dark Reading で紹介（6 月 11 日）。攻撃件数は 20% 減も AI 活用の標的型攻撃への転換により実際のリスクは増大。BEC は試行の 2% で全成功侵害の 21% を占める最高効率の攻撃手法で、AI による高品質フィッシングコンテンツの自動生成が検出回避を加速させている。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.darkreading.com/cybersecurity-analytics/phishing-volume-down-20-risk-rising" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARDS: 2026-06-11 新着 -->
 
