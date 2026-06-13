@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-06-12 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-06-13 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,6 +656,16 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-06-13 新着 (1/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Windows Netlogon CVE-2026-41089（CVSS 9.8）が CISA KEV 追加・積極悪用確認（6/13）— ドメインコントローラーへの 0 クリック SYSTEM RCE・ランサムウェア展開に悪用・5 月 Patch Tuesday パッチを即時適用</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;「Atomic Arch」Arch Linux AUR 400+ パッケージ汚染（6/13）— eBPF ルートキット＋Rust インフォスティーラー・SSH 鍵/GitHub/クラウド認証情報を Tor C2 へ窃取・約 1,500 パッケージに拡大</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;九州電力送配電が未暗号化 SSD 紛失・1,090 万件顧客情報漏洩の恐れ（6/12）— 日本史上最大・氏名・住所・電力使用量・電話番号が対象・経産省が詳細報告を要求</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Windows カーネル CVE-2026-45657（CVSS 9.8）— EternalBlue 類似のワーム型 TCP/IP RCE・未認証 SYSTEM 権限・WannaCry 規模の伝播リスク・6 月 Patch Tuesday でパッチ提供済み（6/13）</span>
+      <!-- 2026-06-13 新着 (2/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Windows Netlogon CVE-2026-41089（CVSS 9.8）が CISA KEV 追加・積極悪用確認（6/13）— ドメインコントローラーへの 0 クリック SYSTEM RCE・ランサムウェア展開に悪用・5 月 Patch Tuesday パッチを即時適用</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;「Atomic Arch」Arch Linux AUR 400+ パッケージ汚染（6/13）— eBPF ルートキット＋Rust インフォスティーラー・SSH 鍵/GitHub/クラウド認証情報を Tor C2 へ窃取・約 1,500 パッケージに拡大</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;九州電力送配電が未暗号化 SSD 紛失・1,090 万件顧客情報漏洩の恐れ（6/12）— 日本史上最大・氏名・住所・電力使用量・電話番号が対象・経産省が詳細報告を要求</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Windows カーネル CVE-2026-45657（CVSS 9.8）— EternalBlue 類似のワーム型 TCP/IP RCE・未認証 SYSTEM 権限・WannaCry 規模の伝播リスク・6 月 Patch Tuesday でパッチ提供済み（6/13）</span>
       <!-- 2026-06-12 新着 (1/2) -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;ServiceNow が未認証 API 脆弱性による顧客データ侵害を公開（6/12）— requires_authentication=false の API が外部公開・IT チケット・従業員記録が露出・Australia リリース顧客直撃・6/5 緊急パッチ適用済み</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Microsoft Defender ゼロデイ「RoguePlanet」PoC 公開（6/12）— 最新 Windows 11/10 でレースコンディション悪用・SYSTEM 権限取得・パッチ未提供・Chaotic Eclipse が発表</span>
@@ -942,6 +952,162 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-06-13 新着 -->
+
+    <!-- CARD: Windows Netlogon CVE-2026-41089 Active Exploitation 2026-06-13 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|インシデント">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">インシデント</span>
+          <span class="timestamp">2026-06-13 09:00</span>
+        </div>
+        <div class="card-title">Windows Netlogon CVE-2026-41089（CVSS 9.8）が CISA KEV 追加・ランサムウェアによる積極悪用を確認 — 0クリック・未認証でドメインコントローラーを SYSTEM 権限で乗っ取り・5月 Patch Tuesday パッチを即時適用（6月13日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Windows Netlogon のスタックベースバッファオーバーフロー（CVE-2026-41089 CVSS 9.8）が実際の攻撃で悪用されていることを CISA が確認し KEV カタログに追加。ドメインコントローラーへ特別細工した Netlogon パケットを送るだけで、ユーザー操作なしに SYSTEM レベル RCE が成立する。</li>
+            <li>Active Directory ドメインコントローラーを完全掌握されることで、ドメイン全体のアカウント操作・横展開・ランサムウェア展開が可能となる。すべてのサポート対象 Windows Server バージョンが影響を受ける。</li>
+            <li>Microsoft は 2026 年 5 月 12 日 Patch Tuesday でパッチ提供済み。CISA は連邦機関へ即時適用を義務化。未適用のドメインコントローラーは直ちに 5 月累積更新プログラムを適用すること。</li>
+          </ul>
+        </div>
+        <div class="card-detail">BleepingComputer が 6 月 13 日に報道。Windows Netlogon の 0 クリック RCE 脆弱性 CVE-2026-41089（CVSS 9.8）が Active Directory ドメインコントローラーを標的としたランサムウェアキャンペーンで積極悪用されていることが確認された。CISA は同脆弱性を KEV カタログに追加。2026 年 5 月 Patch Tuesday パッチ未適用の組織は直ちに適用が必要。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/microsoft/critical-windows-netlogon-remote-code-execution-flaw-now-exploited-in-attacks/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Atomic Arch AUR Supply Chain Attack 2026-06-13 -->
+    <article class="card high" data-severity="high" data-tags="サプライチェーン|Linux">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">サプライチェーン</span><span class="tag">Linux</span>
+          <span class="timestamp">2026-06-13 09:00</span>
+        </div>
+        <div class="card-title">「Atomic Arch」Arch Linux AUR 400+パッケージをサプライチェーン攻撃で汚染 — Rust 製インフォスティーラー＋eBPF カーネルルートキット・SSH 鍵/GitHub/クラウド認証情報を Tor C2 へ窃取・約 1,500 パッケージに拡大（6月13日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Sonatype が「Atomic Arch」と命名したキャンペーンで、攻撃者が AUR（Arch User Repository）の孤立パッケージのオーナーシップを正規プロセスで取得し PKGBUILD を改ざん。yay/paru でビルドすると悪意の npm パッケージ（atomic-lockfile）が自動インストールされる。</li>
+            <li>ペイロードは Rust 製インフォスティーラーと eBPF ルートキット（scales.bpf.c でカーネル getdents64 をフックして PID/ファイル/ソケットを隠蔽）で構成。SSH 鍵・GitHub/npm トークン・Slack/Discord・HashiCorp Vault・AWS/GCP 認証情報を Tor C2 へ送信し systemd で永続化。</li>
+            <li>公式リポジトリ（[core][extra][multilib]）は無影響。GitHub の aur-malware-check（lenucksi/aur-malware-check）で感染確認可能。AUR パッケージのビルド前に PKGBUILD を必ず手動確認すること。</li>
+          </ul>
+        </div>
+        <div class="card-detail">6 月 13 日、BleepingComputer が Sonatype の調査を報道。攻撃者は AUR の正規孤立パッケージを乗っ取り PKGBUILD にバックドアを仕込む手法で、eBPF ルートキット付き Rust 製インフォスティーラーを Linux 開発者に配布。約 400〜1,500 パッケージが影響し SSH 鍵・クラウド認証情報・開発者トークンが Tor C2 に流出。公式リポジトリは安全。即時スキャンと PKGBUILD の手動審査を推奨。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/over-400-arch-linux-packages-compromised-to-push-rootkit-infostealer/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Kyushu Electric Power SSD Loss 2026-06-12 -->
+    <article class="card high" data-severity="high" data-tags="データ漏洩|日本">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">データ漏洩</span><span class="tag">日本</span>
+          <span class="timestamp">2026-06-12 09:00</span>
+        </div>
+        <div class="card-title">九州電力送配電が未暗号化 SSD 紛失・1,090 万件顧客情報が漏洩の恐れ（日本史上最大規模）— 氏名・住所・電力使用量・電話番号が対象・5月26日に紛失発覚・6月4日に警察届出（6月12日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>九州電力送配電が 4 月 27 日にバックアップ作業で使用した外部 SSD を、5 月 26 日の取り出し時に紛失確認。SSD は暗号化もパスワード保護も施されておらず、施錠管理されていたサーバー室キャビネットが解錠状態で発見されていた。</li>
+            <li>SSD には顧客の氏名・供給地点の住所・電力使用量データ・電話番号が最大 1,090 万件含まれる可能性。銀行口座・クレジットカード情報は含まれないとされるが、2016 年の JTB 漏洩（793 万件）を上回る日本史上最大規模の個人情報インシデント。</li>
+            <li>6 月 4 日に警察へ届出済み。サーバー室入室者全員への聞き取り調査を実施したが所在不明のまま。経済産業省は 7 月 8 日までに詳細報告と再発防止策の提出を要求。</li>
+          </ul>
+        </div>
+        <div class="card-detail">6 月 8 日に公表・12 日に BleepingComputer が報道。九州電力送配電の未暗号化 SSD 紛失は日本史上最大規模の個人情報インシデント。氏名・住所・電力使用量・電話番号を含む 1,090 万件が流出した可能性があり、物理セキュリティ（施錠管理・SSD 暗号化）の不備が根本原因。経産省が詳細報告を要求中。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/japanese-energy-firm-loses-drive-with-data-of-109-million-clients/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Windows Kernel CVE-2026-45657 EternalBlue-like 2026-06-13 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|Windows">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">Windows</span>
+          <span class="timestamp">2026-06-13 09:00</span>
+        </div>
+        <div class="card-title">Windows カーネル TCP/IP 脆弱性 CVE-2026-45657（CVSS 9.8）— EternalBlue 類似のワーム型ネットワーク伝播特性・未認証で SYSTEM RCE・特別細工 TCP/IP パケット 1 つで悪用・6 月 Patch Tuesday でパッチ提供（6月13日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Windows カーネルの TCP/IP 処理における Use-After-Free（UAF）で、未認証の攻撃者が特別細工した TCP/IP パケットを送信するだけで SYSTEM 権限でのコード実行が可能。ユーザー操作は不要で、ネットワーク越しに直接悪用できる（CVSS 9.8）。</li>
+            <li>ZDI（Zero Day Initiative）が、本脆弱性は EternalBlue（WannaCry で悪用・MS17-010）と同様のネットワーク自己伝播（ワーム）特性を持つと評価。Windows 11 23H2/24H2/25H2/26H1 および Windows Server 全対象バージョンが影響を受ける。</li>
+            <li>6 月 9 日 Patch Tuesday でパッチ提供済み（6 月累積更新プログラム）。WannaCry 類似の大規模伝播リスクがあるため、インターネット公開サーバーおよびすべての Windows 環境で即時適用が強く推奨される。</li>
+          </ul>
+        </div>
+        <div class="card-detail">Microsoft が 6 月 Patch Tuesday で開示した CVE-2026-45657（CVSS 9.8）は、Windows カーネルの TCP/IP UAF による未認証ネットワーク RCE。ZDI はその自己伝播特性が EternalBlue（MS17-010）と類似すると警告しており、WannaCry 規模の被害が懸念される。6 月累積更新プログラムの即時適用が必須。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://windowsforum.com/threads/cve-2026-45657-critical-windows-kernel-rce-patch-guide-june-2026.424340/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: UpdraftPlus CVE-2026-10795 2026-06-13 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|WordPress">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">WordPress</span>
+          <span class="timestamp">2026-06-13 09:00</span>
+        </div>
+        <div class="card-title">UpdraftPlus WordPress プラグイン CVE-2026-10795（Critical）— 300 万超サイトで未認証 RCE リスク・AES-128 鍵が全ゼロに崩壊する認証バイパスで管理者コマンドを偽造・v1.26.5 でパッチ（6月11日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>UpdraftPlus の UpdraftCentral リモート通信機能（wp_loaded）にメッセージ形式の検証不備が存在。偽の値を渡すと AES-128 暗号鍵が決定論的な全ゼロキーに崩壊し、攻撃者が自ら細工したコマンドをローカルで暗号化してサーバーに送信可能となる。</li>
+            <li>UpdraftCentral キーまたは Migrator キーを設定しているサイトが対象。管理者として偽造した RPC コマンドで任意プラグインのアップロード・有効化が可能となり、リモートコード実行に至る。300 万超のアクティブインストールが潜在的リスク。</li>
+            <li>2026 年 6 月 2 日に発見・報告。6 月 11 日に v1.26.5 でパッチ提供済み。UpdraftCentral キーを使用しているサイトは直ちに更新のこと。</li>
+          </ul>
+        </div>
+        <div class="card-detail">6 月 11 日に公表された UpdraftPlus CVE-2026-10795（Critical）は、AES-128 鍵が全ゼロに崩壊する認証バイパスにより未認証攻撃者が管理者 RPC コマンドを偽造可能。300 万超の WordPress サイトで任意プラグインアップロード経由の RCE リスクが存在する。v1.26.5 でパッチ済み。UpdraftCentral キー使用サイトは即時更新が必須。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://securityonline.info/updraftplus-cve-2026-10795-exploit/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: phpBB CVE-2026-48611 Auth Bypass 2026-06-13 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|Web">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">Web</span>
+          <span class="timestamp">2026-06-13 09:00</span>
+        </div>
+        <div class="card-title">phpBB CVE-2026-48611 — 10 年間潜伏した未認証アカウント完全乗っ取り脆弱性・ユーザー名のみで HTTP リクエスト 1 つ・管理者含む全アカウントに偽装可能・v3.3.17 でパッチ（6月13日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>phpBB フォーラムソフトウェアのデータベース認証モードに 10 年前から潜伏していた認証バイパス脆弱性。未認証攻撃者はターゲットのユーザー名だけで HTTP リクエスト 1 つでそのユーザーの認証済みセッションを取得できる。デフォルトのメンバーリスト公開設定でユーザー名は容易に入手可能。</li>
+            <li>phpBB 3.x および 4.x の全リリース（〜3.3.16・〜4.0.0-a2）のデフォルトインストール環境がそのまま脆弱。管理者アカウントを乗っ取られた場合はフォーラム完全掌握・バックドア設置・会員情報大量窃取が可能となる。</li>
+            <li>Pentest-Tools.com の Dan Stefan Alexandru が 6 月 4 日に報告。phpBB は即日対応し 6 月 6 日に v3.3.17 でパッチを提供。6 月 13 日に BleepingComputer が公開詳報。即時アップデートを推奨。</li>
+          </ul>
+        </div>
+        <div class="card-detail">6 月 13 日 BleepingComputer 報道。phpBB のデータベース認証に 10 年前から存在した認証バイパス CVE-2026-48611 は、ユーザー名のみで HTTP 1 リクエストにより任意ユーザーの認証済みセッションを取得可能。全 3.x/4.x のデフォルトインストールが対象で、6 月 6 日公開の v3.3.17 で修正済み。フォーラム運営者は直ちにアップデートすること。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/phpbb-forum-fixes-auth-bypass-bug-lurking-for-a-decade/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: PwC Annual Threat Dynamics 2026 MEDIUM Report -->
+    <article class="card medium" data-severity="medium" data-tags="レポート|AI">
+      <div class="severity"><div class="sev-icon">●</div><div class="sev-label">MEDIUM</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">レポート</span><span class="tag">AI</span>
+          <span class="timestamp">2026-06-13 09:00</span>
+        </div>
+        <div class="card-title">PwC「Annual Threat Dynamics 2026」— 「ログインで侵入」が主流・AI が攻撃を機械速度に加速・アイデンティティ攻撃急増・製造業へのランサムウェアが継続拡大（2026年版脅威動向報告書）</div>
+        <div class="card-summary">
+          <ul>
+            <li>攻撃者が従来の「侵入して破る」から「正規認証情報でログインする」戦術に移行。セッショントークン・フェデレーテッドアクセス悪用・DeepFake を駆使した IT ヘルプデスクなりすましなど、AI 強化型のソーシャルエンジニアリングがアイデンティティ侵害の主因となっている。</li>
+            <li>AI が攻撃ライフサイクル全体を加速。偵察の自動化・多言語フィッシング生成・マルウェア開発の高速化・自律エージェントによるフル攻撃シーケンス実行など、AI 兵器化が「攻撃者のトレードクラフトの核心」になりつつある。</li>
+            <li>製造業への標的型ランサムウェアが引き続き増加。歴史的に分離されていた OT 環境が IT ネットワークに接続される動きが攻撃者に活用されており、サイバーリスクは技術的問題から経営戦略的課題へと移行が加速。</li>
+          </ul>
+        </div>
+        <div class="card-detail">PwC が公開した「Annual Threat Dynamics 2026」は、アイデンティティ攻撃の急増と AI による攻撃高速化を主要トレンドとして分析。防御より先に AI を武器化した攻撃者が「ログインで侵入」する戦術を主流とし、DeepFake・多言語フィッシング・自律エージェント攻撃が現実的脅威。製造業と OT 環境への継続リスク、サイバーリスクの戦略的課題化も指摘。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.pwc.com/gx/en/issues/cybersecurity/cyber-threat-intelligence/annual-threat-dynamics.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARDS: 2026-06-12 新着 -->
 
