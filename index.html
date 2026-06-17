@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-06-16 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-06-17 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,6 +656,16 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-06-17 新着 (1/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Mastra npm 144 パッケージが「easy-day-js」偽依存でバックドア汚染 — 北朝鮮系 Sapphire Sleet が週 100 万 DL 超の AI 開発環境に侵入・AWS/OpenAI/Anthropic 認証情報を窃取（6/17）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;「FortiBleed」— FortiGate VPN 認証情報 73,932 台分が 194 か国規模で流出・Chevron・Samsung・Toyota ら大企業含む・ロシア語話者グループが 1.16 億回の自動クレデンシャルスタッフィング（6/17）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;DragonForce が「Backdoor.Turn」で Microsoft Teams TURN リレーを C2 に悪用・野生初実装・匿名トークン取得→QUIC で完全偽装・2 か月潜伏後にランサムウェア展開（Symantec 6/16）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Joomla JCE CVE-2026-48907（CVSS 10.0）CISA KEV 追加・未認証 PHP コード実行・偽エディタプロファイルでウェブシェル設置・v2.9.99.5 でパッチ・連邦機関 7/7 期限（6/16）</span>
+      <!-- 2026-06-17 新着 (2/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Mastra npm 144 パッケージが「easy-day-js」偽依存でバックドア汚染 — 北朝鮮系 Sapphire Sleet が週 100 万 DL 超の AI 開発環境に侵入・AWS/OpenAI/Anthropic 認証情報を窃取（6/17）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;「FortiBleed」— FortiGate VPN 認証情報 73,932 台分が 194 か国規模で流出・Chevron・Samsung・Toyota ら大企業含む・ロシア語話者グループが 1.16 億回の自動クレデンシャルスタッフィング（6/17）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;DragonForce が「Backdoor.Turn」で Microsoft Teams TURN リレーを C2 に悪用・野生初実装・匿名トークン取得→QUIC で完全偽装・2 か月潜伏後にランサムウェア展開（Symantec 6/16）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Joomla JCE CVE-2026-48907（CVSS 10.0）CISA KEV 追加・未認証 PHP コード実行・偽エディタプロファイルでウェブシェル設置・v2.9.99.5 でパッチ・連邦機関 7/7 期限（6/16）</span>
       <!-- 2026-06-16 新着 (1/2) -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;SimpleHelp CVE-2026-48558（CVSS 10.0）— OIDC 認証バイパスで未認証が技術者アカウントを即時作成・MFA 回避・14,000 台超が公開稼働・v5.5.16 でパッチ（6/16）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;中国系 APT「UNC6508」が REDCap サーバーを悪用し北米医療・軍事・AI 研究機関に 2 年超のスパイ侵害 — Google Workspace ルール書き換えで機密研究メールを自動流出（Google GTIG・6/15）</span>
@@ -990,6 +1000,140 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-06-17 新着 -->
+
+    <!-- CARD: Mastra npm Sapphire Sleet supply chain 2026-06-17 -->
+    <article class="card high" data-severity="high" data-tags="サプライチェーン|NPM">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">サプライチェーン</span><span class="tag">NPM</span>
+          <span class="timestamp">2026-06-17 09:00</span>
+        </div>
+        <div class="card-title">Mastra npm フレームワーク 144 パッケージが「easy-day-js」偽依存でバックドア汚染 — 北朝鮮系 Sapphire Sleet（BlueNoroff）が 88 分の自動攻撃で週 100 万 DL 超の AI 開発環境に侵入・AWS/OpenAI/Anthropic 認証情報を窃取（6月17日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>乗っ取り済み npm コントリビューターアカウント（ehindero）を悪用し @mastra スコープ全 142 パッケージと mastra・create-mastra を dayjs のタイポスクワット「easy-day-js」に依存するよう 88 分間の自動キャンペーンで書き換え</li>
+            <li>postinstall フックで起動するクロスプラットフォーム情報窃取マルウェアが AWS・OpenAI・Anthropic 認証情報・暗号資産ウォレットを窃取・週 110 万 DL の @mastra/core を含む AI エージェント開発者全体が影響範囲</li>
+            <li>Snyk・Orca が Sapphire Sleet（BlueNoroff）北朝鮮 APT に帰属・感染環境では全認証情報を即時ローテート・暗号資産ウォレットを新規デバイスで再生成・npm キャッシュと永続化アーティファクトの除去が必須</li>
+          </ul>
+        </div>
+        <div class="card-detail">北朝鮮系 Sapphire Sleet（BlueNoroff）が Mastra AI エージェントフレームワークの npm コントリビューターアカウントを侵害し 144 パッケージにクロスプラットフォーム情報窃取マルウェアを埋め込んだ。週 110 万 DL 超の AI 開発基盤への汚染は DevOps パイプライン全体に及ぶ深刻なサプライチェーンリスクをもたらす。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/06/144-mastra-npm-packages-compromised-via.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: FortiBleed Fortinet credential leak 2026-06-17 -->
+    <article class="card high" data-severity="high" data-tags="認証情報漏洩|ネットワーク機器">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">認証情報漏洩</span><span class="tag">ネットワーク機器</span>
+          <span class="timestamp">2026-06-17 09:00</span>
+        </div>
+        <div class="card-title">「FortiBleed」— FortiGate VPN 認証情報 73,932 台分が 194 か国規模で流出・Chevron・Samsung・Toyota ら大企業が対象・ロシア語話者グループが 1.16 億回のクレデンシャルスタッフィング・45 GPU クラスターでハッシュクラック（6月17日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>ロシア語話者の犯罪グループがインターネット公開 32 万台超の FortiGate を自動スキャンし、過去情報窃取マルウェアで収集したクレデンシャルを再利用・45 GPU クラスターでオフラインクラック後に 73,932 台の有効 VPN ログイン情報を確認済み</li>
+            <li>流出データに Chevron・Samsung・Foxconn・Comcast・AT&amp;T・Toyota・Mercedes-Benz・中国国家電網など世界的大企業・重要インフラが含まれ 194 か国に及ぶ最大規模の Fortinet 認証情報流出として認定</li>
+            <li>CVE 番号なし（ゼロデイ不使用）— パスワード未ローテートが根本原因・即時 FortiGate VPN 認証情報の一括変更・多要素認証の強制有効化・不審ログインセッションの点検が必須</li>
+          </ul>
+        </div>
+        <div class="card-detail">「FortiBleed」は新脆弱性ではなく、過去の情報窃取マルウェアで収集された未ローテートのパスワードを大規模再利用した認証情報収穫キャンペーン。73,932 台の有効クレデンシャルが確認済みであり、世界的大企業や重要インフラを含む組織は即時に VPN パスワードを変更し MFA を有効化する必要がある。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/fortibleed-leak-exposes-fortinet-vpn-credentials-for-73-000-devices/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: DragonForce Backdoor.Turn Microsoft Teams C2 2026-06-16 -->
+    <article class="card high" data-severity="high" data-tags="ランサムウェア|C2回避">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">ランサムウェア</span><span class="tag">C2回避</span>
+          <span class="timestamp">2026-06-16 09:00</span>
+        </div>
+        <div class="card-title">DragonForce ランサムウェアが「Backdoor.Turn」で Microsoft Teams TURN リレーを C2 に悪用 — 野生初実装・匿名 Teams トークン取得→QUIC セッションで C2 通信を正規トラフィックに完全偽装・米大手企業に 2 か月潜伏（Symantec 6月16日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>DragonForce が Go 製カスタムバックドア「Backdoor.Turn」を開発・Microsoft の Skype バックエンド ID サービスで匿名 Teams ビジタートークンを取得し TURN リレー越しに QUIC セッションを張り実際の C2 と通信する野生初の実装を確認</li>
+            <li>米国の大手サービス企業に 2 ヶ月間潜伏しながらすべての C2 通信を正規の Microsoft Teams ネットワークトラフィックとして偽装・SIEM・EDR・ファイアウォールによる検出を大幅に困難化してランサムウェアを最終展開</li>
+            <li>2025 年に Praetorian が「Ghost Calls」として概念実証した手法の実戦投入・Teams を使用する組織は外部アクセス設定の審査・匿名ビジタートークンの発行制御・QUIC 通信の異常監視強化が推奨される</li>
+          </ul>
+        </div>
+        <div class="card-detail">DragonForce ランサムウェアが Microsoft Teams の TURN リレーを C2 通信に偽装する「Backdoor.Turn」を野生初投入。匿名ビジタートークンで QUIC セッションを確立し C2 通信を正規 Teams トラフィックに溶け込ませる手法は EDR・SIEM・ファイアウォール全レイヤーを回避する高度な検出回避技術であり、模倣犯の急増が懸念される。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/ransomware-gang-abuses-microsoft-teams-relays-to-hide-malicious-traffic/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Joomla JCE CVE-2026-48907 CISA KEV 2026-06-16 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|CMS">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">CMS</span><span class="tag">CISA KEV</span>
+          <span class="timestamp">2026-06-16 09:00</span>
+        </div>
+        <div class="card-title">Joomla コンテンツエディタ（JCE）CVE-2026-48907（CVSS 10.0）が CISA KEV 追加・積極悪用確認 — 偽エディタプロファイル経由でウェブシェル設置・未認証 PHP コード実行・v2.9.99.5 でパッチ・連邦機関 7/7 期限（6月16日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Widget Factory 製 Joomla コンテンツエディタ（JCE）の不適切アクセス制御（CVE-2026-48907 CVSS 10.0）により認証不要のユーザーが偽のエディタプロファイルを作成し PHP ファイルをアップロード・実行してウェブシェルを永続設置できる</li>
+            <li>JCE バージョン 1.0.0〜2.9.99.4 が対象・2026 年 6 月 3 日に v2.9.99.5 でパッチ提供済み・CISA が 6 月 16 日に KEV カタログ追加・自動化ツールによる大規模スキャン攻撃が展開中</li>
+            <li>米連邦政府機関（FCEB）に BOD 26-04 に基づき 7 月 7 日までの修正が義務化・Joomla を使用する全組織は即時 JCE を v2.9.99.5 以降へ更新し既存のウェブシェル設置がないか点検すること</li>
+          </ul>
+        </div>
+        <div class="card-detail">Joomla の人気コンテンツエディタ拡張 JCE に CVSS 10.0 の未認証 RCE が確認され CISA KEV に追加。攻撃者は偽のエディタプロファイル作成→PHP ウェブシェルアップロードの 2 ステップでサーバーを完全掌握できる。自動化された大規模スキャンが既に進行中であり JCE を使用する全 Joomla サイトは即時アップデートが必須。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/06/cisa-warns-of-actively-exploited-joomla.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: ThingsBoard CVE-2026-53676 JVN 2026-06-16 -->
+    <article class="card high" data-severity="high" data-tags="IoT|脆弱性">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">IoT</span><span class="tag">脆弱性</span>
+          <span class="timestamp">2026-06-16 09:00</span>
+        </div>
+        <div class="card-title">ThingsBoard IoT プラットフォーム CVE-2026-53676（CVSS 7.2）— プロトタイプ汚染によるサンドボックス内任意コード実行・TENANT_ADMIN 権限で悪用可能・JVN#16937365 公開・LAC Co., Ltd. が発見（6月16日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>オープンソース IoT プラットフォーム ThingsBoard のプロトタイプ汚染（CWE-1321）脆弱性 CVE-2026-53676（CVSS 7.2）が JVN#16937365 として公開・TENANT_ADMIN 権限でログインできるユーザーがサンドボックス化されたコンテキスト内で任意コードを実行可能</li>
+            <li>IoT デバイス管理・データ可視化・アラート管理などの機能で広く使われる ThingsBoard は製造・スマートシティ・エネルギー分野で採用が多く、テナント管理者を含む多様な組織に影響が及ぶ</li>
+            <li>株式会社ラック（LAC Co., Ltd.）が JPCERT/CC を通じて脆弱性を報告・影響を受けるバージョンから修正済みバージョンへの更新、または ThingsBoard へのアクセス制御強化を推奨</li>
+          </ul>
+        </div>
+        <div class="card-detail">製造・エネルギー・スマートシティ分野で広く採用される IoT 管理プラットフォーム ThingsBoard にプロトタイプ汚染による任意コード実行脆弱性が確認された。テナント管理者権限（TENANT_ADMIN）を持つ悪意あるユーザーがサンドボックス制約を回避してコードを実行できる点が懸念され、クラウド型デプロイ環境では特に注意が必要。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://jvn.jp/en/jp/JVN16937365/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Canon EOS Network Setting Tool CVE-2026-9258~9262 JVN 2026-06-16 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|カメラ">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">カメラ</span>
+          <span class="timestamp">2026-06-16 09:00</span>
+        </div>
+        <div class="card-title">Canon EOS ネットワーク設定ツールに通信セキュリティ脆弱性 5 件（CVE-2026-9258〜9262 CVSS 最大 7.6）— SSH ホスト鍵検証不備・ハードコード暗号鍵・弱い SSH アルゴリズム・FTP デフォルト設定の組み合わせで中間者攻撃によるパスワード傍受が可能（JVN 6月16日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Canon EOS ユーティリティインストーラーに同梱される EOS ネットワーク設定ツール（FTP/FTPS/SFTP 通信テスト機能）に 5 件の通信セキュリティ脆弱性（CVE-2026-9258〜9262）— SSH ホスト鍵の不適切な検証（CVSS 7.1）・サーバー証明書の不適切な検証（7.1）・ハードコード暗号鍵（6.9）・弱い SSH 暗号化アルゴリズム（7.6）・FTP デフォルト設定（7.1）</li>
+            <li>中間者位置の攻撃者が通信を傍受・改ざんすることで EOS カメラのネットワーク越し接続情報・ファイル転送内容を窃取できる・放送・映像制作・企業イントラネットでの EOS カメラ運用環境が特に影響を受ける</li>
+            <li>Canon PSIRT（CP2026-005）が修正バージョンを 6 月 16 日に公開・EOS ネットワーク設定ツールを最新版へ更新すること・更新適用まで FTP の代わりに SFTP を使用しネットワーク経由の通信を最小化することを推奨</li>
+          </ul>
+        </div>
+        <div class="card-detail">Canon EOS ユーティリティに同梱されるネットワーク設定ツールに SSH・FTPS・FTP の通信セキュリティに関わる 5 件の脆弱性が同時公開された。いずれも中間者攻撃による認証情報・転送ファイルの傍受を可能にするもので、放送・映像制作・企業イントラネットでの EOS カメラ利用組織は速やかなアップデートが求められる。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://psirt.canon/advisory-information/cp2026-005/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARDS: 2026-06-16 新着 -->
 
