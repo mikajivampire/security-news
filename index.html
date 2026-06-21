@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-06-20 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-06-21 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,6 +656,18 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-06-21 新着 (1/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;F5 が NGINX に帯域外 Critical パッチ — HTTP/3 UAF（CVE-2026-42530 CVSS 9.2）と HTTP/2 ヒープオーバーフロー（CVE-2026-42055 CVSS 9.2）で未認証 RCE 経路・1.31.2/1.30.3 へ即時更新（6/19）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;新脅威アクター「Icarus」が Klue の OAuth トークンを悪用し Salesforce・Gong から大量データを窃取・Huntress ら著名セキュリティ企業多数が被害（6/19）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;北朝鮮 APT37（ScarCruft）が偽 Microsoft 警告メールで新型 RAT「NarwhalRAT」を展開・30 超の機能・pCloud API と韓国 Web サイトを C2 に悪用（6/16）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;JetBrains Marketplace の AI プラグイン 15 件（7 万 DL 超）が AI API キーを窃取する悪意コードを内包・DeepSeek/ChatGPT 偽装で 2025 年 10 月から稼働・JetBrains がリモート強制無効化（6/20）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;FortiSandbox の Critical 脆弱性 3 件（CVE-2026-39813 CVSS 9.1 など）が同時に積極悪用確認・マルウェア解析基盤自体の侵害で防御体制全体に影響・5.0.6/4.4.9 へ即時更新（6/16）</span>
+      <!-- 2026-06-21 新着 (2/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;F5 が NGINX に帯域外 Critical パッチ — HTTP/3 UAF（CVE-2026-42530 CVSS 9.2）と HTTP/2 ヒープオーバーフロー（CVE-2026-42055 CVSS 9.2）で未認証 RCE 経路・1.31.2/1.30.3 へ即時更新（6/19）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;新脅威アクター「Icarus」が Klue の OAuth トークンを悪用し Salesforce・Gong から大量データを窃取・Huntress ら著名セキュリティ企業多数が被害（6/19）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;北朝鮮 APT37（ScarCruft）が偽 Microsoft 警告メールで新型 RAT「NarwhalRAT」を展開・30 超の機能・pCloud API と韓国 Web サイトを C2 に悪用（6/16）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;JetBrains Marketplace の AI プラグイン 15 件（7 万 DL 超）が AI API キーを窃取する悪意コードを内包・DeepSeek/ChatGPT 偽装で 2025 年 10 月から稼働・JetBrains がリモート強制無効化（6/20）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;FortiSandbox の Critical 脆弱性 3 件（CVE-2026-39813 CVSS 9.1 など）が同時に積極悪用確認・マルウェア解析基盤自体の侵害で防御体制全体に影響・5.0.6/4.4.9 へ即時更新（6/16）</span>
       <!-- 2026-06-19 新着 (1/2) -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;ShinyHunters が Eastman Kodak から 220 万件超のデータを窃取・同社が不正アクセスを公式確認・身代金期限 6/18 到来・「永久公開」脅迫継続中（6/19）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Microsoft 警告：USB .lnk ワームで自己伝播し Tor C2 経由でクリップボードの暗号資産を横取りする「CryptoBandits」マルウェア・2026 年 2 月から稼働（6/17）</span>
@@ -1022,6 +1034,140 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-06-21 新着 -->
+
+    <!-- CARD: F5 NGINX CVE-2026-42530 CVE-2026-42055 2026-06-21 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|Web">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">Web</span>
+          <span class="timestamp">2026-06-19 20:00</span>
+        </div>
+        <div class="card-title">F5 が NGINX に帯域外 Critical パッチ — CVE-2026-42530（HTTP/3 QUIC UAF・CVSS 9.2）と CVE-2026-42055（HTTP/2 ヒープオーバーフロー・CVSS 9.2）で未認証 RCE の恐れ・mainline 1.31.2 / stable 1.30.3 への即時更新必須（6月19日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>NGINX の HTTP/3 QUIC モジュールに Use-After-Free（CVE-2026-42530 CVSS 9.2）、HTTP/2 プロキシ/gRPC モジュールにヒープバッファオーバーフロー（CVE-2026-42055 CVSS 9.2）が存在し、いずれも未認証リモートコード実行の経路となりうる</li>
+            <li>CVE-2026-42530 は NGINX 1.31.x 系（HTTP/3 対応ブランチ）のみ対象で、細工した HTTP/3 セッションによる QPACK エンコーダストリーム再オープンでメモリ破壊を引き起こす・CVE-2026-42055 は HTTP/2 バックエンドプロキシ環境で特定の非デフォルト設定が重なった場合に発動</li>
+            <li>F5 が 6 月 17 日に帯域外（Out-of-Band）緊急アドバイザリを発行・mainline は 1.31.2・stable は 1.30.3 でパッチ提供済み・前回同クラスの NGINX 脆弱性では開示後 3 日以内に実悪用が確認された先例がある</li>
+          </ul>
+        </div>
+        <div class="card-detail">F5 が NGINX の HTTP/3（QUIC）モジュールと HTTP/2 プロキシモジュールに存在する 2 件の Critical 脆弱性（CVE-2026-42530・CVE-2026-42055、各 CVSS 9.2）に対する帯域外緊急パッチを公開した。HTTP/3 の Use-After-Free は細工された QPACK エンコーダストリームによるメモリ破壊で、ASLR が無効な環境や ASLR バイパスが可能な条件下では任意コード実行につながる。エッジ・CDN・リバースプロキシ基盤として広く使われる NGINX は攻撃者にとって高価値標的であり、早急なバージョンアップが求められる。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/f5-issues-out-of-band-patches-for-critical-nginx-vulnerabilities/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Klue OAuth Breach Icarus Group 2026-06-21 -->
+    <article class="card high" data-severity="high" data-tags="インシデント|サプライチェーン">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">サプライチェーン</span>
+          <span class="timestamp">2026-06-19 18:00</span>
+        </div>
+        <div class="card-title">新脅威アクター「Icarus」が Klue の OAuth トークンを悪用し Salesforce・Gong・HubSpot などから企業データを大量窃取 — Huntress・Recorded Future・Tanium ら多数のセキュリティ企業が被害・Salesforce がアプリ統合を即時無効化（6月19日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>マーケット・インテリジェンス SaaS「Klue」が 6 月 12 日に OAuth 統合インフラへの不正侵入を確認・放置されたレガシー認証情報を起点にバックエンドコードを改ざん、顧客の Salesforce・Gong・HubSpot・SharePoint・Slack などへの OAuth トークンを一括窃取した</li>
+            <li>攻撃者グループ「Icarus」（2026 年 4 月出現）が Python スクリプトで Salesforce API を自動クエリし、ビジネスコンタクト・商談情報・価格情報・通話記録を大量抽出・Huntress・Recorded Future・Tanium・Jamf・Sprout Social・Insurity を含む複数の著名セキュリティ企業が被害</li>
+            <li>Salesforce は Klue アプリ統合を即時無効化・Klue は全 OAuth トークンを失効させ CrowdStrike によるインシデントレスポンスを実施・Icarus は被害組織への恐喝メール送付を開始しており被害の拡大が懸念される</li>
+          </ul>
+        </div>
+        <div class="card-detail">市場情報プラットフォーム Klue が OAuth サプライチェーン攻撃を受け、顧客の Salesforce・Gong・HubSpot・SharePoint 等への認証トークンが流出した。攻撃者グループ「Icarus」はプロトタイプ用の未削除レガシー認証情報でバックエンドに侵入し、顧客 OAuth トークンを使った Salesforce API の自動クエリで大量データを抽出した。Huntress を含む著名セキュリティ企業が被害を受けており、SaaS 統合における認証情報ライフサイクル管理の重要性が改めて浮き彫りとなった。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/klue-oauth-breach-linked-to-icarus-salesforce-data-theft-attacks/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: JetBrains malicious AI plugins 2026-06-21 -->
+    <article class="card high" data-severity="high" data-tags="サプライチェーン|マルウェア">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">サプライチェーン</span><span class="tag">マルウェア</span>
+          <span class="timestamp">2026-06-20 10:00</span>
+        </div>
+        <div class="card-title">JetBrains Marketplace の AI コーディング補助プラグイン 15 件（計 7 万インストール超）が AI プロバイダー API キーを C2 に送信する悪意コードを内包 — DeepSeek・ChatGPT 偽装・2025 年 10 月から稼働・JetBrains がリモート強制無効化（6月20日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>JetBrains Marketplace で AI コーディングアシスタントを装う 15 本のプラグイン（7 パブリッシャーアカウント・計約 7 万インストール）が、ユーザーが設定した OpenAI・Anthropic・DeepSeek 等の AI プロバイダー API キーをハードコードされた C2 サーバー（39.107.60[.]51）へ HTTP 平文で送信していた</li>
+            <li>2025 年 10 月から順次公開・2026 年 6 月 10 日まで新規追加が継続・「DeepSeek AI Assist」（27,727 DL）・「CodeGPT AI Assistant」（25,571 DL）が最多 DL で、チャット補完・コードレビュー・テスト生成など正常機能を維持しながら API キーを窃取していたため発覚が困難だった</li>
+            <li>JetBrains が 6 月 16 日に報告を受け当日中に全プラグイン・関連アカウントを削除し、バックエンドシステムで既インストール済み IDE に対してリモート強制無効化を実施・影響を受けた可能性があるユーザーは AI プロバイダーの API キーを即時ローテーションすること</li>
+          </ul>
+        </div>
+        <div class="card-detail">JetBrains Marketplace で AI コーディングツールを偽装した 15 本の悪意プラグインが 2025 年 10 月から発見されずに稼働していたことが明らかになった。各プラグインはユーザーが設定した AI API キー（OpenAI・Anthropic・DeepSeek 等）を入力時に検証後、HTTP 平文でハードコードされた中国系 C2 サーバーに送信した。正常動作を装って高 DL 数を獲得しており、7 万件超のインストールが確認されている。JetBrains は報告当日に全削除とリモート無効化で対応したが、API キーの即時ローテーションが急務だ。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/malicious-jetbrains-marketplace-plugins-steal-ai-api-keys-from-developers/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: APT37 NarwhalRAT 2026-06-21 -->
+    <article class="card high" data-severity="high" data-tags="APT|マルウェア">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">APT</span><span class="tag">マルウェア</span>
+          <span class="timestamp">2026-06-16 14:00</span>
+        </div>
+        <div class="card-title">北朝鮮 APT37（ScarCruft）が偽 Microsoft アカウント警告メールで新型 RAT「NarwhalRAT」を展開 — RokRAT から刷新・30 超の機能でキーロギング・マイク録音・USB 収集・C2 に pCloud API と韓国 Web サイトを悪用（6月16日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>北朝鮮国家支援グループ APT37（ScarCruft）が「Microsoft アカウントへの不審ログインを確認」と偽装したスピアフィッシングメールを送付・ZIP 内の悪意 LNK ファイルが新型 RAT「NarwhalRAT」を感染端末に投下</li>
+            <li>NarwhalRAT はキーロギング・画面キャプチャ・マイク録音・USB ストレージファイル収集・遠隔コマンド実行など 30 以上の機能を持つ本格的 RAT で、APT37 が長年使用してきた RokRAT から大幅に刷新された新型マルウェアとして注目される</li>
+            <li>C2 通信には韓国の一般 Web サイト（daehoat.com・novel21.co.kr）をリレーとして使用し、pCloud クラウドストレージ API も通信経路に組み込んで検出を困難にしている・政府・外交・研究機関等が主要標的</li>
+          </ul>
+        </div>
+        <div class="card-detail">韓国セキュリティ企業 Genians が分析した北朝鮮 APT37（ScarCruft）の新型マルウェア「NarwhalRAT」は、偽 Microsoft セキュリティ警告を使ったスピアフィッシングで感染する。C2 インフラに韓国の一般 Web サイトと pCloud API を組み合わせて通信を隠蔽する設計となっており、ネットワーク監視による検出が困難だ。30 以上の RAT 機能を持つ NarwhalRAT は RokRAT の後継と分析されており、北朝鮮が APT ツールセットを継続的に高度化させていることを示す重要な事例だ。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/06/fake-microsoft-alerts-used-to-deploy.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: FortiSandbox active exploitation CVE-2026-39813 2026-06-21 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|インシデント">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">インシデント</span>
+          <span class="timestamp">2026-06-16 22:00</span>
+        </div>
+        <div class="card-title">Fortinet FortiSandbox の Critical 脆弱性 3 件（CVE-2026-39813・CVE-2026-39808・CVE-2026-25089）が同時に積極悪用を確認 — 認証バイパス・コマンドインジェクション・未認証 RCE の 3 連撃・マルウェア解析基盤自体が侵害対象に・5.0.6/4.4.9 へ即時更新（6月16日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>4 月・6 月にパッチ済みの FortiSandbox Critical 脆弱性 3 件 — CVE-2026-39813（JRPC API パストラバーサルによる認証完全バイパス・CVSS 9.1）・CVE-2026-39808（コマンドインジェクション）・CVE-2026-25089（未認証 OS コマンドインジェクション RCE・CVSS 9.8）— の実悪用が 6 月 15〜16 日に Defused Cyber によって相次いで確認された</li>
+            <li>マルウェア解析サンドボックス自体が侵害されることで、攻撃者はサンプル解析結果の改ざん・C2 通信の検出無力化・企業内部ネットワークへの横移動の足掛かりを得る可能性があり被害が通常の脆弱性より広範に及ぶ</li>
+            <li>影響バージョンは FortiSandbox 4.4.0〜4.4.8 および 5.0.0〜5.0.5・5.0.6 または 4.4.9 へのアップデートが必須・パッチ未適用環境はインターネット露出を即時遮断すること</li>
+          </ul>
+        </div>
+        <div class="card-detail">Fortinet FortiSandbox のマルウェア解析サンドボックス製品に存在する Critical 脆弱性 3 件が同時に実悪用されていることが確認された。CVE-2026-39813 は JRPC API のパストラバーサルで認証を完全バイパスする CVSS 9.1 の脆弱性、CVE-2026-25089 は未認証での OS コマンドインジェクション RCE（CVSS 9.8）。セキュリティ基盤製品そのものが侵害されるため、エンタープライズの防御体制全体に影響が波及するリスクがある。パッチ適用済みの最新バージョンへの即時更新が最優先だ。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/critical-fortinet-fortisandbox-flaws-now-exploited-in-attacks/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Fortinet 2026 Global Threat Landscape Report 2026-06-21 -->
+    <article class="card medium" data-severity="medium" data-tags="レポート|脅威動向">
+      <div class="severity"><div class="sev-icon">●</div><div class="sev-label">MEDIUM</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">レポート</span><span class="tag">脅威動向</span>
+          <span class="timestamp">2026-05-06 00:00</span>
+        </div>
+        <div class="card-title">Fortinet「2026年グローバル脅威景観レポート」— ランサムウェア被害者が前年比 389% 増（7,831 件）・AI 犯罪ツール（WormGPT/FraudGPT）が攻撃の工業化を牽引・重大脆弱性の悪用開始が開示後 24〜48 時間に短縮・640 億件のリコネッサンスイベントを観測</div>
+        <div class="card-summary">
+          <ul>
+            <li>FortiGuard Labs が 2025 年の脅威活動を包括分析した年次レポートを公開・確認済みランサムウェア被害者数が 2024 年の約 1,600 件から 7,831 件へ 389% 急増・WormGPT・FraudGPT・BruteForceAI などの AI 犯罪サービスキットが攻撃の「工業化」を加速した</li>
+            <li>重大脆弱性の悪用開始は開示後 24〜48 時間に短縮（前レポートより大幅加速）・2025 年を通じて 640 億件以上のリコネッサンスイベント・675 億件超のブルートフォース試行・1,220 億件超の悪用試行（前年比 25% 増）を観測</li>
+            <li>インフォスティーラー由来の窃取ログが前年比 79% 増・クラウドインシデントの大半は脆弱性ではなく盗難/公開された認証情報が起点であることも明確化・AI エージェントによるより包括的なデータ窃取への移行も確認</li>
+          </ul>
+        </div>
+        <div class="card-detail">Fortinet の FortiGuard Labs が公開した 2026 年グローバル脅威景観レポートは、2025 年の攻撃動向を MITRE ATT&CK フレームワークで体系的に分析した年次報告書。確認済みランサムウェア被害数が前年比約 5 倍に急増した背景には AI 犯罪ツールの普及による攻撃の自動化・工業化がある。脆弱性悪用の開始が開示後 24〜48 時間に短縮されたという事実は、組織のパッチ対応速度が防御の成否を左右する時代への移行を示している。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.fortinet.com/resources/reports/threat-landscape-report" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARDS: 2026-06-19 新着 -->
 
