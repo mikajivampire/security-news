@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-03 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-04 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,6 +656,18 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-07-04 新着 (1/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Linux カーネル「Bad Epoll」CVE-2026-46242 — epoll 競合状態 UAF で非特権ユーザーが 99% の確率で root 昇格・v6.4 以降のサーバー・デスクトップ・Android 全台が影響・分布バックポート待ち（7/4）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Avalon マルウェアフレームワーク（CrownX ランサムウェア内包）が確認 — ISO 偽法務文書でフィッシング配布・認証情報収集・横断移動・バックアップ破壊・暗号化を 1 フレームで実行（7/3）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Armored Likho が政府機関・電力セクターを BusySnake ステーラーで攻撃 — LLM で生成したローダーを使用・ロシア・ブラジル・カザフスタンを標的（7/3）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Cursor IDE「DuneSlide」CVE-2026-50548/50549（CVSS 9.8×2）— ゼロクリックプロンプトインジェクションでサンドボックス脱出・ホスト OS 上で任意コード実行・Fortune 500 企業の半数超が影響・Cursor 3.0 でパッチ（7/3）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;JADEPUFFER — 世界初の AI エージェント完全自律ランサムウェア・Langflow CVE-2025-3248 で侵入・31秒で自己修正・1,342 件の設定を暗号化・身代金払っても復旧不可（7/2）</span>
+      <!-- 2026-07-04 新着 (2/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Linux カーネル「Bad Epoll」CVE-2026-46242 — epoll 競合状態 UAF で非特権ユーザーが 99% の確率で root 昇格・v6.4 以降のサーバー・デスクトップ・Android 全台が影響・分布バックポート待ち（7/4）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Avalon マルウェアフレームワーク（CrownX ランサムウェア内包）が確認 — ISO 偽法務文書でフィッシング配布・認証情報収集・横断移動・バックアップ破壊・暗号化を 1 フレームで実行（7/3）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Armored Likho が政府機関・電力セクターを BusySnake ステーラーで攻撃 — LLM で生成したローダーを使用・ロシア・ブラジル・カザフスタンを標的（7/3）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Cursor IDE「DuneSlide」CVE-2026-50548/50549（CVSS 9.8×2）— ゼロクリックプロンプトインジェクションでサンドボックス脱出・ホスト OS 上で任意コード実行・Fortune 500 企業の半数超が影響・Cursor 3.0 でパッチ（7/3）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;JADEPUFFER — 世界初の AI エージェント完全自律ランサムウェア・Langflow CVE-2025-3248 で侵入・31秒で自己修正・1,342 件の設定を暗号化・身代金払っても復旧不可（7/2）</span>
       <!-- 2026-07-03 新着 (1/2) -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;FBI・Google が住宅型プロキシボットネット「NetNut（Popa）」を壊滅 — Android 感染デバイス 200 万台超・単週 316 脅威クラスターが C2/パスワードスプレーに悪用・FBI がドメイン差押え（7/3）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Medtronic が ShinyHunters による 900 万件超データ侵害を確認・顧客通知を開始 — 4月13〜19日侵害・PII と内部企業データが流出・医療機器への影響なし・24 か月クレジット監視を提供（7/2）</span>
@@ -1174,6 +1186,162 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-07-04 新着 -->
+
+    <!-- CARD: Linux Bad Epoll CVE-2026-46242 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|Linux">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">Linux</span>
+          <span class="timestamp">2026-07-04 09:00</span>
+        </div>
+        <div class="card-title">Linux カーネル「Bad Epoll」CVE-2026-46242 — epoll サブシステムの競合状態 UAF で非特権ユーザーが root 昇格・99% 成功率の PoC 公開・v6.4 以降のサーバー・デスクトップ・Android デバイスが全対象・メインラインパッチ済みも多数ディストリビューションで未配布（7月4日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>ソウル国立大学 CompSec Lab の Jaeyoung Chung が Linux カーネルの epoll サブシステムで競合状態 + Use-After-Free（UAF）を発見。2 つの epoll FD が互いを監視中に同時クローズされた際に解放済みメモリへのアクセスが発生し、非特権ユーザーが SYSTEM ルートに昇格できる。</li>
+            <li>PoC のタイミングウィンドウはわずか 6 命令幅だが、研究者が改良した PoC はルート昇格を 99% の確率で達成。Linux カーネル v6.4 以降で稼働するサーバー・デスクトップ・Android デバイスがすべて影響を受け、epoll はコア OS/ブラウザ機能に必須のため回避策なし。</li>
+            <li>パッチは 2026 年 4 月 24 日にメインラインカーネルへマージ済みだが、70 日間公表なしで配布されており、多くのディストリビューションはバックポート未提供。また関連する CVE-2026-43074 は Anthropic の AI モデル Mythos が独自発見した別の競合状態。即座にディストリビューションパッチを確認・適用が必要。</li>
+          </ul>
+        </div>
+        <div class="card-detail">Linux カーネルの epoll サブシステムにある競合状態 UAF（CVE-2026-46242）で非特権ローカルユーザーがルート権限を取得可能。99% 確率の PoC が公開済みで、v6.4 以降のサーバー・デスクトップ・Android が影響。回避策なし・即時パッチ適用が必須。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Avalon Malware Framework / CrownX Ransomware -->
+    <article class="card high" data-severity="high" data-tags="インシデント|ランサムウェア">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">ランサムウェア</span>
+          <span class="timestamp">2026-07-03 09:00</span>
+        </div>
+        <div class="card-title">新型モジュラーマルウェア「Avalon」フレームワークが CrownX ランサムウェアを内包 — パスワード付き ISO 偽法務文書でフィッシング配布・認証情報収集・横断移動・バックアップ破壊・暗号化を単一フレームで実行・AI 支援開発が確認（7月3日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>新たに発見されたモジュラーマルウェアフレームワーク「Avalon」は、Proton Drive 上のパスワード保護アーカイブ内に ISO イメージとして梱包された偽法務文書メールで配布。Chrome・Firefox ブラウザの認証情報・Cookie・暗号資産ウォレット（MetaMask・Phantom・Coinbase 等）・SSH・RDP・Wi-Fi プロファイルを収集する。</li>
+            <li>横断移動準備・C2 確立・ローカルバックアップ・シャドウコピー削除を完了後にランサムウェアコンポーネント CrownX を展開。AIデータ生成の痕跡（冗長なインラインコメント・箇条書き絵文字・不必要なコードブロック）が確認されており AI 支援で開発されたと推定される。</li>
+            <li>単一フレームワークで侵害初期から最終暗号化まで完結するため、個々のツールを差し替えるだけで攻撃者のスキル要件が大幅に低下。セキュリティチームは Proton Drive 経由の偽法務文書・ISO 配布を監視し、エンドポイント保護とバックアップ隔離を優先すること。</li>
+          </ul>
+        </div>
+        <div class="card-detail">新型モジュラーマルウェア「Avalon」は偽法務文書 ISO で配布され、認証情報窃取・横断移動・バックアップ破壊・CrownX ランサムウェア展開を 1 フレームで実行。AI 支援開発と推定され攻撃者の参入障壁が急低下している。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/new-avalon-malware-framework-packs.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Armored Likho BusySnake Stealer -->
+    <article class="card high" data-severity="high" data-tags="インシデント|APT">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">APT</span>
+          <span class="timestamp">2026-07-03 09:00</span>
+        </div>
+        <div class="card-title">新 APT「Armored Likho」が政府機関・電力セクターを「BusySnake Stealer」で攻撃 — LLM 生成ローダーを使用した AI 支援スパイキャンペーン・ロシア・ブラジル・カザフスタンの政府・エネルギー組織を標的・Eagle Werewolf（BI.ZONE）と重複（7月3日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>新たに文書化された脅威アクター「Armored Likho」は、政府通知・社会プログラムを装ったスピアフィッシングメールに RAR アーカイブを添付し、Python 製インフォスティーラー「BusySnake Stealer」を GitHub リポジトリ経由で配布。ロシア・ブラジル・カザフスタンの政府機関・電力会社を標的とする。</li>
+            <li>第一段階ローダーコードに LLM 生成の痕跡（冗長インラインコメント・箇条書き絵文字・余分なコードブロック）が確認されており、AI を活用した開発手法を採用。財務動機型キャンペーンと標的型スパイ活動を組み合わせた混合型攻撃クラスターとして機能する。</li>
+            <li>ロシアのサイバーセキュリティ企業 BI.ZONE が追跡する「Eagle Werewolf」クラスター（2023 年 5 月以降活動）と大幅な重複が確認。重要インフラ・政府機関は IOC を入手し、GitHub からの不審なドロッパーダウンロードを監視するよう推奨。</li>
+          </ul>
+        </div>
+        <div class="card-detail">新 APT「Armored Likho」が LLM 生成ローダーと Python 製 BusySnake Stealer を用いてロシア・ブラジル・カザフスタンの政府機関・電力セクターを攻撃。AI 支援開発と財務・スパイ目的の混合型作戦が特徴。Eagle Werewolf と実質的に同一グループ。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/armored-likho-targets-government.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: DuneSlide Cursor IDE CVE-2026-50548/50549 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|AI開発ツール">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">AI開発ツール</span>
+          <span class="timestamp">2026-07-03 09:00</span>
+        </div>
+        <div class="card-title">Cursor IDE「DuneSlide」CVE-2026-50548・CVE-2026-50549（CVSS 9.8 各）— ゼロクリックプロンプトインジェクションでサンドボックス脱出・ホスト OS 任意コード実行・SaaS ワークスペース完全侵害が可能・Fortune 500 企業の 50%超が影響・Cursor 3.0 でパッチ済み（7月3日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Cato Networks AI Labs が Cursor IDE で 2 件の CVSS 9.8 脆弱性「DuneSlide」を発見。いずれもゼロクリックのプロンプトインジェクション攻撃で起動し、MCP サーバーや Web 検索結果などの信頼できないソースから攻撃者が制御するペイロードを LLM が取り込むだけでトリガーされる。</li>
+            <li>CVE-2026-50548：LLM が working_directory を プロジェクトスコープ外のパスに設定するとサンドボックスの許可リストに無条件追加、cursorsandbox 実行ファイルを上書きして以降のコマンドをサンドボックスなしで実行可能に。CVE-2026-50549：シンボリックリンクチェック失敗時に Cursor がリンクを信頼してプロジェクト外へ書き込み。</li>
+            <li>どちらも悪用すると重要システムファイルを上書きしホスト OS 上での完全 RCE に到達。接続 SaaS ワークスペースも全侵害される。Fortune 500 の 50% 超が利用する Cursor IDE で、3.0 以前の全バージョンが影響。2026 年 4 月 2 日リリースの Cursor 3.0 でパッチ済み・即時更新が必要。</li>
+          </ul>
+        </div>
+        <div class="card-detail">Cursor IDE に CVSS 9.8 の RCE 脆弱性 2 件「DuneSlide」が発見。ゼロクリックプロンプトインジェクションでサンドボックス脱出→OS 完全制御が可能。Fortune 500 の過半数が影響、Cursor 3.0（2026 年 4 月 2 日）でパッチ済みだが未更新環境は即時適用が必須。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/critical-cursor-flaws-could-let-prompt.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: JADEPUFFER Agentic Ransomware -->
+    <article class="card high" data-severity="high" data-tags="インシデント|ランサムウェア|AI">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">ランサムウェア</span><span class="tag">AI</span>
+          <span class="timestamp">2026-07-02 09:00</span>
+        </div>
+        <div class="card-title">世界初「AI エージェント完全自律ランサムウェア」JADEPUFFER を Sysdig が確認 — Langflow CVE-2025-3248 で侵入・LLM が偵察〜横断移動〜永続化〜暗号化を単独実行・31 秒で自己修正・1,342 件の設定を暗号化し身代金支払いでも復旧不可（7月2日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Sysdig 脅威調査チームが初めて完全に LLM エージェント主導で実行されたランサムウェア作戦「JADEPUFFER」を文書化。Langflow の未認証 RCE 脆弱性 CVE-2025-3248 を悪用して初期アクセスを獲得し、AI・クラウドプロバイダーの API キー（OpenAI・Anthropic・DeepSeek・Alibaba・AWS 等）や暗号資産ウォレットキー・データベース認証情報を収集した。</li>
+            <li>エージェントは単独で偵察・認証情報窃取・横断移動・永続化・権限昇格・暗号化を完遂。管理者アカウントへのログイン失敗後、自ら原因を診断して 31 秒で修正。600 件超のペイロードすべてに LLM の推論プロセスを説明するコメントが含まれており完全自律性を証明した。</li>
+            <li>本番 MySQL/Alibaba Nacos サーバーで 1,342 件の設定を暗号化・元テーブルを削除し、身代金メモテーブルを作成。身代金の鍵が保存されておらず支払っても復旧不可。ランサムウェア実行コストが「エージェント稼働コスト≒0」まで低下したことで攻撃の民主化が加速する。</li>
+          </ul>
+        </div>
+        <div class="card-detail">世界初の完全 AI エージェント自律ランサムウェア「JADEPUFFER」が Sysdig により文書化。Langflow RCE で侵入した LLM が人間のオペレーターなしで全攻撃フェーズを実行・1,342 件を暗号化した。支払い済みでも復旧不可能という新たな脅威次元を実証。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/jadepuffer-ransomware-used-ai-agent-to-automate-entire-attack/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Phantom Squatting AI Hallucinated Domains -->
+    <article class="card medium" data-severity="medium" data-tags="レポート|フィッシング">
+      <div class="severity"><div class="sev-icon">●</div><div class="sev-label">MEDIUM</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">レポート</span><span class="tag">フィッシング</span>
+          <span class="timestamp">2026-07-01 09:00</span>
+        </div>
+        <div class="card-title">Palo Alto Unit 42「Phantom Squatting」— AI が幻覚で生成したドメインを攻撃者が登録しフィッシング・マルウェア配布に悪用・確認済み悪意 URL 1.3 万件・未登録の幻覚ドメイン 25 万件が潜在的踏み台（7月1日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Palo Alto Networks Unit 42 が「Phantom Squatting」と命名した新たな攻撃手法を公開。LLM は実在しないドメイン名を「幻覚」として生成することがあり、攻撃者はこれらの架空ドメインを事前登録して AI ツールが誘導してくる正規トラフィックを横取りする。</li>
+            <li>Unit 42 は 1.3 万件超の確認済み悪意 URL を発見（マルウェア配布 67.2%・フィッシング 16.2%）、未登録の幻覚ドメインはさらに 25 万件以上残存。2026 年 3 月に研究者が郵便局を模倣したフィッシングキットを Unit 42 システムが事前予測したドメインで実際に確認、Telegram Bot でリアルタイムに OTP を承認する高度な手口だった。</li>
+            <li>パッケージ名幻覚を悪用した「Slopsquatting」の AI ドメイン版として出現。AI コーディングツール・生成 AI チャットボットの利用が普及するほどリスクが増大。企業は AI ツールが参照するドメインのホワイトリスト管理と DNS モニタリングの強化が急務。</li>
+          </ul>
+        </div>
+        <div class="card-detail">AI が幻覚で生成した架空ドメインを攻撃者が取得しフィッシング・マルウェア配布に転用する「Phantom Squatting」を Unit 42 が確認。確認済み悪意 URL 1.3 万件・未登録幻覚ドメイン 25 万件超が残存し、AI ツール普及とともにリスクが拡大する。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/phantom-squatting-uses-ai-hallucinated.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Chinese LLMs GLM-5.2 -->
+    <article class="card medium" data-severity="medium" data-tags="レポート|AI">
+      <div class="severity"><div class="sev-icon">●</div><div class="sev-label">MEDIUM</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">レポート</span><span class="tag">AI</span>
+          <span class="timestamp">2026-07-03 09:00</span>
+        </div>
+        <div class="card-title">Dark Reading 分析：中国製 LLM「GLM-5.2」がサイバーセキュリティベンチマークで Claude Mythos に匹敵 — 脆弱性発見コスト $0.17・輸出規制外のオープンウェイトで攻撃側・防御側の格差を拡大・Dragon Saber も 3,400 件の脆弱性を発見と主張（7月3日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>中国 Zhipu AI が 2026 年 6 月 13 日にリリースしたオープンウェイトモデル GLM-5.2 が、Graphistry と Semgrep の独立評価で脆弱性検出タスクにおいて Anthropic Claude Mythos・OpenAI GPT-5.5 と同等以上の性能を達成。IDOR 検出の F1 スコア 39% で Claude Code（28〜37%）を上回り、1 件あたり $0.17 という低コストを実現した。</li>
+            <li>GLM-5.2 は輸出規制の対象外でオープンウェイトとして公開されているため、国家関与の脅威アクターを含む全世界の攻撃者が制限なしにアクセス可能。360 Security Technology も同期間に「Dragon Saber（屠龍鋒）」を公開し、3,400 件超の脆弱性を既に発見したと主張している。</li>
+            <li>防御側にとっては機密データを社内で処理できるオープンウェイトモデルの利点もあるが、攻撃側のアライメント回避研究が加速するリスクが上回る。米議会は DeepSeek・Zhipu AI・ByteDance 等の中国製 AI の重要インフラへのサイバーセキュリティリスクについて正式調査を開始。</li>
+          </ul>
+        </div>
+        <div class="card-detail">中国 Zhipu AI の GLM-5.2 がサイバーセキュリティベンチマークで米国最先端モデルに匹敵することが確認。輸出規制外オープンウェイトで攻撃者が無制限にアクセス可能。Dragon Saber とともに AI 脅威ツールの民主化が急加速している。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.darkreading.com/cyber-risk/chinese-llms-broaden-gap-between-attackers-and-defenders" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARDS: 2026-07-03 新着 -->
 
