@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-06 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-07 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,10 +656,16 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-07-07 新着 (1/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Gitea Docker CVE-2026-20896（CVSS 9.8）開示 13 日後に積極悪用 — X-WEBAUTH-USER ヘッダー偽装で未認証管理者アクセス・公開インスタンス 6,200 台超が危機・v1.26.3 でパッチ済み（7/7）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Cisco Talos が Microsoft 365 標的の PhaaS「ARToken」を公開 — EvilTokens 系列・80 超 API でデバイスコードフィッシング・PRT 永続化・MFA 完全バイパス（7/7）</span>
       <!-- 2026-07-06 新着 (1/2) -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Adobe ColdFusion CVE-2026-48282（CVSS 10.0）が公開 2 時間以内に積極悪用開始 — パストラバーサル無認証 RCE・KEVIntel ハニーポットが捕捉・インターネット公開約 800 台が危機・Update 10/21 に即時更新（7/6）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Linux KVM「Januscape」CVE-2026-53359 — 16 年潜伏のゲスト→ホスト脱出脆弱性・シャドウページ UAF でクラウドホスト root 権限奪取・Intel/AMD 両対応・PoC 公開済み・7月4日パッチ提供（7/6）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;中国系「Operation DragonReturn」が偽インド確定申告ツールで DcRAT を展開 — AMSI バイパス＋fileless 実行・タイムゾーンで南アジアを選別・5月から継続稼働・Seqrite が詳細分析（7/6）</span>
+      <!-- 2026-07-07 新着 (2/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Gitea Docker CVE-2026-20896（CVSS 9.8）開示 13 日後に積極悪用 — X-WEBAUTH-USER ヘッダー偽装で未認証管理者アクセス・公開インスタンス 6,200 台超が危機・v1.26.3 でパッチ済み（7/7）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Cisco Talos が Microsoft 365 標的の PhaaS「ARToken」を公開 — EvilTokens 系列・80 超 API でデバイスコードフィッシング・PRT 永続化・MFA 完全バイパス（7/7）</span>
       <!-- 2026-07-06 新着 (2/2) -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Adobe ColdFusion CVE-2026-48282（CVSS 10.0）が公開 2 時間以内に積極悪用開始 — パストラバーサル無認証 RCE・KEVIntel ハニーポットが捕捉・インターネット公開約 800 台が危機・Update 10/21 に即時更新（7/6）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Linux KVM「Januscape」CVE-2026-53359 — 16 年潜伏のゲスト→ホスト脱出脆弱性・シャドウページ UAF でクラウドホスト root 権限奪取・Intel/AMD 両対応・PoC 公開済み・7月4日パッチ提供（7/6）</span>
@@ -1208,6 +1214,48 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-07-07 新着 -->
+
+    <!-- CARD: Gitea Docker CVE-2026-20896 active exploitation -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|悪用確認済み">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">悪用確認済み</span>
+          <span class="timestamp">2026-07-07 09:00</span>
+        </div>
+        <div class="card-title">Gitea Docker CVE-2026-20896（CVSS 9.8）が開示 13 日後に積極悪用開始 — X-WEBAUTH-USER ヘッダー偽装で未認証管理者アクセス・公開インスタンス 6,200 台超が危機・v1.26.3 でパッチ済み（7月6日）</div>
+        <div class="card-summary"><ul>
+          <li>Gitea Docker イメージのデフォルト設定で REVERSE_PROXY_TRUSTED_PROXIES が「*」（全 IP 信頼）に設定されており、X-WEBAUTH-USER HTTP ヘッダーを偽装するだけで未認証の攻撃者が任意のユーザー（管理者含む）になりすます CVE-2026-20896（CVSS 9.8）が公開された。</li>
+          <li>Sysdig の脅威インテリジェンスが開示から 13 日後の 7 月 6 日に ProtonVPN 出口ノードからの自動偵察・認証バイパス試行を確認し、インターネット公開中の約 6,200 台の Gitea インスタンスが積極的な悪用リスクにさらされている。</li>
+          <li>v1.26.2 以前が対象。v1.26.3 でワイルドカード「*」を削除しリバースプロキシ認証をオプトインに変更済み。即時アップグレードが必要。</li>
+        </ul></div>
+        <div class="card-detail">Gitea Docker イメージのデフォルト設定不備（CVE-2026-20896 / CVSS 9.8）を悪用した未認証管理者なりすまし攻撃が 7 月 6 日に確認された。公開インスタンス 6,200 台超が危機に晒されており、v1.26.3 への即時更新が不可欠。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: ARToken PhaaS EvilTokens Microsoft 365 -->
+    <article class="card high" data-severity="high" data-tags="フィッシング|認証情報窃取">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">フィッシング</span><span class="tag">認証情報窃取</span>
+          <span class="timestamp">2026-07-07 09:00</span>
+        </div>
+        <div class="card-title">Cisco Talos が Microsoft 365 標的の PhaaS「ARToken」を公開 — EvilTokens 系列・80 超 API でデバイスコードフィッシング・PRT 永続化・MFA 完全バイパスが可能（7月1日）</div>
+        <div class="card-summary"><ul>
+          <li>Cisco Talos がインシデントレスポンス中に発見した React ベースの PhaaS パネル「ARToken」は EvilTokens の関連プラットフォームで、80 超の API エンドポイントを通じ Microsoft 365 のデバイスコード認証フローを悪用して OAuth トークンを窃取し MFA を完全バイパスする。</li>
+          <li>ARToken は Primary Refresh Token（PRT）による永続アクセスを確立し、Outlook メールボックス・SharePoint・OneDrive への完全アクセス、BEC 操作（送信・転送ルール・添付ファイルダウンロード）まで一体化した攻撃基盤を提供する。</li>
+          <li>7 層のアンチ解析システム（XOR 暗号化ペイロード・クライアント側行動検証）を採用し従来の EvilTokens より高度な検出回避を実現。Microsoft 365 を利用する企業は条件付きアクセスポリシーの見直しとデバイスコードフローの制限が急務。</li>
+        </ul></div>
+        <div class="card-detail">Cisco Talos が公開した ARToken は EvilTokens 系 Microsoft 365 特化 PhaaS で、デバイスコードフィッシングと PRT 永続化により MFA を無力化する。80 超 API で BEC・情報窃取を自動化し、7 層の難読化で検出を回避する高度な攻撃プラットフォームである。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARDS: 2026-07-06 新着 -->
 
