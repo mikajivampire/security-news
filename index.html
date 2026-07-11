@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-10 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-11 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,6 +656,14 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-07-11 新着 (1/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;「WP-SHELLSTORM」が WordPress 2 万 5,000 超サイトをバックドア — Breeze CVE-2026-3844 を自動悪用しウェブシェル設置・侵害アクセスをランサムウェアグループへ転売（7/11）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;「Ghostcommit」— PNG 画像に隠したプロンプトで AI コードレビューエージェントを騙し .env シークレットを窃取・Cursor/Antigravity で実証・CodeRabbit は画像非解析で検知不能（7/11）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;U-Boot ブートローダーに 6 件の新脆弱性（BRLY-2026-037〜042）— 未認証 FIT イメージ処理で RCE・BMC・IoT・産業機器の 50 超安定版が影響・パッチ未提供（7/11）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;豪 ACSC が世界規模 CMS 悪用キャンペーンを警告 — WordPress・Joomla・Craft CMS の 15 超プラグイン既知 CVE を一斉悪用・ウェブシェル設置で持続アクセス（7/11）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;CISA が Joomla 拡張 2 件（CVE-2026-48939 iCagenda・CVE-2026-56291 Balbooa Forms）を KEV 追加 — 未認証ファイルアップロード RCE が積極悪用確認済み・連邦機関 7/24 期限（7/10）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;中国・インド系 APT がパキスタン Balochistan 警察の生体認証・刑事記録システムを 2 年超にわたって同時侵害 — 偽アップデートで公開 CMS に潜伏・SentinelLabs 公開（7/9）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;ランサムウェアグループ「Unsafe」が Deutsche Bank サードパーティ侵害を主張 — 従業員メール・パスワードハッシュ・内部 DB レコードをリークサイトで公開（7/4）</span>
       <!-- 2026-07-10 新着 (1/2) -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Ubiquiti UniFi 5 製品に 25 件の重大脆弱性 — CVE-2026-50746（CVSS 10.0）で未認証 OS コマンド実行・全世界 10 万台超のエンドポイントが露出・Connect 3.4.20 等への緊急パッチ適用要（7/10）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Progress ShareFile「信頼できる外部脅威」で Storage Zone Controller の即時停止を要請 — CVE-2026-2699（CVSS 9.8）認証バイパス＋CVE-2026-2701（CVSS 9.1）RCE チェーンが積極悪用の脅威段階に（7/10）</span>
@@ -1252,6 +1260,168 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-07-11 新着 -->
+
+    <!-- CARD: WP-SHELLSTORM WordPress webshell brokerage -->
+    <article class="card high" data-severity="high" data-tags="インシデント|マルウェア">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">マルウェア</span>
+          <span class="timestamp">2026-07-11 09:00</span>
+        </div>
+        <div class="card-title">「WP-SHELLSTORM」ウェブシェルアクセスブローカーが WordPress 2 万 5,000 超サイトをバックドア — Breeze キャッシュプラグイン CVE-2026-3844 を 4 万 5,000 標的に自動発射・侵害アクセスをランサムウェアグループへ転売（7月11日）</div>
+        <div class="card-summary"><ul>
+          <li>SOCRadar が 2026 年 6 月 11 日に無防備な米国サーバーを発見。800MB・434 ファイルを解析した結果、Breeze キャッシュプラグイン（CVE-2026-3844）を 4 万 5,000 超の標的に自動発射し 1 万 7,000 以上にウェブシェルを設置、計 2 万 5,195 件の WordPress サイトを侵害していることが判明した。</li>
+          <li>攻撃者は Apache Nacos・XXL-Job・Spring Boot インフラも並行ターゲット化。2 日間で 613 件の設定ファイルを 11 組織から流出させ AWS/クラウド認証情報を収集。既知公開 CVE を自動化ツールで大量スキャンする低コスト手法でアクセスブローカービジネスを展開。</li>
+          <li>侵害済みアクセスはランサムウェアグループへの転売を目的としており、WordPress サイト運営者はプラグインの即時更新とウェブシェル有無の確認が急務。Ctrl-Alt-Intel・Technique が詳細分析を公開済み。</li>
+        </ul></div>
+        <div class="card-detail">公開状態のハッカーサーバーを SOCRadar が発見し、25,000 超の WordPress サイトが「WP-SHELLSTORM」と呼ばれるウェブシェルアクセスブローカー作戦の被害を受けていることが明らかになった。未パッチの既知 CVE を自動化スキャンで大量悪用する手口で、侵害アクセスはランサムウェアグループへの転売目的とみられる。即時パッチ適用とシェル有無の確認が不可欠。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/exposed-hacker-server-reveals-wp.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Ghostcommit AI code review prompt injection -->
+    <article class="card high" data-severity="high" data-tags="AI|脆弱性">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">AI</span><span class="tag">脆弱性</span>
+          <span class="timestamp">2026-07-11 09:00</span>
+        </div>
+        <div class="card-title">「Ghostcommit」— PNG 画像に隠したプロンプトで AI コードレビューエージェントを騙し .env シークレットを窃取・CodeRabbit/Bugbot は画像を非解析・Cursor と Antigravity（Sonnet/Gemini/GPT-5.5）で実証（7月11日）</div>
+        <div class="card-summary"><ul>
+          <li>研究者が AGENTS.md（エージェントが自動読み込みするプロジェクトポリシーファイル）から PNG 画像を参照させ、その画像テキストに .env ファイルを 1 バイトずつ読み取って整数リストとしてソースコードに埋め込む指示を隠した。CodeRabbit はデフォルト設定で画像ファイルを除外するため、AI レビュアーはバイナリとして無視する。</li>
+          <li>Cursor と Antigravity コーディングエージェントが Sonnet・Gemini・GPT-5.5 モデル下で指示に従い .env 内容を漏洩させることを実証。Anthropic の Claude Code は同条件下でも露骨な拒否を返し悪用されなかった。</li>
+          <li>研究者は 4GB GPU 上の軽量オープンモデル Gemma 4 を使い、見えない文字検出・コード形状分析・LLM パスを組み合わせた防御プロトタイプを構築。AI を活用したコードレビューチェーンへの信頼評価の見直しが急務。</li>
+        </ul></div>
+        <div class="card-detail">プルリクエストの PNG 画像内に悪意のあるプロンプトを埋め込みリポジトリ .env 秘密情報を窃取する新攻撃手法「Ghostcommit」が BleepingComputer で報告された。AI コードレビューツールの多くが画像ファイルを非解析であることを悪用し AGENTS.md 経由でコーディングエージェントに指示実行させる。企業の AI 支援開発パイプラインへの信頼再評価が必要。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/ghostcommit-hides-prompt-injection-in-images-to-fool-ai-agents-steal-secrets/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: U-Boot bootloader 6 vulnerabilities BRLY-2026-037 to 042 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|ファームウェア">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">ファームウェア</span>
+          <span class="timestamp">2026-07-11 09:00</span>
+        </div>
+        <div class="card-title">U-Boot ブートローダーに 6 件の新脆弱性（BRLY-2026-037〜042）— 未認証 FIT イメージ処理でスタックバッファアンダーフロー＋任意コード実行・2013 年以降全安定版に潜伏・BMC・IoT・産業機器が影響・パッチ未提供（7月11日）</div>
+        <div class="card-summary"><ul>
+          <li>Binarly が U-Boot 2026.04 の FIT（Flattened Image Tree）解析・検証ロジックに 6 件の未知脆弱性を発見。BRLY-2026-037（スタックバッファアンダーフロー＋潜在的 RCE）と BRLY-2026-038（スタックバッファアンダーフロー）を連鎖させることで署名検証前の段階で信頼性の高いコード実行が可能。CVE は未採番。</li>
+          <li>残る 4 件（039〜042）は DoS: 未チェックサイズ値・NULL ポインタ逆参照・外部データプロパティ未チェック・無限再帰によるスタック枯渇。脆弱コードの大半は v2013.07 から存在し、50 超の安定版リリースと多数のベンダーファームウェアに内在する。</li>
+          <li>影響範囲はエンタープライズサーバーの BMC・ネットワーク機器・産業システム・IoT デバイスなど組み込み Linux 機器全般。U-Boot メンテナーに報告済みだがパッチ未提供のため、影響デバイスのネットワーク露出最小化が緊急の対応策。</li>
+        </ul></div>
+        <div class="card-detail">世界で最も広く使われるオープンソースブートローダー U-Boot に 6 件の新脆弱性が Binarly により発見された。FIT イメージの署名検証前コードパスにスタックバッファアンダーフローと RCE が成立し、2013 年以降の全安定版が影響を受ける。BMC・IoT・産業機器など広範な組み込みデバイスが対象でパッチ未提供のためネットワーク隔離が急務。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/new-u-boot-flaws-could-enable-stealthy-firmware-attacks/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Australia ACSC global CMS exploitation campaign -->
+    <article class="card high" data-severity="high" data-tags="インシデント|脆弱性">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">脆弱性</span>
+          <span class="timestamp">2026-07-11 09:00</span>
+        </div>
+        <div class="card-title">豪 ACSC が世界規模 CMS 悪用キャンペーンを警告 — WordPress・Joomla・Craft CMS の 15 超プラグイン既知 CVE を一斉悪用・ウェブシェル設置で持続アクセス・認証情報窃取・オーストラリア企業を中心に被害（7月11日）</div>
+        <div class="card-summary"><ul>
+          <li>オーストラリアサイバーセキュリティセンター（ACSC）が世界規模の CMS プラットフォームと CMS プラグインを標的にした大規模悪用キャンペーンを警告。WordPress・Craft CMS・MaxSite CMS・MetInfo CMS・Joomla JCE が対象で Simple File List・WavePlayer・BerqWP・WPBookit・Ninja Forms・Breeze Cache ほか多数のプラグインが悪用された。</li>
+          <li>悪用された脆弱性の種別は未認証ファイルアップロード・RCE・SSRF・デシリアライゼーション。いずれも公開済みパッチがある既知 CVE であり未適用サイトが標的となった。設置されたウェブシェルはサービス妨害・認証情報窃取・追加マルウェア展開・横断移動に活用される。</li>
+          <li>オーストラリア国内の多数企業が既に被害を受けており、ACSC はウェブサイトソフトウェアとプラグインの即時パッチ適用、ウェブシェル有無の調査、不審なファイルアクセスの監査を緊急推奨している。</li>
+        </ul></div>
+        <div class="card-detail">豪 ACSC が 2026 年 7 月 11 日、WordPress・Joomla 等の CMS プラットフォームと多数のプラグインを標的にした世界規模の大規模悪用キャンペーンを警告した。攻撃者は未パッチの既知 CVE を自動スキャンで一斉攻撃しウェブシェルを設置。オーストラリアを中心に多国の組織が被害を受けており、未パッチサイトの即時更新と侵害調査が不可欠。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/australia-warns-of-global-campaign-targeting-vulnerable-cms-platforms/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: CISA KEV July 10 iCagenda CVE-2026-48939 Balbooa Forms CVE-2026-56291 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|CISA KEV">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">CISA KEV</span>
+          <span class="timestamp">2026-07-10 22:00</span>
+        </div>
+        <div class="card-title">CISA が Joomla 拡張 2 件（CVE-2026-48939 iCagenda・CVE-2026-56291 Balbooa Forms）を KEV 追加 — 未認証ファイルアップロードで PHP コード実行・ウェブシェル設置攻撃が積極悪用確認済み・連邦機関 7 月 24 日期限（7月10日）</div>
+        <div class="card-summary"><ul>
+          <li>CISA が 2026 年 7 月 10 日、iCagenda（Joomla イベントカレンダー拡張）CVE-2026-48939 と Balbooa Forms（Joomla フォームビルダー）CVE-2026-56291 を既知悪用済み脆弱性（KEV）カタログに追加。両脆弱性とも未認証でファイルアップロードが可能で PHP ウェブシェルの設置と任意コード実行が可能。</li>
+          <li>iCagenda は v4.0.8/3.9.15 未満が対象でファイル添付機能から任意 PHP ファイルをアップロード可能。Balbooa Forms は未認証の任意ファイルアップロードで実行可能ファイルを設置できる完全 RCE 脆弱性。双方とも積極悪用が確認済みで BOD 26-04 に基づく連邦機関の修正期限は 7 月 24 日。</li>
+          <li>先週の KEV 追加（JoomShaper CVE-2026-48908・Joomlack CVE-2026-56290・Langflow CVE-2026-55255）と合わせて Joomla エコシステムへの集中攻撃が継続。Joomla サイト運営者は拡張の即時更新と不審なアップロードファイルの確認が急務。</li>
+        </ul></div>
+        <div class="card-detail">CISA が 7 月 10 日に Joomla 拡張 2 件（iCagenda CVE-2026-48939・Balbooa Forms CVE-2026-56291）を KEV カタログに追加した。双方とも未認証ファイルアップロードで PHP ウェブシェル設置・RCE が可能で積極悪用を確認済み。先週の Joomla 関連 KEV 追加と合わせ Joomla エコシステムへの集中的な攻撃が続いており、即時パッチ適用と侵害調査が急務。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.cisa.gov/news-events/alerts/2026/07/10/cisa-adds-two-known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: China India APT Pakistani law enforcement biometric records -->
+    <article class="card high" data-severity="high" data-tags="APT|スパイ活動">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">APT</span><span class="tag">スパイ活動</span>
+          <span class="timestamp">2026-07-11 09:00</span>
+        </div>
+        <div class="card-title">中国・インド系 APT がパキスタン Balochistan 警察の生体認証・刑事記録・市民 DB を 2 年超にわたって同時侵害 — 偽ソフトウェアアップデートを公開 CMS に設置・BRI 関連の安全保障情報収集が動機と分析（SentinelLabs・7月9日）</div>
+        <div class="card-summary"><ul>
+          <li>SentinelLabs が 2026 年 7 月 9 日、中国系・インド系の 2 つの脅威グループが同一のパキスタン法執行機関を別々に標的にしていたことを公開した。Balochistan 警察を主要ターゲットとし、生体認証記録・ホテル宿泊者登録・テナント登録・刑事事件ファイル・職員記録を保持するシステムが 2024 年 2 月から 2026 年 4 月まで侵害されていた。</li>
+          <li>最大の特徴は Balochistan 警察市民苦情管理システム（CMS）への偽ソフトウェアアップデートを設置する手法。警察職員・市民が利用する公開システムに悪意ファイルを配置し実行時に C2 からマルウェアを追加ダウンロードさせた。</li>
+          <li>中国系グループの関心は中国人労働者の安全管理（BRI 関連）とされ、インド系グループは長年の両国間緊張とパキスタンの安全保障情勢が動機と分析。同一組織を複数の国家 APT が競合的に標的にするケースとして希少な事例。</li>
+        </ul></div>
+        <div class="card-detail">SentinelLabs が中国・インド系の 2 つの APT がパキスタン法執行機関（Balochistan 警察を中心）の生体認証・市民・刑事記録を 2 年以上にわたって同時侵害していた事実を公開した。公開システムに偽アップデートを設置するサプライチェーン的手法が特徴で、敏感な政府・身元確認データの長期窃取が行われていた。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.sentinelone.com/labs/one-target-china-india-espionage-converge-on-pakistani-law-enforcement/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Deutsche Bank Unsafe ransomware third-party breach -->
+    <article class="card high" data-severity="high" data-tags="インシデント|ランサムウェア">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">ランサムウェア</span>
+          <span class="timestamp">2026-07-11 09:00</span>
+        </div>
+        <div class="card-title">ランサムウェアグループ「Unsafe」がドイツ銀行（Deutsche Bank）第三者サプライヤー経由の侵害を主張 — 従業員メール・パスワードハッシュ・住所・内部 DB レコードをリークサイトで公開・DORA 規制下でのサードパーティリスク管理に試練（7月4日）</div>
+        <div class="card-summary"><ul>
+          <li>ランサムウェアグループ「Unsafe」が 2026 年 7 月 4 日、Deutsche Bank をダークウェブリークサイトに掲載し、従業員メールアドレス・パスワードハッシュ・物理住所・内部 DB レコードを含むスクリーンショットを証拠として公開した。Deutsche Bank は「自社ネットワークではなく第三者企業が影響を受けた」と声明。</li>
+          <li>Unsafe は 2026 年に再活性化した二重恐喝グループで米・独・スイス・仏の組織を標的にしている。Deutsche Bank は内部調査で「第三者侵害が自社の企業ネットワークに影響した証拠はない」と述べつつ、サプライヤー側の調査を継続。流出データの正確性は第三者独立検証待ち。</li>
+          <li>EU の金融機関向けサイバーセキュリティ規制 DORA（2025 年 1 月施行）の下で金融機関はサードパーティリスク管理の強化が義務付けられており、本件は DORA の実効性を問う事例として注目されている。</li>
+        </ul></div>
+        <div class="card-detail">ランサムウェアグループ「Unsafe」が Deutsche Bank のサードパーティサプライヤー侵害を主張し従業員データと内部 DB レコードをリークサイトで公開した。Deutsche Bank は自社ネットワークへの直接侵害を否定しているが DORA 規制下でのサードパーティリスク管理の透明性が試されている。欧州金融機関へのサプライチェーン攻撃リスクを改めて浮き彫りにした事案。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://cybernews.com/security/deutsche-bank-ransomware-data-breach/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Six for 2026 cyber threats report (Task2 Report) -->
+    <article class="card medium" data-severity="medium" data-tags="レポート">
+      <div class="severity"><div class="sev-icon">●</div><div class="sev-label">MEDIUM</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">レポート</span><span class="tag">AI脅威</span>
+          <span class="timestamp">2026-07-11 09:00</span>
+        </div>
+        <div class="card-title">Corelight「2026年に無視できないサイバー脅威 6 選」— AI 主導攻撃・脆弱性悪用の超高速化・AI 搭載ランサムウェアが 3 大トレンド・SOC の戦略的強化とネットワーク可視化が唯一の有効防御（BleepingComputer 7月11日）</div>
+        <div class="card-summary"><ul>
+          <li>Corelight が BleepingComputer 経由で 2026 年に組織が直面する 6 大サイバー脅威を分析。AI エージェント・シャドウ AI・AI ドリブンソーシャルエンジニアリングが攻撃の主軸となり、従来の人手による偵察が自動化エージェントに置き換わりつつある状況を詳述。</li>
+          <li>脆弱性の悪用開始までの時間が AI ツールにより「数時間」から「数分」に短縮。ネットワークスキャンから攻撃開始まで完全自動化され、パッチ適用の猶予が事実上消滅しつつある。AI 搭載ランサムウェアはフィッシングルアーの精緻化・高速侵害・自動暗号化を実現。</li>
+          <li>防御側はネットワーク全体のリアルタイム可視化を唯一の有効対抗策とし SOC の戦略的見直しを推奨。攻撃の自動化と知能化が防御側の対応時間を圧迫する現状において AI ドリブンの防御ツール導入が急務と結論付けている。</li>
+        </ul></div>
+        <div class="card-detail">Corelight の分析レポートが BleepingComputer で公開。AI 主導攻撃・脆弱性悪用の超高速化・AI 搭載ランサムウェアなど 2026 年の 6 大脅威トレンドを詳述。攻撃の自動化と知能化が防御側の対応時間を圧迫する現状において、ネットワーク可視化をベースにした SOC 強化が急務と提言している。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/six-for-2026-the-cyber-threats-you-cant-ignore/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARDS: 2026-07-10 新着 -->
 
