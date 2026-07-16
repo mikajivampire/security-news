@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-15 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-16 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,6 +656,15 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-07-16 新着 (1/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;SonicWall SMA1000 ゼロデイ 2 件（CVE-2026-15409 CVSS 10.0 + CVE-2026-15410）が CISA KEV 追加・未認証 SSRF + コードインジェクション連鎖でデバイス完全制御・連邦機関期限 7/17（7/14）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;CISA が Oracle EBS CVE-2026-46817 を KEV 追加・連邦機関期限 7/18 — Oracle Payments の未認証テイクオーバー・公開約 950 インスタンスで積極悪用確認（7/15）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;露系 UAT-11795「Starland RAT」— WebEx・Zoom・MobaXterm 偽装インストーラーで認証情報・暗号資産を窃取・WLDR PowerShell C2・ハードウェア ID バインドで検知回避・Cisco Talos 公開（7/16）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;新型ランサムウェア「Spirals」が IIS 侵害から 24 時間以内に全ネットワーク暗号化・Rust 製・AES-128/ECDH-P256・間欠暗号化で高速展開・南アジア IT 企業を侵害（7/16）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;スペイン警察が €1.4 億規模 BEC・投資詐欺組織を壊滅・4 人逮捕（スペイン・ポルトガル・パナマ）・800 超銀行口座・67 名マネーミュール・€300 万即時凍結（7/16）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;中国系 APT「UNK_MassTraction」が米・カナダ大学 Roundcube サーバーを侵害 — CVE-2024-42009 + CVE-2025-49113 チェーンで物理研究者メール窃取＋内部ネットワークへのピボット（7/8）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Check Point「AI Security Report 2026」— AI が自律攻撃オペレーターへ転換・1 名が 5,317 AI コマンドでメキシコ政府機関 9 機関を侵害・脆弱性開示から悪用可能化まで数時間（7/16）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;日本交通がマルウェア攻撃でシステム停止 — 電話配車・ハイヤー Web 受注・陣痛タクシー全面停止・タクシーアプリ「GO」は正常稼働・7/14 時点でデータ流出なし（7/13）</span>
       <!-- 2026-07-15 新着 (1/2) -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;AsyncAPI npm サプライチェーン攻撃 — 週 DL 225万超の @asyncapi 5パッケージが GitHub Actions pwn request で侵害・RAT+クレデンシャル窃取ペイロードを4時間7分配布（7/15）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;米DOJ がロシア BPH 事業者 Media Land / ML.Cloud の3名を起訴 — LockBit・BlackSuit・Play 等に攻撃インフラ提供・被害 $6,200万・Rewards for Justice 報奨金 $1,000万（7/15）</span>
@@ -1334,6 +1343,168 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-07-16 新着 -->
+
+    <!-- CARD: SonicWall SMA1000 CVE-2026-15409/15410 zero-day July 14 2026 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|CISA-KEV">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">CISA-KEV</span>
+          <span class="timestamp">2026-07-14 17:00</span>
+        </div>
+        <div class="card-title">SonicWall SMA1000 ゼロデイ 2 件（CVE-2026-15409 CVSS 10.0 ＋ CVE-2026-15410）が CISA KEV に追加・積極悪用確認 — 未認証 SSRF でローカルサービスに到達しコードインジェクションで root 権限奪取・連邦機関への期限は 7 月 17 日（7月14日）</div>
+        <div class="card-summary"><ul>
+          <li>SonicWall SMA1000（SMA6210・SMA7210・SMA8200v）に 2 件のゼロデイ脆弱性：Rapid7 MDR チームが実際の侵害調査中に発見・SonicWall が複数インシデントで積極悪用を公式確認し CISA が 7 月 14 日に KEV カタログへ追加</li>
+          <li>CVE-2026-15409（CVSS 10.0）未認証 SSRF で localhost ポート 8188 へのウェブソケットトンネルを確立 → CVE-2026-15410（CVSS 7.2）コードインジェクションで root 権限でのコマンド実行を達成：2 脆弱性の連鎖でデバイスを完全制御</li>
+          <li>修正版（ホットフィックス 12.4.3-03453 または 12.5.0-02835）への即時更新が必須・パッチ適用できない場合は製品使用停止が推奨・連邦機関（FCEB）の適用期限は 7 月 17 日（BOD 26-04）</li>
+        </ul></div>
+        <div class="card-detail">CVE-2026-15409 は SonicWall SMA1000 Workplace インターフェースの未認証 SSRF（CVSS 10.0）で、攻撃者は localhost のポート 8188 の内部サービスへ直接ウェブソケット接続を張れる。続いて CVE-2026-15410 のコードインジェクションで root 権限コマンドを実行するチェーン攻撃が Rapid7 MDR チームにより確認されており、SonicWall も複数の実被害インシデントを認定した。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Oracle EBS CVE-2026-46817 CISA KEV July 15 2026 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|CISA-KEV">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">CISA-KEV</span>
+          <span class="timestamp">2026-07-15 19:00</span>
+        </div>
+        <div class="card-title">CISA が Oracle E-Business Suite CVE-2026-46817 を KEV 追加・連邦機関期限は 7 月 18 日 — Oracle Payments の未認証 HTTP テイクオーバー・公開約 950 インスタンスで積極悪用確認・5 月 CPU でパッチ提供済み（7月15日）</div>
+        <div class="card-summary"><ul>
+          <li>Oracle EBS バージョン 12.2.3〜12.2.15 の Oracle Payments File Transmission コンポーネントに不正権限管理欠陥 CVE-2026-46817：認証不要・ユーザー操作不要・HTTP 経由でシステムを完全テイクオーバー可能な最高水準の危険度</li>
+          <li>Defused 社が 6 月下旬からハニーポットでの悪用を観測・インターネット公開中の約 950 台が標的・基幹 ERP システムへの不正アクセスで財務データ・受発注情報・機密ビジネスデータが危機</li>
+          <li>Oracle が 5 月 28 日の Critical Patch Update（補足 CPU は 6 月 16 日）でパッチ提供済み・CISA が 7 月 15 日に KEV 追加・連邦機関（FCEB）の適用期限は 7 月 18 日（BOD 26-04）・未適用システムは即時更新を</li>
+        </ul></div>
+        <div class="card-detail">CVE-2026-46817 は Oracle EBS の Payments モジュール内 File Transmission コンポーネントの権限管理欠陥で、ネットワーク経由で認証なし・操作なしにシステムを完全掌握できる。2026 年 6 月末からハニーポットへの実攻撃が観測されており、公開インスタンス約 950 台が危険にさらされている。Oracle は 5 月 CPU でパッチを提供済みだが適用遅延が確認されている。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-oracle-flaw-by-saturday/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Russian UAT-11795 Starland RAT WebEx Zoom trojan July 16 2026 -->
+    <article class="card high" data-severity="high" data-tags="マルウェア|APT">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">マルウェア</span><span class="tag">APT</span>
+          <span class="timestamp">2026-07-16 10:00</span>
+        </div>
+        <div class="card-title">Cisco Talos が露系脅威アクター「UAT-11795」の Starland RAT キャンペーンを公開 — WebEx・Zoom・MobaXterm 偽装インストーラーで認証情報・暗号資産を窃取・PBKDF2 暗号化の専用 WLDR C2・ハードウェア ID でペイロード固定（7月16日）</div>
+        <div class="card-summary"><ul>
+          <li>Cisco Talos が金銭目的の露系 UAT-11795 を追跡・少なくとも 2025 年 6 月から継続稼働・米国を主標的にドイツ・ルーマニア・ベネズエラでも被害確認</li>
+          <li>WebEx・Zoom・DBeaver・FaceIT・MobaXterm のトロイの木馬版インストーラーで StarlandRAT を配布：64bit チェーンは CastleStealer（ブラウザ認証情報・暗号資産・クラウドトークン窃取）・32bit チェーンは Remcos RAT に分岐</li>
+          <li>専用 C2 フレームワーク「WLDR」は PowerShell 製・PBKDF2-SHA256 暗号化・完全インメモリ動作・被害者のハードウェア ID に紐付いたペイロード配布で検知・解析を大幅に困難化</li>
+        </ul></div>
+        <div class="card-detail">UAT-11795 は認証情報・暗号資産ウォレット窃取を目的とする金銭動機の露系脅威アクター。正規ソフトのトロイの木馬版インストーラーを配布して StarlandRAT を感染させ（スクリーンショット・シェルコマンド・シェルコード注入）、環境に応じて CastleStealer か Remcos を二次展開。C2 は完全インメモリの WLDR PowerShell フレームワークで PBKDF2-SHA256 暗号化通信とハードウェア ID バインドによって従来の検知手法を回避する。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/russian-hackers-trojanize-webex-zoom-apps-to-push-starland-malware/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Spirals Ransomware 24 hours July 16 2026 -->
+    <article class="card high" data-severity="high" data-tags="ランサムウェア">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">ランサムウェア</span>
+          <span class="timestamp">2026-07-16 09:00</span>
+        </div>
+        <div class="card-title">新型ランサムウェア「Spirals」が IIS サーバー侵害から 24 時間以内に全ネットワークを暗号化 — Rust 製・AES-128/ECDH-P256・間欠暗号化で高速展開・南アジア IT 企業を侵害・6 日以内のデータ公開を脅迫（7月16日）</div>
+        <div class="card-summary"><ul>
+          <li>Symantec Threat Hunter Team が新たなランサムウェアアクター「Spirals」を分析：6 月に南アジアの IT サービス企業の公開 IIS サーバーへ ASP.NET ウェブシェルを設置して侵入・UAC バイパス・SAM/LSASS ダンプで認証情報を大量取得</li>
+          <li>revsocks・Chisel・Cloudflare トンネルで複数の冗長リモートアクセスを確保後・WMI で 10 数台のシステムへ横断移動・セキュリティソフト無効化を試みたうえで 24 時間未満で全面暗号化を完了</li>
+          <li>Rust 製 Spirals は AES-128 鍵を攻撃者保有 ECDH-P256 公開鍵で保護・5MB 超ファイルへの間欠暗号化で処理を高速化・C:\ に RECOVERY_SECTION.log を設置し 6 日以内未払いでデータ公開を警告</li>
+        </ul></div>
+        <div class="card-detail">Spirals は侵入〜データ窃取〜暗号化完了までを 24 時間未満で完結させた高速型ランサムウェアアクター。IIS へのウェブシェル設置を初期侵入とし、多重の永続チャネル確保後に WMI 横断展開。Rust 製ペイロードは AES-128 で暗号化し 5MB 超への間欠暗号化で速度を最大化。Symantec は既存ランサムウェアファミリーとの関連は現時点で不明としている。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/new-spirals-ransomware-encrypts-victim-network-in-under-24-hours/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Spain €140M Cyber Fraud Ring July 16 2026 -->
+    <article class="card high" data-severity="high" data-tags="インシデント|捜査">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">捜査</span>
+          <span class="timestamp">2026-07-16 10:00</span>
+        </div>
+        <div class="card-title">スペイン警察が 1 億 4,000 万ユーロ規模のサイバー詐欺・資金洗浄組織を壊滅・スペイン・ポルトガル・パナマで 4 人逮捕 — BEC・偽投資プラットフォーム・CEO 詐欺・MiTM で欧州を標的・800 超銀行口座・67 名マネーミュール（7月16日）</div>
+        <div class="card-summary"><ul>
+          <li>スペイン Guardia Civil 主導の国際合同捜査でスペイン・ポルトガル・パナマの 4 人を逮捕・偽投資プラットフォーム・CEO 詐欺（BEC）・請求書詐欺・中間者攻撃を組み合わせて欧州全域の企業と個人から約 1 億 4,000 万ユーロ（約 160 億円）を詐取</li>
+          <li>800 以上の銀行口座と 120 の法人口座・67 人の外部マネーミュールを動員して 9,400 万ユーロを洗浄・BEC 関連被害だけで 6,100 万ユーロ（2024 年以降）・産業規模のサイバー犯罪エコシステムを確認</li>
+          <li>パソコン 15 台・スマートフォン 170 台以上を押収・犯罪収益 300 万ユーロを即時凍結し被害者への還付に充当・首謀者（パナマで逮捕）の訴追手続きが進行中</li>
+        </ul></div>
+        <div class="card-detail">Operation Fandango として知られる本捜査で、BEC・偽投資詐欺を主軸に 1 億 4,000 万ユーロを詐取した組織が摘発された。グループは産業規模の資金洗浄インフラ（800 超の銀行口座・120 の法人口座・67 人のマネーミュール）を運用し、欧州各国の企業・個人を多手法で標的にしてきた。3 か国連携で首謀者 4 人を逮捕し 300 万ユーロの即時凍結に成功した。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/spanish-police-take-down-140-million-cyber-fraud-ring-arrest-four/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: China UNK_MassTraction Roundcube university attack July 8 2026 -->
+    <article class="card high" data-severity="high" data-tags="APT|スパイ活動">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">APT</span><span class="tag">スパイ活動</span>
+          <span class="timestamp">2026-07-08 10:00</span>
+        </div>
+        <div class="card-title">中国系スパイ APT「UNK_MassTraction」が米・カナダ大学 Roundcube メールサーバーを侵害 — CVE-2024-42009（XSS）＋ CVE-2025-49113（デシリアライゼーション）チェーンで物理・宇宙物理研究者メール窃取＋大学内部ネットワークへのピボットを確認（7月8日）</div>
+        <div class="card-summary"><ul>
+          <li>Proofpoint が追跡する中国系 APT クラスター「UNK_MassTraction」が 2026 年 5 月以降、脆弱な Roundcube インスタンスを運用する米国・カナダの大学を継続的に標的としたスパイキャンペーンを実施</li>
+          <li>XSS 脆弱性 CVE-2024-42009 でブラウザ保存認証情報を窃取しつつ、デシリアライゼーション欠陥 CVE-2025-49113 でサーバー本体にバックドアを設置：国家安全保障関連の物理・宇宙物理・粒子物理研究者が主標的</li>
+          <li>攻撃者はメール窃取にとどまらず侵害した Webmail サーバーを大学内部ネットワーク全体へのエッジデバイス的ピボットポイントとして利用する戦術的な転換が確認されている</li>
+        </ul></div>
+        <div class="card-detail">Proofpoint の分析によると、UNK_MassTraction は Roundcube の XSS 欠陥 CVE-2024-42009 でブラウザ認証情報を盗み、デシリアライゼーション欠陥 CVE-2025-49113 でサーバーにバックドアを設置する 2 段階攻撃を採用。従来のエンドユーザー標的から Webmail サーバー自体を大学内部ネットワークへの侵入口として使う戦術変化が中国系 APT の新たな傾向を示している。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/suspected-china-aligned-hackers-exploit.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Check Point AI Security Report 2026 July 16 -->
+    <article class="card high" data-severity="high" data-tags="レポート|AI">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">レポート</span><span class="tag">AI</span>
+          <span class="timestamp">2026-07-16 08:00</span>
+        </div>
+        <div class="card-title">Check Point「AI Security Report 2026」— AI が「補助」から「自律攻撃オペレーター」へ転換・1 人の攻撃者が Claude Code ＋ GPT-4.1 で 5,317 コマンドを自動実行しメキシコ政府機関 9 機関を侵害・脆弱性開示から悪用可能化まで数時間（7月16日）</div>
+        <div class="card-summary"><ul>
+          <li>Check Point Research が「AI Security Report 2026」を公開：AI が攻撃者の「準備ツール」から実際の侵害を自律実行する「オペレーター」フェーズへ移行したことをドキュメント化・攻撃セッション全体の人間の直接指示は最小化</li>
+          <li>単一攻撃者が Claude Code と GPT-4.1 を組み合わせ 34 セッションで 5,317 コマンドを自動実行しメキシコ政府機関 9 機関を侵害（人間の実入力は 1,088 プロンプトのみ）・脆弱性開示から悪用可能なエクスプロイト生成まで数時間に短縮</li>
+          <li>企業内の高リスク AI プロンプトが年間で倍増（1/50 → 1/25 の比率）・間接プロンプトインジェクション検出が 3〜5 月で約 5 倍に急増・一部政府は重要インフラへの緊急修正期限を 12 時間に短縮</li>
+        </ul></div>
+        <div class="card-detail">Check Point AI Security Report 2026 は AI が攻撃者の補助から自律攻撃実行者への質的転換を遂げた事実を文書化した年次報告書。商用 AI を活用した 1 名の攻撃者が 9 機関を侵害した事例が象徴的で、AI による脆弱性のラピッド悪用化・間接プロンプトインジェクションの通常攻撃化・高リスク AI 利用の急増という 3 つのトレンドが企業セキュリティに即座のインパクトをもたらしている。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://research.checkpoint.com/2026/ai-security-report-2026/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Nihon Kotsu cyberattack logistics July 13 2026 -->
+    <article class="card high" data-severity="high" data-tags="物流|インシデント">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">物流</span><span class="tag">インシデント</span>
+          <span class="timestamp">2026-07-13 12:00</span>
+        </div>
+        <div class="card-title">日本最大のタクシー・ハイヤー事業者「日本交通」がマルウェア攻撃でシステム停止 — タクシー電話配車・ハイヤー Web 受注・陣痛タクシー Web 登録が全面停止・タクシーアプリ「GO」は正常稼働・7 月 14 日時点でデータ流出の証拠なし（7月13日）</div>
+        <div class="card-summary"><ul>
+          <li>日本最大のタクシー・ハイヤー事業者「日本交通株式会社」（年間売上高約 1,550 億円・タクシー 8,558 台）が 7 月 11 日未明にマルウェア感染と外部からの不正アクセスを確認・7 月 13 日に公式発表</li>
+          <li>タクシー電話配車システム・ハイヤー Web 受注予約管理システム・陣痛タクシー Web 登録（東京・横浜・大阪等の主要都市）が一時停止・タクシーアプリ「GO」は別インフラのため正常稼働を継続</li>
+          <li>不正アクセス検知後すぐにシステムをネットワーク切断・内部ネットワークを隔離・外部セキュリティ専門機関と連携して調査継続・7 月 14 日時点でデータ流出の証拠なし・帰属先・ランサムウェアの有無は未公表</li>
+        </ul></div>
+        <div class="card-detail">日本交通は 7 月 13 日、7 月 11 日未明に発生したマルウェア感染と不正アクセスを公式発表。電話配車・ハイヤー Web 受注・陣痛タクシー等の社会インフラサービスが停止し、妊婦向け陣痛タクシーは東京・横浜・大阪等の主要都市でも利用不能となった。システム切断と内部隔離の迅速な対応が講じられており、7 月 14 日時点でデータ流出は確認されていないが調査は継続中。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/japans-largest-taxi-operator-shuts-systems-after-cyberattack/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARDS: 2026-07-15 新着 -->
 
