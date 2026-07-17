@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-16 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-17 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,6 +656,12 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-07-17 新着 -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;CISA が Microsoft SharePoint CVE-2026-58644（CVSS 9.8）を KEV 追加・連邦機関期限 7/19 — 認証済み Site Owner からデシリアライゼーション RCE・SharePoint オンプレミス全バージョンが対象（7/17）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;CISA が Fortinet FortiSandbox CVE-2026-39808/CVE-2026-25089（各 CVSS 9.1）を KEV 追加・連邦機関期限 7/19 — 未認証 OS コマンドインジェクション・FortiSandbox 全製品が影響（7/17）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Coca-Cola Fairlife がランサムウェア攻撃で米国全工場の操業を停止 — 年間売上 40 億ドルの主力ブランド・カナダは稼働継続・攻撃グループ・データ窃取は未公表（7/17）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;EY（Ernst &amp; Young）が第三者 IT サポートシステム侵害で顧客税務データ流出を公表 — 3月28日〜4月12日に不正アクセス・投資情報・税申告財務情報が対象（7/17）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Windows ゼロデイ「LegacyHive」PoC 公開 — User Profile Service 特権昇格・Windows 10/11/Server 全バージョン（完全パッチ済み）が影響・CVE 未採番・パッチなし（7/17）</span>
       <!-- 2026-07-16 新着 (1/2) -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;SonicWall SMA1000 ゼロデイ 2 件（CVE-2026-15409 CVSS 10.0 + CVE-2026-15410）が CISA KEV 追加・未認証 SSRF + コードインジェクション連鎖でデバイス完全制御・連邦機関期限 7/17（7/14）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;CISA が Oracle EBS CVE-2026-46817 を KEV 追加・連邦機関期限 7/18 — Oracle Payments の未認証テイクオーバー・公開約 950 インスタンスで積極悪用確認（7/15）</span>
@@ -1343,6 +1349,128 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-07-17 新着 -->
+
+    <!-- CARD: Microsoft SharePoint CVE-2026-58644 CISA KEV July 17 2026 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|CISA-KEV">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">CISA-KEV</span>
+          <span class="timestamp">2026-07-17 09:00</span>
+        </div>
+        <div class="card-title">CISA が Microsoft SharePoint Server CVE-2026-58644（CVSS 9.8）を KEV 追加・連邦機関期限は 7 月 19 日 — 認証済み Site Owner 権限からデシリアライゼーションで任意コード実行・オンプレミス全バージョンが対象（7月17日）</div>
+        <div class="card-summary"><ul>
+          <li>CVSS 9.8 の SharePoint Server デシリアライゼーション RCE 脆弱性・Site Owner 以上の権限を持つ認証済み攻撃者がネットワーク経由で任意コードを注入・リモート実行可能</li>
+          <li>SharePoint Server Subscription Edition・2019・2016 のオンプレミス全バージョンが対象・CVE-2026-56164 等との多段攻撃チェーンの一部として積極悪用が確認済み</li>
+          <li>CISA が 7 月 17 日に KEV カタログへ追加・連邦機関（FCEB）は 7 月 19 日（日曜日）までにパッチ適用が必須</li>
+        </ul></div>
+        <div class="card-detail">CISA は 7 月 17 日、Microsoft SharePoint Server の CVE-2026-58644（CVSS 9.8）を既知悪用脆弱性カタログへ追加し、連邦機関に 7 月 19 日までの対応を義務付けた。本脆弱性はデシリアライゼーションの欠陥で、Site Owner 権限以上の認証済み攻撃者がリモートからコードを実行できる。CVE-2026-56164・CVE-2026-32201 等と組み合わせた多段攻撃チェーンの一環として積極的な悪用が確認されており、IIS マシンキー窃取やマルウェア展開も報告されている。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.cisa.gov/news-events/alerts/2026/07/17/cisa-adds-one-known-exploited-vulnerability-catalog" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Fortinet FortiSandbox CVE-2026-39808 CVE-2026-25089 CISA KEV July 17 2026 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|CISA-KEV">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">CISA-KEV</span>
+          <span class="timestamp">2026-07-17 09:00</span>
+        </div>
+        <div class="card-title">CISA が Fortinet FortiSandbox の未認証 OS コマンドインジェクション 2 件（CVE-2026-39808・CVE-2026-25089 各 CVSS 9.1）を KEV 追加 — 認証不要で任意コマンド実行・連邦機関期限は 7 月 19 日（7月17日）</div>
+        <div class="card-summary"><ul>
+          <li>CVE-2026-39808・CVE-2026-25089 ともに CVSS 9.1・未認証の攻撃者が細工した HTTP リクエスト 1 本で FortiSandbox に任意の OS コマンドを実行可能・ユーザー操作は不要</li>
+          <li>FortiSandbox・FortiSandbox Cloud・FortiSandbox PaaS の全製品が対象・Fortinet は 4 月と 6 月にパッチを提供していたが今週から積極的な悪用が確認・セキュリティ企業 Defused が第 3 の CVE-2026-39813 とのセット悪用も観測</li>
+          <li>CISA は 7 月 16〜17 日に KEV カタログへ追加・連邦機関（FCEB）は 7 月 19 日（日曜日）までのパッチ適用が必須</li>
+        </ul></div>
+        <div class="card-detail">CISA は Fortinet FortiSandbox の未認証 OS コマンドインジェクション 2 件を 7 月 16〜17 日に KEV カタログへ追加した。どちらも認証なしで細工した HTTP リクエストを送るだけで任意コマンドを実行でき、ユーザー操作も不要な深刻度の高い脆弱性だ。パッチは春から夏にかけて提供済みだったが、セキュリティ企業 Defused が今週から実際の悪用試行を複数観測しており、連邦機関に対し日曜日までの対応が命じられた。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/cisa-warns-feds-to-patch-exploited-fortinet-fortisandbox-flaws-by-sunday/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Coca-Cola Fairlife ransomware July 17 2026 -->
+    <article class="card high" data-severity="high" data-tags="インシデント|ランサムウェア">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">ランサムウェア</span>
+          <span class="timestamp">2026-07-17 09:00</span>
+        </div>
+        <div class="card-title">Coca-Cola 傘下の乳製品ブランド Fairlife がランサムウェア攻撃で米国全生産拠点を一時停止 — 年間売上約 40 億ドルの主力ブランド・カナダ工場は継続稼働・攻撃グループ・データ窃取の有無は未公表（7月17日）</div>
+        <div class="card-summary"><ul>
+          <li>7 月 16 日、Coca-Cola が Fairlife の生産システムへの不正アクセスとランサムウェア攻撃を公式発表・米国全生産施設の操業を一時停止しインシデント対応と事業継続プロトコルを発動</li>
+          <li>カナダの Fairlife 工場は影響を受けておらず稼働継続・法執行機関への通報済み・外部サイバーセキュリティ専門家の支援を得て調査中</li>
+          <li>責任グループ・身代金要求の詳細・データ窃取の有無は現時点で未公表・Fairlife はヨーグルト・プロテインドリンク等を製造する Coca-Cola の主力成長ブランド</li>
+        </ul></div>
+        <div class="card-detail">Coca-Cola は 7 月 16 日、傘下ブランド Fairlife の米国生産システムがランサムウェア攻撃を受け、米国全工場の操業を一時停止したと発表した。Fairlife は推定年間売上約 40 億ドルを誇る Coca-Cola の主力成長ブランドで、ヨーグルト・チーズ・プロテインドリンクなどを米国で生産している。現時点で責任グループや身代金要求の有無は明らかにされておらず、食品・飲料業界への重大なランサムウェア被害が改めて浮き彫りとなった。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/coca-cola-says-fairlife-ransomware-attack-halts-us-dairy-production/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Ernst Young data breach July 17 2026 -->
+    <article class="card high" data-severity="high" data-tags="インシデント|データ漏洩">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">データ漏洩</span>
+          <span class="timestamp">2026-07-17 09:00</span>
+        </div>
+        <div class="card-title">EY（Ernst &amp; Young）が第三者 IT サポートシステム侵害による顧客税務データ流出を公表 — 3 月 28 日〜4 月 12 日に不正アクセス・投資保有情報・税申告用財務情報が対象・24 か月の信用監視を提供（7月17日）</div>
+        <div class="card-summary"><ul>
+          <li>第三者 IT サービス管理プラットフォームが 3 月 28 日〜4 月 12 日の間に不正アクセスを受け、税務担当者がサポートチケットに添付した顧客の投資保有状況・税申告用財務情報を含む文書が流出</li>
+          <li>EY は 4 月 23 日に異常を検知し即時対応を開始・7 月 15 日にカリフォルニア州司法長官へ侵害通知を提出・現時点でデータ悪用の証拠や特定個人が標的にされた証拠はなし</li>
+          <li>影響を受けた顧客に 24 か月のクレジット監視・なりすまし防止サービス（Experian）を 10 月 31 日申込み期限で提供・Big Four 会計法人として顧客の機密財務情報を広く保有する同社の侵害は業界全体に衝撃</li>
+        </ul></div>
+        <div class="card-detail">大手会計コンサルティング法人 EY（Ernst &amp; Young）は 7 月 17 日、内部 IT 担当者が使用する第三者サービス管理プラットフォームへの侵害を顧客に通知し始めた。不正アクセスは 3 月 28 日から 4 月 12 日の期間に発生し、サポートチケットに添付されていた機関投資家顧客の個人情報・投資保有情報・税申告用財務情報が流出した。EY は 4 月 23 日に異常を検知して即時対応を開始したが、Big Four 法人として大規模な機密財務情報を保有するだけに第三者リスク管理の強化が改めて問われている。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/ernst-and-young-discloses-data-breach-after-support-system-hack/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: LegacyHive Windows zero-day July 17 2026 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|ゼロデイ">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">ゼロデイ</span>
+          <span class="timestamp">2026-07-17 09:00</span>
+        </div>
+        <div class="card-title">Nightmare Eclipse が新 Windows ゼロデイ「LegacyHive」の PoC を公開 — User Profile Service の特権昇格でパッチ済み Windows 10/11 および Server 全バージョンが影響・CVE 未採番・パッチなし（7月17日）</div>
+        <div class="card-summary"><ul>
+          <li>Windows User Profile Service（ProfSvc）の脆弱性を悪用し標準ユーザーが管理者を含む他ユーザーのレジストリハイブをロード可能・特権昇格とクロスユーザーデータアクセスに繋がる</li>
+          <li>Windows 10・11 および Server 2016/2019/2022 の完全パッチ適用済み版を含む全バージョンが影響・Microsoft は未対応・CVE 番号未割り当て・現時点でパッチ提供の見通しなし</li>
+          <li>研究者 Nightmare Eclipse はこれまで BlueHammer・RoguePlanet 等 9 件の Windows ゼロデイを協調開示なしで公開・今回は悪用防止のため PoC の一部機能を意図的に除去して公開</li>
+        </ul></div>
+        <div class="card-detail">セキュリティ研究者 Nightmare Eclipse は 7 月 15 日、Windows User Profile Service を標的とした特権昇格ゼロデイ「LegacyHive」の PoC を公開した。攻撃者は標準ユーザー権限から他ユーザー（管理者含む）のレジストリハイブをロードでき、時限的パス切り替えトリックを利用した特権昇格が可能となる。完全パッチ済みの Windows 10・11・Server 全バージョンが影響を受けるが CVE は未採番でパッチ提供の見通しも立っていない。同研究者は 9 件の Windows ゼロデイを協調開示なしで公開し続けており、Microsoft との対立が続いている。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: 1M+ emails hidden text AI filter bypass July 16 2026 (Task2: Report) -->
+    <article class="card medium" data-severity="medium" data-tags="レポート|フィッシング">
+      <div class="severity"><div class="sev-icon">●</div><div class="sev-label">MEDIUM</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">レポート</span><span class="tag">フィッシング</span>
+          <span class="timestamp">2026-07-16 09:00</span>
+        </div>
+        <div class="card-title">Barracuda 調査：100 万通超のフィッシングメールがゼロサイズ・透明テキストで AI セキュリティフィルターを回避 — LLM が安価に大量生成・AI 製品の「生テキスト解析」と「表示テキスト解析」のギャップを直接突く（7月16日）</div>
+        <div class="card-summary"><ul>
+          <li>Barracuda が 4 月以降に 100 万通超の「テキストソルティング」フィッシングを検出・フォントサイズ 0 または背景同色テキストを HTML メールに埋め込み AI・ルールベース双方のフィルターの解析文字列を汚染して検出を回避</li>
+          <li>攻撃テーマは小売業のポイント・ギフトカード・クーポン偽装が主流・LLM が多様なテキストソルトを安価に大量自動生成することで従来の回避技術より高速・低コストで大規模展開が可能</li>
+          <li>現行の AI メールセキュリティ製品は「生の HTML ソース」を解析するが攻撃者が操作するのは AI が見る文字列であり、「ユーザーが実際に見るテキスト」の次元での解析への対応が急務</li>
+        </ul></div>
+        <div class="card-detail">Barracuda Networks の研究者が 7 月 16 日公開した調査によると、4 月以降に 100 万通超のフィッシングメールが「テキストソルティング」技術を用いて AI および従来型セキュリティフィルターを回避していた。攻撃者は HTML メール内にフォントサイズ 0 または背景同色の不可視テキストを埋め込み、AI が解析する文字列を意図的に汚染して検出を回避する。LLM によりソルトの自動生成コストが激減しており、現行の AI メールセキュリティが表示テキストと生テキストの乖離への対応を急ぐ必要性を示している。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.darkreading.com/threat-intelligence/1m-emails-hidden-text-dupe-ai-security-filters" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARDS: 2026-07-16 新着 -->
 
