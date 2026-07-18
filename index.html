@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-17 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-18 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,6 +656,13 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-07-18 新着 -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;WordPress「wp2shell」CVE-2026-63030（CVSS 9.8）＋ CVE-2026-60137（CVSS 9.1）で公開 PoC が出現 — 未認証 REST API＋SQL インジェクション連鎖 RCE・7.0.0〜7.0.1 および 6.9.0〜6.9.4 が対象・緊急パッチ 7.0.2/6.9.5 で強制自動更新（7/18）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;「FortiBleed」が INC・Lynx ランサムウェアの攻撃パイプラインと判明 — 194 か国 8 万 6,644 台の Fortinet 機器 VPN 認証情報を窃取・354 件の FortiGate 侵入・12 件のランサムウェア展開を確認（7/18）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Abbott Laboratories が ShinyHunters による 2 件のサイバーインシデントを調査 — LabCentral ポータル侵害で CE 製造認証書・技術仕様等の知的財産を窃取・7/18 を公開期限に恐喝（7/18）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;日本の冷凍食品・物流大手「ニチレイ」がサイバー攻撃で全国 140 拠点の冷蔵倉庫・出荷を停止 — KFC Japan 1,300 店超で食材不足・個人情報サーバーへの不正アクセスを確認（7/17）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;カナダ「マウント・ロイヤル大学」が「CMD Organization」によるランサムウェアで学生・職員のファイルドライブ全削除・30 BTC 身代金要求・パスポートスキャン含む漏洩サンプルを公開（7/18）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Zoom Workplace for Windows に未認証アカウント乗っ取り CVE-2026-53412（CVSS 9.8）— ネットワーク経由・認証ゼロ・ユーザー操作不要でアカウント完全制御・v7.0.0 へ即時更新（7/15）</span>
       <!-- 2026-07-17 新着 -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;CISA が Microsoft SharePoint CVE-2026-58644（CVSS 9.8）を KEV 追加・連邦機関期限 7/19 — 認証済み Site Owner からデシリアライゼーション RCE・SharePoint オンプレミス全バージョンが対象（7/17）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;CISA が Fortinet FortiSandbox CVE-2026-39808/CVE-2026-25089（各 CVSS 9.1）を KEV 追加・連邦機関期限 7/19 — 未認証 OS コマンドインジェクション・FortiSandbox 全製品が影響（7/17）</span>
@@ -1349,6 +1356,162 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-07-18 新着 -->
+
+    <!-- CARD: WordPress wp2shell CVE-2026-63030 RCE July 18 2026 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|RCE">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">RCE</span>
+          <span class="timestamp">2026-07-18 09:00</span>
+        </div>
+        <div class="card-title">WordPress Core「wp2shell」CVE-2026-63030（CVSS 9.8）＋ CVE-2026-60137（CVSS 9.1）の未認証 RCE チェーンで公開 PoC が出現 — REST API バッチルート混乱 ＋ WP_Query SQL インジェクション連鎖・認証ゼロ・プラグイン不要でコード実行・7.0.0〜7.0.1・6.9.0〜6.9.4 が対象・緊急パッチ 7.0.2/6.9.5 で強制自動更新（7月18日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>CVE-2026-63030（REST API バッチルート混乱）と CVE-2026-60137（WP_Query の author__not_in パラメーター SQL インジェクション・CVSS 9.1）を連鎖させ、有効なアカウントもプラグインも不要で任意コードをリモート実行可能</li>
+            <li>WordPress 7.0.0〜7.0.1 および 6.9.0〜6.9.4 が影響対象。世界で最も普及する CMS のコア自体の脆弱性のため、ベアインストール環境でも完全侵害が成立し影響サイト数は数億に上る</li>
+            <li>WordPress は 7.0.2 および 6.9.5 を緊急リリースし強制自動更新を有効化・公開 PoC が出回っているため、自動更新を無効にしているサイトは即時手動アップデートまたは REST API の一時無効化が必要</li>
+          </ul>
+        </div>
+        <div class="card-detail">CVE-2026-63030 と CVE-2026-60137 の 2 件を連鎖させた未認証 RCE が WordPress コアに発覚。REST API のバッチルート処理の混乱を通じて SQL インジェクションを誘発し最終的にコード実行を達成する攻撃チェーンで、認証情報・プラグインが一切不要のため影響範囲は世界の WordPress サイト全体に及ぶ。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/wordpress-core-wp2shell-rce-flaws-get-public-exploits-patch-now/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: FortiBleed INC Lynx ransomware July 18 2026 -->
+    <article class="card high" data-severity="high" data-tags="ランサムウェア|インシデント">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">ランサムウェア</span><span class="tag">インシデント</span>
+          <span class="timestamp">2026-07-18 09:00</span>
+        </div>
+        <div class="card-title">「FortiBleed」キャンペーンが INC・Lynx ランサムウェアの攻撃パイプラインと判明 — 世界 194 か国 8 万 6,644 台の Fortinet 機器から VPN 認証情報を窃取・カスタムスニファー「FortiGate Sniffer」で傍受・354 件の侵入確認・少なくとも 12 件のランサムウェア展開（7月18日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>侵害した FortiGate ファイアウォールにカスタムパケットスニファー「FortiGate Sniffer」を設置し SSL VPN 認証情報をリアルタイム傍受・45 GPU クラスター（Hashtopolis）でハッシュをクラック・194 か国 8 万 6,644 件の認証情報データベースを構築</li>
+            <li>SOCRadar が FortiBleed オペレーターの同一インフラから INC・Lynx RaaS の ransomware 交渉パネルへのアクセスを確認・354 件の FortiGate 完全侵入と少なくとも 12 件のランサムウェア展開に直接関与</li>
+            <li>CISA が Fortinet ユーザー全員にデバイスのセキュリティ強化措置を緊急勧告・影響を受けるユーザーは即刻 VPN 認証情報を変更しファームウェアを最新化することが必要</li>
+          </ul>
+        </div>
+        <div class="card-detail">FortiBleed キャンペーンは Fortinet FortiGate に設置したカスタムスニファーで VPN 認証情報を横取りし大規模クラスターでクラックする持続的大規模窃取作戦だ。SOCRadar の分析で INC および Lynx ランサムウェアグループとの直接連携が確認され、窃取した認証情報が実際のランサムウェア攻撃の初期アクセスに転用されていることが明らかになった。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/fortibleed-credential-theft-campaign-linked-to-lynx-ransomware/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Abbott Laboratories ShinyHunters July 18 2026 -->
+    <article class="card high" data-severity="high" data-tags="インシデント|データ侵害">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">データ侵害</span>
+          <span class="timestamp">2026-07-18 09:00</span>
+        </div>
+        <div class="card-title">Abbott Laboratories が ShinyHunters による 2 件のサイバーインシデントを調査 — LabCentral ポータルを侵害し CE 製造認証書・技術仕様・規制文書などの知的財産を窃取・7 月 18 日を公開期限に恐喝（7月18日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>ShinyHunters（＋ShadowByt3$）が 7 月 4 日に Abbott の LabCentral 顧客ポータルへ顧客認証情報で侵入・API エンドポイントを通じて CE 製造認証書・技術仕様書・規制文書・アッセイファイル等の知的財産を段階的に窃取</li>
+            <li>Exact Sciences（Cancer Diagnostics 部門）のレガシー IT システムへの不正アクセスが別件として並行進行・Abbott は 2 件ともに調査中で顧客個人データへの影響は現時点で未確認</li>
+            <li>脅威アクターは 7 月 18 日（後に 7 月 21 日に延長）を交渉期限として設定・データ未公開のまま Abbott が調査・当局への報告を続行中</li>
+          </ul>
+        </div>
+        <div class="card-detail">医療機器・診断システム大手 Abbott Laboratories がランサムウェアグループ ShinyHunters による二重のサイバーインシデントを公表した。LabCentral ポータル経由で侵入した攻撃者は API エンドポイントを悪用し製造認証書や規制文書など高感度の知的財産を窃取、7 月 18 日を公開期限として恐喝した。7月4日の侵入から 2 週間以上かけて静かに内部を探索していた点が特徴的だ。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Nichirei Japan cyberattack July 13-17 2026 -->
+    <article class="card high" data-severity="high" data-tags="インシデント|物流">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">物流</span>
+          <span class="timestamp">2026-07-17 09:00</span>
+        </div>
+        <div class="card-title">日本の冷凍食品・コールドチェーン物流大手「ニチレイ」がサイバー攻撃で全国 140 拠点の冷蔵倉庫・冷凍食品出荷を停止 — KFC Japan 全 1,300 店超で食材不足・個人情報サーバーへの不正アクセスを確認・個人情報保護委員会に初報提出（7月17日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>7 月 13 日にサイバー攻撃を検知しグループ全システムを緊急遮断・ニチレイロジグループの冷蔵倉庫業務とニチレイフーズの冷凍食品出荷が全国で停止・7 月 17 日から順次復旧開始</li>
+            <li>国内 140 拠点の冷蔵配送ネットワークに依存する KFC Japan が全 1,300 店超で食材不足・限定メニュー・短縮営業・臨時休業を警告・スーパーマーケットや他の食品チェーンへも影響波及</li>
+            <li>調査の結果、個人情報を保管するサーバーへの不正アクセスが判明し個人情報保護委員会（PIPC）へ速報提出。攻撃グループ・侵入経路・暗号化の有無は未公表</li>
+          </ul>
+        </div>
+        <div class="card-detail">日本最大級の冷凍食品・コールドチェーン物流企業ニチレイが 7 月 13 日にサイバー攻撃を受け、全国 140 拠点の冷蔵倉庫と食品出荷システムを停止した。KFC Japan 1,300 店超をはじめ複数の食品チェーンへ影響が波及し日本の冷凍食品サプライチェーン全体が打撃を受けた。個人情報を含むサーバーへのアクセスも確認されており今後の情報流出規模の確認が急がれる。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.securityweek.com/cyberattack-disrupts-operations-of-japanese-frozen-food-giant-nichirei/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Mount Royal University CMD ransomware July 2026 -->
+    <article class="card high" data-severity="high" data-tags="ランサムウェア|インシデント">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">ランサムウェア</span><span class="tag">インシデント</span>
+          <span class="timestamp">2026-07-18 09:00</span>
+        </div>
+        <div class="card-title">カナダ「マウント・ロイヤル大学」がランサムウェアグループ「CMD Organization」に攻撃され学生・職員のファイルドライブを全削除 — 30 BTC（約 190 万ドル）身代金要求・パスポートスキャン含む漏洩サンプルを公開・2 年間の信用監視を提供（7月18日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>6 月 17 日に侵害を検知・職員・学生用 H ドライブと部門データ用ストレージの 2 系統が削除され外部サービス・インターネットアクセスが停止・CMD Organization が攻撃を主張しパスポートスキャンを含む漏洩サンプルを公開</li>
+            <li>脅威アクターは 30 BTC（約 190 万ドル）の身代金を要求し 6 日以内に交渉がなければフルデータを公開すると脅迫・大学は当局と協力して調査を継続</li>
+            <li>大学は全現職・過去 5 年間の職員へ 2 年間の信用監視・個人情報盗難保護を提供。システム完全復旧には数週間〜数か月かかる見込みで影響を受けた個人への通知作業が進行中</li>
+          </ul>
+        </div>
+        <div class="card-detail">カナダ・アルバータ州カルガリーのマウント・ロイヤル大学が CMD Organization によるランサムウェア攻撃を受け、学生・職員の個人ファイルドライブが削除・恐喝材料に使われた。パスポートスキャンを含む機密文書が流出サンプルとして公開され 30 BTC の身代金が要求されている。高等教育機関へのランサムウェア攻撃が個人情報流出と組み合わさった典型的な二重恐喝モデルの事例。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.securityweek.com/mount-royal-university-confirms-data-stolen-in-ransomware-attack/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Zoom CVE-2026-53412 CVSS 9.8 July 15 2026 -->
+    <article class="card high" data-severity="high" data-tags="脆弱性">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span>
+          <span class="timestamp">2026-07-15 09:00</span>
+        </div>
+        <div class="card-title">Zoom Workplace for Windows に未認証アカウント乗っ取り脆弱性 CVE-2026-53412（CVSS 9.8）— ネットワーク上から認証情報もユーザー操作も不要でアカウントを完全制御・チャット履歴・SSO 認証情報・クラウドサブスクリプション全体が危機・v7.0.0 へ即時更新が必要（7月15日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>不適切な入力検証（Improper Input Validation・CWE-20）により、ネットワーク上から未認証の攻撃者が Zoom Workplace for Windows のアカウントを乗っ取り可能・チャット履歴・クラウド録画・連絡先・SSO 認証情報へのアクセスが成立</li>
+            <li>Zoom Workplace for Windows v7.0.0 未満・Windows VDI Client v7.0.10/6.6.15/6.5.18 未満・Meeting SDK for Windows v7.0.0 未満が影響対象。企業の Zoom 導入環境全体に影響</li>
+            <li>現時点で野生悪用（in-the-wild exploitation）は未確認。Zoom は 7 月 14 日に勧告を発表し 7 月 15 日に更新・CVSS 9.8 の深刻度を踏まえ即時パッチ適用を強く推奨</li>
+          </ul>
+        </div>
+        <div class="card-detail">世界で数億人が使用する Zoom Workplace for Windows に認証なしでアカウントを完全掌握できる深刻な脆弱性 CVE-2026-53412 が発覚した。成功した攻撃者はアーカイブチャット・クラウドサブスクリプション・SSO 認証情報など企業の機密情報全体にアクセス可能となり、野生悪用は未確認ながら CVSS 9.8 の深刻度から Zoom を業務利用する全組織に即刻アップデートが求められる。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: NMFTA 2026 Transportation Cybersecurity logistics cargo theft -->
+    <article class="card high" data-severity="high" data-tags="物流|レポート">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">物流</span><span class="tag">レポート</span>
+          <span class="timestamp">2026-07-18 09:00</span>
+        </div>
+        <div class="card-title">NMFTA「2026 年運輸業界サイバーセキュリティ動向レポート」警告 — 全貨物窃盗の 25% がサイバー起因に・ブローカー・運送会社へのフィッシング ＋ RMM ツール悪用でデジタル侵害と物理窃盗を融合・米国貨物被害は年間最大 350 億ドル（7月18日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>NMFTA（全国自動車貨物協会）が 2026 年版レポートで警告・組織犯罪グループが偽ロードボード掲載・フィッシングメール・RMM ツール悪用によりブローカー・運送業者・荷主の認証情報を侵害して実際の貨物を横取りする手法を急速に拡大中</li>
+            <li>2026 年 Q1 時点で全貨物窃盗件数の 25% がサイバー起因に分類。デジタル侵害と物理窃盗の相関が「明確な因果関係」として確認され、従来型の強盗・トレーラー窃盗から組織的なサイバー起因窃盗へのシフトが進む</li>
+            <li>NMFTA が匿名インシデント報告ポータル「Threat Report Portal」を開設し業界横断的なリスク情報共有を促進。継続的なソーシャルエンジニアリング意識訓練が最も有効な防御策として示された</li>
+          </ul>
+        </div>
+        <div class="card-detail">NMFTA の 2026 年版レポートは従来の物理的な貨物窃盗がサイバー犯罪者の手法と融合し「サイバー起因の貨物窃盗」という新形態に進化していることを警告する。デジタル侵害と物理窃盗の相関が明確になり、運輸・物流業界全体が重大なサイバー脅威にさらされている実態が明らかになった。米国の貨物被害は年間最大 350 億ドルに上ると試算されている。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.securityweek.com/nmfta-warns-of-surge-and-sophistication-of-cyber-enabled-cargo-theft/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARDS: 2026-07-17 新着 -->
 
