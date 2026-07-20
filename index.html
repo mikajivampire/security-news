@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-19 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-20 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,6 +656,12 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-07-20 新着 -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;ServiceNow AI プラットフォーム CVE-2026-6875（CVSS 9.5）が野外悪用開始 — 未認証サンドボックス脱出 RCE・パッチ 7/13 提供の 5 日後から攻撃開始・複数の異なる脱出経路が確認済み・即時パッチ必須（7/20）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;JadePuffer 進化版「EncForge」が PyTorch・SafeTensors・FAISS ベクトル DB など AI モデルデータ 180 拡張子を標的にしたランサムウェアを展開 — AI 資産標的型ランサムウェアの初事例・Sysdig 公開（7/20）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;macOS 新型インフォスティーラー「ClickLock」— 210ms ごとに全プロセスを強制終了してパスワード入力を強要・Keychain・8 ブラウザ・31 暗号資産ウォレット拡張を窃取・33 か国 100 超感染・Group-IB 公開（7/20）</span>
+      <span class="ticker-item"><span class="med">● MED</span> &nbsp;OpenSSL「HollowByte」DoS — 11 バイトの TLS ペイロードでサーバーメモリを無制限消費・CVE 未採番・6/9 にサイレントパッチ済み・公式アドバイザリなし・7/18 に oss-security で初公開（7/18）</span>
+      <span class="ticker-item"><span class="med">● REPORT</span> &nbsp;FIFA ワールドカップ 2026 便乗サイバー脅威が急増 — フィッシング前年比 22 倍・偽チケットサイト・QR コードフィッシング・国家系ハクティビストが米加墨会場を標的・Dark Reading（7/19）</span>
       <!-- 2026-07-19 新着 -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;コロンビア国営エネルギー大手「Ecopetrol」がサイバー攻撃で 3,300 アカウントのデータ窃取・ランサムウェア暗号化は阻止も恐喝継続・15 子会社のクラウドストレージが侵害（7/17）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;「ViteVenom」— 偽 @vitejs npm パッケージ 7 件がブロックチェーン 4 層 C2（Tron/Aptos/BSC）経由で RAT 配布・SuccessKey 展開・認証情報窃取・永続バックドア（Checkmarx 7/17）</span>
@@ -1368,6 +1374,118 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-07-20 新着 -->
+
+    <!-- CARD: ServiceNow CVE-2026-6875 actively exploited -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|エンタープライズ">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">エンタープライズ</span>
+          <span class="timestamp">2026-07-20 09:00</span>
+        </div>
+        <div class="card-title">ServiceNow AI プラットフォーム CVE-2026-6875（CVSS 9.5）が野外悪用開始 — 未認証サンドボックス脱出 RCE・パッチ提供 5 日後に攻撃確認・複数の異なるサンドボックス脱出経路を悪用・GlideRecord API JavaScript インジェクション（7月20日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Searchlight Cyber が発見した ServiceNow AI プラットフォームの未認証 RCE（CVSS 9.5）が 7 月 18 日から積極悪用中。GlideRecord の addQuery() API が javascript: プレフィックスを実行前に評価する欠陥を利用してスクリプトサンドボックスを脱出・リモートコード実行が可能</li>
+            <li>ServiceNow は 7 月 13 日にパッチを提供したが、攻撃者は公式 PoC とは異なる複数のサンドボックス脱出経路を悪用しており、既知手法のみブロックした組織は依然として保護されていない状態</li>
+            <li>Defused 社が野外悪用を確認・警告。ネットワーク到達可能な全インスタンスが対象で認証・フィッシング・初期アクセスは不要。クラウドホスト版は自動更新済みだがセルフホスト版は即時手動パッチが必須</li>
+          </ul>
+        </div>
+        <div class="card-detail">ServiceNow の AI プラットフォームに存在する深刻な脆弱性（CVSS 9.5）が 7 月 18 日から悪用されている。未認証の攻撃者は GlideRecord クエリ API の JavaScript 評価欠陥を利用してスクリプトサンドボックスを脱出し、リモートでコードを実行できる。公式 PoC とは異なる複数の脱出経路が確認されており、既知手法のブロックだけでは保護されない点が深刻。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-now-exploited-in-attacks/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: JadePuffer EncForge AI model ransomware -->
+    <article class="card high" data-severity="high" data-tags="ランサムウェア|AI">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">ランサムウェア</span><span class="tag">AI</span>
+          <span class="timestamp">2026-07-20 09:00</span>
+        </div>
+        <div class="card-title">JadePuffer 進化版「EncForge」が AI モデルデータを標的にしたランサムウェアを展開 — PyTorch・HuggingFace SafeTensors・FAISS ベクトル DB・学習データセットなど 180 拡張子を AES-256 暗号化・Sysdig が初の AI 資産標的型ランサムウェアとして確認（7月20日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Sysdig TRT が初の AI 自律エージェント型ランサムウェア「JadePuffer」の進化版として「EncForge」（UPX Pack Go バイナリ）を確認。AES-256-CTR＋RSA-2048 ハイブリッド暗号化で ML スタック全体を標的とする初の専用設計ランサムウェア</li>
+            <li>PyTorch/TensorFlow チェックポイント・HuggingFace SafeTensors・llama.cpp GGUF モデル・FAISS ベクトルインデックス・Apache Parquet 学習データセット・NumPy 配列など約 180 拡張子を網羅し AI 開発インフラを壊滅させる設計</li>
+            <li>Langflow の既知脆弱性（CVE-2025-3248）から初期アクセスを取得後、LLM エージェントが偵察・横展開・権限昇格・暗号化まで全フェーズを自律完結。AI 資産をバックアップなしで保有する組織への被害が深刻</li>
+          </ul>
+        </div>
+        <div class="card-detail">Sysdig が 7 月 20 日に公開した調査で、AI 自律エージェントが全攻撃フェーズを単独で遂行するランサムウェア「JadePuffer」の最新ペイロード「EncForge」が明らかになった。ML モデルの学習データ・重みファイル・ベクトル DB を対象に特化した設計で、AI インフラへのバックアップ戦略の再設計が急務となっている。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: ClickLock macOS infostealer -->
+    <article class="card high" data-severity="high" data-tags="マルウェア|macOS">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">マルウェア</span><span class="tag">macOS</span>
+          <span class="timestamp">2026-07-20 09:00</span>
+        </div>
+        <div class="card-title">macOS 新型インフォスティーラー「ClickLock Stealer」— ClickFix ルアーで配布・Finder/ブラウザ/システムプロセスを 210ms 間隔で強制終了してパスワード入力を強要・8 ブラウザ・31 暗号資産ウォレット拡張・macOS Keychain を窃取・33 か国 100 超感染（7月20日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Group-IB が発見した macOS 用情報窃取マルウェア。偽 Cloudflare 認証を装う ClickFix ルアーで Terminal にコマンドを貼り付けさせ感染。Finder・ドック・Spotlight・ブラウザなどを 210ms ごとに強制終了し、パスワード入力ボックス以外の使用を最大 83 時間不能にする</li>
+            <li>正しいパスワードが入力されると macOS Keychain・8 ブラウザの保存認証情報・31 種の暗号資産ウォレット拡張・8 デスクトップウォレットアプリ・シェル履歴・FTP 認証情報を一括窃取し Telegram BOT へ送信。GSocket でリモートバックドアも設置</li>
+            <li>2026 年 5 月から稼働中で 33 か国 100 超のシステムに感染（欧州 50% 超）。エクスプロイト不要で特権昇格なしに動作する社会工学型攻撃。macOS セキュリティ機構をバイパスしてユーザーの行動を利用する新手法</li>
+          </ul>
+        </div>
+        <div class="card-detail">Group-IB が 7 月 20 日に詳細を公開した「ClickLock Stealer」は、ClickFix 手法でターミナルコマンド実行を誘発するソーシャルエンジニアリング型マルウェア。起動後は全アプリを 210ms ごとに強制終了し続け最大 83 時間パスワード入力を強要する。入力後は Keychain・ブラウザ・暗号資産ウォレットを丸ごと窃取し Telegram 経由で攻撃者に送信する。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/new-clicklock-macos-malware-traps-users-into-revealing-login-password/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: HollowByte OpenSSL DoS (MEDIUM) -->
+    <article class="card medium" data-severity="medium" data-tags="脆弱性|インフラ">
+      <div class="severity"><div class="sev-icon">●</div><div class="sev-label">MEDIUM</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">インフラ</span>
+          <span class="timestamp">2026-07-18 18:00</span>
+        </div>
+        <div class="card-title">OpenSSL「HollowByte」— 11 バイトの TLS ハンドシェイクペイロードでサーバーメモリを際限なく消費させる DoS 脆弱性・CVE 未採番・2026年6月9日にサイレントパッチ済みだが公式アドバイザリなし・7月18日に oss-security で初公開（7月18日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>OpenSSL の TLS ハンドシェイク処理に存在するメモリ消費 DoS 脆弱性。ハンドシェイクヘッダーの宣言ボディ長を検証前にバッファ確保するため、11 バイトの細工ペイロードで最大 131KB のメモリを不正に確保させることが可能</li>
+            <li>攻撃者が繰り返しリクエストを送るとサーバーワーカースレッドがブロックし RSSet が際限なく増大。16GB 環境のテストで 25% のメモリを占有させることを実証済みで、DoS 状態からの回復にはプロセス再起動が必要</li>
+            <li>OpenSSL チームは 6 月 9 日にサイレントパッチ（CVE 未採番・リリースノート未記載・公式アドバイザリなし）で修正済み。7 月 18 日に oss-security ML で研究者が公開するまで脆弱性の存在は非公知だったため、パッチ適用状況の把握が困難</li>
+          </ul>
+        </div>
+        <div class="card-detail">「HollowByte」は OpenSSL の TLS ハンドシェイク処理において、メッセージヘッダーの宣言ボディ長に基づいて受信バッファを事前確保する実装欠陥を悪用する DoS 脆弱性。攻撃者は 11 バイトの細工ペイロードを送信するだけで任意サイズのバッファ確保を誘発できる。サイレント修正のため多くの管理者が対応の要否を認識していない可能性がある。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/hollowbyte-ddos-flaw-bloats-openssl-server-memory-with-11-byte-payload/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: FIFA World Cup 2026 cyber threats (MEDIUM, report) -->
+    <article class="card medium" data-severity="medium" data-tags="レポート|フィッシング">
+      <div class="severity"><div class="sev-icon">●</div><div class="sev-label">MEDIUM</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">レポート</span><span class="tag">フィッシング</span>
+          <span class="timestamp">2026-07-19 09:00</span>
+        </div>
+        <div class="card-title">FIFA ワールドカップ 2026 に合わせたサイバー脅威が急増 — KnowBe4 調査でフィッシングが前年比 22 倍増・偽チケットサイト・QR コードフィッシング・スタジアム運営 DDoS・国家系ハクティビストが米国・カナダ・メキシコ会場を標的（7月19日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>KnowBe4 ThreatLabs が 4 月から追跡したワールドカップ便乗フィッシングは 22 倍増。偽 FIFA 採用メール・チケット転売詐欺・賞金詐欺など複数の手口で認証情報・個人情報を組織的に窃取するキャンペーンが展開中</li>
+            <li>偽チケットポータル・グッズサイト・ストリーミングサービス・シャトルバス向け QR コードを悪用した詐欺が急増。個人ファンだけでなく公式スポンサー・旅行会社・ホスピタリティ企業も標的。スタジアム運営・交通システムへのランサムウェア・DDoS 攻撃も警告</li>
+            <li>親ロシア・親イラン系国家ハクティビストが米国・カナダ・メキシコ会場への DDoS 攻撃を予告。大会終了後も関連詐欺・フィッシングが継続すると研究者は警告しており、余韻を利用した二次攻撃に注意が必要</li>
+          </ul>
+        </div>
+        <div class="card-detail">Dark Reading がまとめた 2026 FIFA ワールドカップ前後の脅威動向によると、フィッシング・詐欺・DDoS・ランサムウェアすべてのベクターで急増が確認されている。ハクティビスト・犯罪グループ・国家系脅威アクターが混在して攻撃を仕掛けており、大規模スポーツイベントのサイバーセキュリティリスクが改めて浮き彫りになっている。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.darkreading.com/cybersecurity-operations/2026-fifa-world-cup-faces-surge-cyber-threats" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARDS: 2026-07-19 新着 -->
 
