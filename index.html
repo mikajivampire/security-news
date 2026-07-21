@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-20 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-07-21 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,6 +656,16 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-07-21 新着 -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Clover Health がソーシャルエンジニアリングで医療保険従業員 3 名のアカウントを乗っ取り PII・PHI 流出—SEC に重大インシデント開示（7/21）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;イラン系 APT「Cavern Manticore」の「HollowGraph」バックドア—Microsoft 365 カレンダーに 2050 年付きイベントを作成して C2 通信をゼロ偽造・イスラエル組織を標的にスパイ（7/21）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;「FakeGit」—7,600 偽 GitHub リポジトリ・800 偽 AI Skills/MCP サーバーが SmartLoader→StealC を配布・GitHub Release 経由で 1,400 万件超ダウンロード（7/21）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Qilin ランサムウェアが Palo Alto PAN-OS CVE-2026-0257（CVSS 7.8）認証バイパスで VPN 経由侵害—Arctic Wolf が 2026 年 6 月の複数侵害を調査・二重恐喝（7/21）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;7-Zip CVE-2026-14266（CVSS 7.0）—XZ アーカイブ処理のヒープオーバーフローで細工ファイルを開くだけで RCE・ZDI 7/15 開示・7-Zip 26.02 でパッチ済み（7/21）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;Storm-2949 が Microsoft SSPR 悪用で Azure データを窃取—IT サポート偽装で MFA 除去・Graph API で組織全体偵察・OneDrive/SharePoint のVPN設定を収集（7/21）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;「SleeperGem」—7 年休眠の RubyGems アカウント乗っ取りで git_credential_manager 等 3 パッケージにローダー注入・開発者マシンにデーモン永続化（7/21）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;エスティ ローダーが Oracle EBS CVE-2025-61882 経由で Cl0p に 870GB 窃取された顧客データ流出を公表—2025 年 8 月侵害・2026 年 7 月に被害者通知開始（7/21）</span>
+      <span class="ticker-item"><span class="med">● MED</span> &nbsp;Google・Microsoft が 160 万インストールの「ModHeader」拡張機能を削除—休眠状態の閲覧履歴収集コードを公式配布版に発見・実際のデータ収集証拠なし（7/21）</span>
       <!-- 2026-07-20 新着 -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;ServiceNow AI プラットフォーム CVE-2026-6875（CVSS 9.5）が野外悪用開始 — 未認証サンドボックス脱出 RCE・パッチ 7/13 提供の 5 日後から攻撃開始・複数の異なる脱出経路が確認済み・即時パッチ必須（7/20）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;JadePuffer 進化版「EncForge」が PyTorch・SafeTensors・FAISS ベクトル DB など AI モデルデータ 180 拡張子を標的にしたランサムウェアを展開 — AI 資産標的型ランサムウェアの初事例・Sysdig 公開（7/20）</span>
@@ -1374,6 +1384,206 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-07-21 新着 -->
+
+    <!-- CARD: Clover Health data breach July 21 -->
+    <article class="card high" data-severity="high" data-tags="インシデント|データ漏洩">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">データ漏洩</span><span class="tag">医療</span>
+          <span class="timestamp">2026-07-21 09:00</span>
+        </div>
+        <div class="card-title">Clover Health がソーシャルエンジニアリング攻撃で医療保険加入者の PII・PHI を流出・SEC に重大インシデントとして公開—従業員 3 名のアカウント乗っ取りで訪問スケジューリング・ブローカー販売業務システムが侵害（7月21日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>ソーシャルエンジニアリングにより医療保険従業員 3 名の非管理職アカウントを乗っ取り、加入者の個人情報（PII）と保護医療情報（PHI）が流出</li>
+            <li>7 月 4 日に異常なログインアクティビティを検知、7 月 21 日に SEC へ重大インシデントを正式開示・法執行機関に通知済み</li>
+            <li>侵害されたアカウントは訪問スケジューリングと保険ブローカー向け販売機能を担当、財務・請求システムへのアクセスはなかった</li>
+          </ul>
+        </div>
+        <div class="card-detail">米国の医療技術企業 Clover Health は、ソーシャルエンジニアリング攻撃により 3 名の非管理職従業員アカウントが侵害されたと SEC 開示を通じて発表。侵害発覚から約 2.5 週間後の 7 月 21 日に公表し、法執行機関との連携・サードパーティフォレンジックによる調査を継続中。保険加入者の PII・PHI へのアクセスが確認されており、医療情報保護法（HIPAA）上の対応が求められる。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.securityweek.com/clover-health-investments-discloses-data-breach/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: HollowGraph malware Iran APT Cavern Manticore -->
+    <article class="card high" data-severity="high" data-tags="APT|マルウェア">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">APT</span><span class="tag">マルウェア</span><span class="tag">スパイ</span>
+          <span class="timestamp">2026-07-21 09:00</span>
+        </div>
+        <div class="card-title">イラン系 APT「Cavern Manticore」が新型バックドア「HollowGraph」で Microsoft 365 カレンダーイベントを C2 デッドドロップに悪用—2050 年付きイベントに指令と窃取データを隠蔽しイスラエル組織をスパイ（7月21日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>.NET DLL バックドア「HollowGraph」が Microsoft Graph API を介し 2050 年 5 月 13 日付のカレンダーイベントに C2 指令と窃取データを隠蔽—攻撃者独自サーバーへの通信ゼロで正規 M365 トラフィックに完全偽装</li>
+            <li>Group-IB が 12 台の感染マシンを確認、2026 年 6 月 3 日〜7 月 9 日の通信を観測—イスラエル組織を標的にした持続的スパイキャンペーンと分析、Cavern Manticore の大型ツールキットの一部と判断</li>
+            <li>ソフトウェアパッチで対処不可能—Microsoft Graph・M365 監査ログで未来日付（2050 年）のアプリ主導カレンダーイベントと異常な件名・添付ファイルを監視することが唯一の早期検知手段</li>
+          </ul>
+        </div>
+        <div class="card-detail">イラン系 APT「Cavern Manticore」が操る「HollowGraph」は、正規 Microsoft 365 カレンダーを双方向デッドドロップとして機能させる高度なステルス型バックドア。2050 年付きイベントの件名・添付ファイルに指令と窃取データを隠すことで、ネットワーク監視ツールが検知する外部 C2 通信が一切発生しない。get と send の 2 コマンドのみをサポートするシンプルな .NET DLL であり、イスラエルへの標的型スパイ活動に特化した設計。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: FakeGit Campaign 7600 GitHub repos SmartLoader -->
+    <article class="card high" data-severity="high" data-tags="マルウェア|サプライチェーン">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">マルウェア</span><span class="tag">サプライチェーン</span><span class="tag">AI</span>
+          <span class="timestamp">2026-07-21 09:00</span>
+        </div>
+        <div class="card-title">「FakeGit」キャンペーン—7,600 の偽 GitHub リポジトリが SmartLoader→StealC インフォスティーラーを配布・800 件は偽 AI Skills・MCP サーバーを騙り GitHub Release 経由で 1,400 万件超のダウンロードを記録（7月21日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>6,600 の偽開発者プロフィールが作成した 7,600 の GitHub リポジトリが、コピー済みプロジェクト・本物そっくりの README・悪意 ZIP で SmartLoader を配布—GitHub Release アセット経由で 1,400 万件超のダウンロードを達成</li>
+            <li>800 リポジトリが Gmail・WhatsApp 統合や Databricks・Jenkins・Docker ツールを偽装した偽 AI Skills・MCP サーバーとして公開—AI 開発者エコシステムを直接標的化</li>
+            <li>SmartLoader は開発者マシンに永続化後、StealC インフォスティーラーをセカンドステージとして展開—ブラウザ認証情報・暗号資産ウォレット・クラウドシークレットを収集</li>
+          </ul>
+        </div>
+        <div class="card-detail">Island の Oleg Zaytsev が発表した「FakeGit」は GitHub を悪用した大規模マルウェア配布キャンペーン。6,600 超の偽プロフィールが本物のリポジトリを複製し、本物そっくりの README と悪意ある ZIP で SmartLoader を感染させる。特に AI Skills・MCP サーバーを装った 800 件が AI 開発者を直接狙っており、1,400 万超のダウンロードが示す被害規模は甚大。感染後は StealC で認証情報・ブラウザデータ・暗号資産情報を収集する。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/fakegit-campaign-uses-7600-github.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Qilin ransomware PAN-OS CVE-2026-0257 -->
+    <article class="card high" data-severity="high" data-tags="ランサムウェア|脆弱性">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">ランサムウェア</span><span class="tag">脆弱性</span><span class="tag">VPN</span>
+          <span class="timestamp">2026-07-21 09:00</span>
+        </div>
+        <div class="card-title">Qilin ランサムウェアが Palo Alto PAN-OS 認証バイパス CVE-2026-0257（CVSS 7.8）を悪用し VPN 経由で多数侵害—Arctic Wolf が 2026 年 6 月の複数侵害を調査・暗号化のみから二重恐喝まで多様な攻撃手口（7月21日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Arctic Wolf が 2026 年 6 月に発生した複数侵害を調査し、Qilin RaaS アフィリエイトが CVE-2026-0257（PAN-OS GlobalProtect の認証バイパス）を初期侵入口として使用—認証情報不要・特定証明書設定で未認証 VPN セッションを確立</li>
+            <li>侵害後の手口はアフィリエイトによって多様—暗号化のみの急速展開から長期滞在型の二重恐喝型まで複数スタイルが確認・Qilin は 2022 年 8 月「Agenda」として登場し現在ダークウェブリークサイトに 2,000 件超の被害者を掲載</li>
+            <li>CVE-2026-0257 は Palo Alto Networks が 5 月 13 日にパッチ提供・CISA は 5 月 29 日 KEV 追加—GlobalProtect VPN を稼働中の全組織はパッチ適用状況の確認と侵害の有無の調査が急務</li>
+          </ul>
+        </div>
+        <div class="card-detail">Qilin RaaS アフィリエイトが PAN-OS の認証バイパス脆弱性（CVE-2026-0257 / CVSS 7.8）を利用した侵害を多数実行していたことを Arctic Wolf が公開。「認証オーバーライドクッキー有効かつ特定証明書設定」の GlobalProtect 環境で未認証 VPN セッションを確立後、迅速な暗号化または長期滞在型の二重恐喝攻撃を展開。Rapid7 は 5 月 17 日から顧客環境での悪用を確認しており、既にパッチ適用済みでも 5 月以降の侵害痕跡の確認が必要。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/qilin-ransomware-attackers-exploit-pan.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: 7-Zip CVE-2026-14266 XZ heap overflow -->
+    <article class="card high" data-severity="high" data-tags="脆弱性">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">RCE</span>
+          <span class="timestamp">2026-07-21 09:00</span>
+        </div>
+        <div class="card-title">7-Zip CVE-2026-14266（CVSS 7.0）— XZ アーカイブ処理のヒープバッファオーバーフローで細工ファイルを開くだけで任意コード実行が可能・Trend Micro ZDI が 7 月 15 日に開示・修正版 7-Zip 26.02 は 6 月 25 日公開済み（7月21日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>7-Zip の XZ デコーダーがフィルター処理時にバッファ残量の減算を省略することでヒープバッファオーバーフローが発生—ユーザーが細工した XZ アーカイブを開くだけで現プロセスのコンテキストで任意コードが実行される</li>
+            <li>CVSS 3.0 スコアは 7.0（High）、AV:L/AC:H/PR:N/UI:R—Trend Micro Zero Day Initiative が発見し 2026 年 7 月 15 日に技術詳細を公開</li>
+            <li>修正版 7-Zip 26.02 は 2026 年 6 月 25 日リリース済み—7 月 20 日時点で公開 PoC・野生悪用は未確認、ただし速やかなアップグレードを推奨</li>
+          </ul>
+        </div>
+        <div class="card-detail">Trend Micro ZDI が開示した CVE-2026-14266 は、7-Zip が XZ チャンクデータを処理する際にバッファへの既書き込みバイト数を差し引かずにバッファサイズ全体を次の処理に渡すことで発生するヒープオーバーフロー。悪用が成功した場合、攻撃者は細工した XZ アーカイブをユーザーに開かせるだけで当該プロセスのコンテキストでコードを実行できる。7-Zip 26.02 ではバイト数減算ロジックが追加されており、速やかな更新を推奨。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/new-7-zip-vulnerability-could-let.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Storm-2949 Microsoft SSPR Azure data theft -->
+    <article class="card high" data-severity="high" data-tags="インシデント|クラウド攻撃">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">クラウド攻撃</span><span class="tag">Azure</span>
+          <span class="timestamp">2026-07-21 09:00</span>
+        </div>
+        <div class="card-title">脅威アクター「Storm-2949」が Microsoft SSPR（セルフサービスパスワードリセット）を悪用した Azure データ窃取攻撃を展開—IT サポート偽装でパスワードリセット誘導・MFA を除去し Graph API で組織全体を偵察（7月21日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Storm-2949 が IT サポートを偽装した電話でターゲットに SSPR フローを通じたパスワードリセットと MFA 承認を誘導—リセット後に MFA 設定を削除して攻撃者のデバイスに Microsoft Authenticator を登録しアカウントを完全乗っ取り</li>
+            <li>アカウント乗っ取り後、Microsoft Graph API とカスタム Python スクリプトでユーザー・ロール・アプリ・サービスプリンシパルを列挙—OneDrive・SharePoint の VPN 設定・IT 運用ファイルを検索してラテラルムーブメントへの足がかりを取得</li>
+            <li>対策: SSPR 経由の MFA 再登録を必ず管理者が承認するポリシーの導入・SSPR フローの異常アクティビティログ監視・Conditional Access ポリシーの強化が急務</li>
+          </ul>
+        </div>
+        <div class="card-detail">Storm-2949 の攻撃手法は正規の Microsoft セルフサービスパスワードリセット機能を経由するため、ユーザーが「IT サポートからの正当な要求」として操作に従うリスクが高い。攻撃者は MFA 除去後に組織の Azure テナント全体を Graph API で偵察し、VPN 認証情報やリモートアクセス情報を収集してオンプレミスネットワークへの横断移動を試みる段階的な手口。複数組織が被害を受けており、SSPR 設定の見直しが推奨される。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/microsoft-self-service-password-reset-abused-in-azure-data-theft-attacks/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: SleeperGem RubyGems supply chain -->
+    <article class="card high" data-severity="high" data-tags="サプライチェーン|マルウェア">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">サプライチェーン</span><span class="tag">マルウェア</span><span class="tag">開発者</span>
+          <span class="timestamp">2026-07-21 09:00</span>
+        </div>
+        <div class="card-title">「SleeperGem」— 6〜7 年間休眠の RubyGems アカウントを乗っ取り git_credential_manager 等 3 パッケージに悪意ローダーを注入・CI/CD をスキップし開発者マシンのみでネイティブデーモンと永続化を設置（7月21日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>git_credential_manager（v2.8.0〜2.8.3、7 月 18 日公開）・Dendreo（v1.1.3〜1.1.4）・fastlane-plugin-run_tests_firebase_testlab（v0.3.2）の 3 パッケージが悪意ローダーを内包—CI/CD 環境では実行をスキップし、開発者マシン上でのみ攻撃者 Forgejo サーバーから第 2 ステージを取得</li>
+            <li>感染後、ネイティブデーモンをインストールし永続化を実現—「SleeperGem」は 6〜7 年間休眠していた本物のアカウントを乗っ取ることでリスクレーダーをすり抜ける新型手法（Aikido Security・Charlie Eriksen が命名・発見）</li>
+            <li>対応: 影響バージョンを即時削除・安全な上位バージョンへアップグレード・SSH 鍵・クラウド認証情報を含む全シークレットをローテーション・全アカウントの 2FA を有効化</li>
+          </ul>
+        </div>
+        <div class="card-detail">Aikido Security の Charlie Eriksen が発見した「SleeperGem」は、長期間活動していない RubyGems アカウントを乗っ取ることで脅威インテリジェンスの警戒レーダーをすり抜ける新手の供給チェーン攻撃。git_credential_manager など開発者が使うパッケージを標的に CI/CD 環境をスキップしてローカル開発マシンのみで悪意コードを実行。攻撃者の Forgejo サーバーから取得した第 2 ステージが永続バックドアを設置し SSH 鍵・クラウド認証情報・API シークレットが危険にさらされる。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/sleepergem-uses-three-malicious.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Estée Lauder Oracle EBS breach notification -->
+    <article class="card high" data-severity="high" data-tags="インシデント|データ漏洩">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">インシデント</span><span class="tag">データ漏洩</span><span class="tag">Cl0p</span>
+          <span class="timestamp">2026-07-21 09:00</span>
+        </div>
+        <div class="card-title">エスティ ローダーが Oracle E-Business Suite ゼロデイ CVE-2025-61882 経由の Cl0p 侵害で顧客の個人・財務・医療情報が流出したと公表—2025 年 8 月侵害・870GB 窃取・2026 年 7 月に被害者通知開始（7月21日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Cl0p サイバー犯罪グループが Oracle EBS ゼロデイ（CVE-2025-61882）を悪用し 2025 年 8 月 9 日頃にエスティ ローダーの人事管理システムへ不正アクセス—個人・財務・医療情報を含む 870GB のデータを窃取しリークサイトに公開</li>
+            <li>同一キャンペーンで Harvard・ペンシルベニア大学・Logitech・Washington Post・Envoy Air（American Airlines 子会社）など多数の組織が被害を受けており、Oracle が 2025 年 10 月 4 日にパッチを提供する以前のゼロデイ悪用と確認</li>
+            <li>エスティ ローダーは被害者に 24 か月の無償身元監視サービス（Kroll 提供）を提供—法執行機関に通知済みでシステム強化対策を実施、2026 年 6 月 19 日に調査で侵害を確定</li>
+          </ul>
+        </div>
+        <div class="card-detail">世界的化粧品大手エスティ ローダーは Oracle EBS を標的にした Cl0p の大規模キャンペーン（CVE-2025-61882 ゼロデイ悪用）で 2025 年 8 月に人事システムへの不正侵入を受け、従業員・顧客の個人・財務・健康情報が漏洩したことを 2026 年 7 月に公表した。Cl0p は Oracle が 2025 年 10 月にパッチ提供する以前にゼロデイとして悪用しており、同一キャンペーンの被害企業は Harvard や Logitech など広範にわたる。Kroll による 24 か月の身元監視サービスを提供。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/est-e-lauder-discloses-data-breach-via-oracle-e-business-flaw/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: ModHeader extension pulled - MEDIUM report -->
+    <article class="card medium" data-severity="medium" data-tags="レポート">
+      <div class="severity"><div class="sev-icon">●</div><div class="sev-label">MEDIUM</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">ブラウザセキュリティ</span><span class="tag">サプライチェーン</span><span class="tag">レポート</span>
+          <span class="timestamp">2026-07-21 09:00</span>
+        </div>
+        <div class="card-title">Google・Microsoft が 160 万インストールの「ModHeader」拡張機能を削除—公式配布版に休眠状態の閲覧履歴収集コードを発見・Stripe OLT が公式署名と照合し確認・Edge 版は 7 月 3 日・Chrome 版は 7 月 10 日に削除（7月21日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Chrome・Edge 合計 160 万インストールの人気ブラウザ拡張機能「ModHeader」の公式配布版に、空のアローリストで休眠状態の閲覧履歴収集モジュールが埋め込まれていたことを UK セキュリティ企業 Stripe OLT が Google 署名と照合して発見</li>
+            <li>収集モジュールは休眠状態で実際のデータ収集・送信の証拠は確認されず—Microsoft Edge 版は 7 月 3 日に削除済み、Chrome 版は 7 月 10 日に削除済み</li>
+            <li>正規ストア配布版であっても隠蔽コードが存在し得ることを再確認—Chrome・Edge 両ストアの拡張機能レビュープロセスおよびブラウザ拡張機能サプライチェーンの信頼性への懸念が浮上</li>
+          </ul>
+        </div>
+        <div class="card-detail">UK セキュリティ企業 Stripe OLT が Chrome Web Store の公式署名と照合して本物の ModHeader 拡張機能に閲覧履歴収集コードを発見した。アローリストが空のため実際の収集は行われておらず、データ流出の証拠もない。ただし Chrome 約 90 万・Edge 約 70 万の計 160 万ユーザーが潜在リスクに晒されていた事実は、ブラウザ拡張機能サプライチェーンの脆弱性を改めて示す重要な事例となった。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARDS: 2026-07-20 新着 -->
 
