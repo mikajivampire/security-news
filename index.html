@@ -623,7 +623,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <h1>THREAT<span>/</span>INTEL <span>//</span> セキュリティニュース</h1>
-      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-08-04 09:00</span></div>
+      <div class="hero-sub">POWERED BY CLAUDE CODE &nbsp;|&nbsp; LAST UPDATE: <span id="last-update">2026-08-05 09:00</span></div>
     </div>
   </div>
 </section>
@@ -656,6 +656,16 @@
   <!-- Ticker -->
   <div class="ticker-wrap">
     <div class="ticker" id="ticker">
+      <!-- 2026-08-05 新着 (1/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;TP-Link Omada ZTP に 15 件の脆弱性—Forescout が Black Hat USA 2026 で開示・ハードコード暗号鍵＋CVE-2025-7850/7851 連鎖で企業ネットワーク完全制御（8/5）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;FortiBleed が Lynx・INC ランサムウェアへの認証情報供給路と判明—SOCRadar が 43 万台超の FortiGate 標的・1 億 1 千万件超の認証情報を RaaS に提供（8/5）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;AI 議事録ツール tl;dv の Firebase 設定ミスで 23 か国政府会議に侵入可能—180,000 件超の通話記録が露出・研究者が進行中の政府会議に侵入成功（8/3）</span>
+      <span class="ticker-item"><span class="med">● REPORT</span> &nbsp;「Smoke#Screen」— ScreenConnect RMM 悪用フィッシングキャンペーン・4 種の異なるソーシャルエンジニアリング手法と Cloudflare トンネルでサイレント永続化（8/4）</span>
+      <!-- 2026-08-05 新着 (2/2) -->
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;TP-Link Omada ZTP に 15 件の脆弱性—Forescout が Black Hat USA 2026 で開示・ハードコード暗号鍵＋CVE-2025-7850/7851 連鎖で企業ネットワーク完全制御（8/5）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;FortiBleed が Lynx・INC ランサムウェアへの認証情報供給路と判明—SOCRadar が 43 万台超の FortiGate 標的・1 億 1 千万件超の認証情報を RaaS に提供（8/5）</span>
+      <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;AI 議事録ツール tl;dv の Firebase 設定ミスで 23 か国政府会議に侵入可能—180,000 件超の通話記録が露出・研究者が進行中の政府会議に侵入成功（8/3）</span>
+      <span class="ticker-item"><span class="med">● REPORT</span> &nbsp;「Smoke#Screen」— ScreenConnect RMM 悪用フィッシングキャンペーン・4 種の異なるソーシャルエンジニアリング手法と Cloudflare トンネルでサイレント永続化（8/4）</span>
       <!-- 2026-08-04 新着 (1/2) -->
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;INC Ransomware が SonicWall SMA 1000 CVE-2026-15409 で支配的脅威に台頭—KNUCKLEBALL→Suo5→ORANGETAIL チェーンで VPN root 奪取・885 件超の被害・8 月から活動急加速（8/3）</span>
       <span class="ticker-item"><span class="hi">▲ HIGH</span> &nbsp;英国 PNLD が ExfilSquad に侵害—警察官・刑事司法関係者 13.5 万件がダークウェブに流出・Microsoft Power Pages 設定ミスが経路・NCA・ICO が調査（8/3）</span>
@@ -1539,6 +1549,96 @@
   <div class="section-header">THREAT_FEED // 最新インシデント</div>
 
   <div class="news-grid" id="news-grid">
+
+    <!-- CARDS: 2026-08-05 新着 -->
+
+    <!-- CARD: TP-Link Omada ZTP 15 vulnerabilities -->
+    <article class="card high" data-severity="high" data-tags="脆弱性|ネットワーク">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">脆弱性</span><span class="tag">ネットワーク</span>
+          <span class="timestamp">2026-08-05 09:00</span>
+        </div>
+        <div class="card-title">TP-Link Omada ZTP に 15 件の脆弱性—Forescout が Black Hat USA 2026 で開示・ハードコード暗号鍵・MITM・CVE-2025-7850/7851 との連鎖で企業ネットワーク完全制御が成立（8 月 5 日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Forescout Vedere Labs が Black Hat USA 2026 で TP-Link Omada のゼロタッチプロビジョニング（ZTP）機構に 15 件の脆弱性を公開・11 件に CVE 割り当て済み（CVE-2025-7850/7851/9289/9290/9292/9293/15630 等）・ハードコードされた暗号鍵・不安全な認証情報送信・弱い証明書検証・XSS が含まれる</li>
+            <li>既知の RCE 脆弱性 CVE-2025-7850/7851 との連鎖でルーター・スイッチ・VPN ルーター・無線 AP を含む Omada エコシステム全体をハイジャック可能・クライアント側コード実行・情報窃取・デバイスなりすまし・暗号化通信傍受の 4 攻撃カテゴリを実証</li>
+            <li>TP-Link がパッチを提供済み・強固な管理者認証情報と MFA の有効化・侵害疑い時はすべてのシークレットをローテーションし不審なネットワークトラフィックを監視することが急務</li>
+          </ul>
+        </div>
+        <div class="card-detail">Forescout Vedere Labs の研究者が Black Hat USA 2026 で TP-Link Omada ZTP の信頼関係を標的とした 15 件の脆弱性を公開。コントローラーがゲートウェイ・スイッチ・AP を自動設定する ZTP のセキュリティホールを悪用し、既存 RCE と連鎖させることで企業ネットワーク全体の掌握が成立する。ビジネス向けネットワーク機器の即時更新が必要。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/tp-link-patches-omada-ztp-flaws-allowing-hackers-to-breach-networks/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: FortiBleed linked to Lynx/INC ransomware -->
+    <article class="card high" data-severity="high" data-tags="ランサムウェア|インシデント">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">ランサムウェア</span><span class="tag">インシデント</span>
+          <span class="timestamp">2026-08-05 09:00</span>
+        </div>
+        <div class="card-title">FortiBleed キャンペーンが Lynx・INC ランサムウェアへの認証情報供給路と判明—SOCRadar が 43 万台超の FortiGate を標的・カスタムスニファーで 1 億 1 千万件超の認証情報を窃取し RaaS に提供（8 月 5 日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>SOCRadar 脅威研究部門（STRU）が FortiBleed キャンペーンの背後のオペレーターを INC Ransom・Lynx ランサムウェア RaaS グループと直接紐付け・同一オペレーターが両グループのランサム交渉パネルにログインしていた痕跡が証拠として確認された</li>
+            <li>2026 年 2 月から継続稼働・43 万台超の FortiGate ファイアウォールを標的に「FortiGate Sniffer」カスタムツールを展開・659 個の認証情報収集パイプラインで RADIUS・NTLM・Kerberos を含む 1 億 1 千万件超の認証情報を窃取・73,000 台超の機器認証情報がすでにインターネット上に流出済み</li>
+            <li>Fortinet デバイスの管理コンソールへの不審アクセス確認・設定ファイルの整合性チェック・全シークレットのローテーション・VPN 認証の MFA 有効化が急務</li>
+          </ul>
+        </div>
+        <div class="card-detail">SOCRadar の調査でクレデンシャル窃取キャンペーン「FortiBleed」が INC Ransom と Lynx という 2 つのランサムウェア RaaS グループの初期アクセス基盤として機能していることが判明。カスタムスニファーツールが侵害済み FortiGate 上で認証情報を傍受し、収集された認証情報がランサムウェア攻撃の侵入経路として直接活用されているとみられ、Fortinet 製品利用組織は緊急対応が必要。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.bleepingcomputer.com/news/security/fortibleed-credential-theft-campaign-linked-to-lynx-ransomware/" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: tl;dv AI notetaker Firebase misconfiguration -->
+    <article class="card high" data-severity="high" data-tags="データ漏洩|クラウド">
+      <div class="severity"><div class="sev-icon">▲</div><div class="sev-label">HIGH</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">データ漏洩</span><span class="tag">クラウド</span>
+          <span class="timestamp">2026-08-03 12:00</span>
+        </div>
+        <div class="card-title">AI 議事録ツール「tl;dv」の Firebase 設定ミスで 23 か国政府会議に侵入可能—180,000 件超の通話記録が露出・研究者が政府・企業の進行中会議に参加者として侵入成功（8 月 3 日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>セキュリティ研究者「BobDaHacker」が AI 議事録ツール tl;dv（Too Long; Didn't View）の Google Firebase バックエンドへの認証なしアクセスを発見・任意の tl;dv ユーザーが世界中の進行中会議のメタデータを照会可能・約 80% の確率で会議に参加者として実際に侵入できることを実証</li>
+            <li>23 か国政府の .gov ドメインを含む 80,000 ユーザー超の 180,000 件超の完了済み通話記録が露出・Salesforce・Forbes・Cloudflare 等の大手企業が利用・会議タイムスタンプ・録音状態・作成者メールアドレスが取得可能</li>
+            <li>Firebase Firestore セキュリティルールの設定ミスが根本原因・tl;dv は 200 万ユーザー超が利用・会議録音・AI 要約ツールが組織のセキュリティポリシーの死角になっていることを示す重大事例</li>
+          </ul>
+        </div>
+        <div class="card-detail">AI 会議自動参加・文字起こしツール tl;dv の Google Firebase バックエンドに設定ミスが発見され、任意のユーザーが世界中の進行中会議のメタデータを取得し会議に侵入できることが判明。23 か国政府機関を含む 80,000 ユーザー超の通話記録 180,000 件超が露出しており、AI 議事録ツールの急速な普及に伴うクラウドセキュリティリスクが浮き彫りになった。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.darkreading.com/application-security/ai-notetaker-spy-government-corporate-video-calls" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
+
+    <!-- CARD: Smoke#Screen RMM phishing campaign (MEDIUM/REPORT) -->
+    <article class="card medium" data-severity="medium" data-tags="レポート|フィッシング">
+      <div class="severity"><div class="sev-icon">●</div><div class="sev-label">MEDIUM</div></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="tag">レポート</span><span class="tag">フィッシング</span>
+          <span class="timestamp">2026-08-04 10:00</span>
+        </div>
+        <div class="card-title">「Smoke#Screen」— ScreenConnect RMM を悪用した高度フィッシングキャンペーン・4 種の異なるソーシャルエンジニアリング手法と Cloudflare トンネルでサイレント永続化（8 月 4 日）</div>
+        <div class="card-summary">
+          <ul>
+            <li>Securonix が発見した「Smoke#Screen」は正規 RMM ツール ScreenConnect を悪用・Zoom/Adobe 偽アップデート・業務文書要求・システムメンテナンスツール・「SystemCheck」UAC 悪用の 4 種の心理的に異なるルアーで被害者を誘導しサイレントにエージェントをインストール</li>
+            <li>被害者がファイルを実行すると ScreenConnect エージェントが 3 つの攻撃者管理リレーサーバーへビーコン送信を開始・Cloudflare トンネル・Dropbox・ConnectWise 署名済みバイナリ・自己完結型暗号化バンドルを組み合わせシグネチャベース検知を回避</li>
+            <li>攻撃者が C# ソースコードをオープンディレクトリに公開放置したため Securonix が 5 種のキルチェーンを完全文書化・RMM ツールを使用する組織は不審なビーコン通信とリモートアクセスコネクションの継続的な監視が必要</li>
+          </ul>
+        </div>
+        <div class="card-detail">Securonix が発見した「Smoke#Screen」は ConnectWise 署名済みバイナリと Cloudflare トンネルを悪用する高度なフィッシングキャンペーン。4 種類の心理的に差別化されたソーシャルエンジニアリング手法でシグネチャ・評判ベースの検知を回避し、正規 RMM ツール ScreenConnect 経由で永続的なリモートアクセスを確立する攻撃者の TTP を詳細解析した。</div>
+        <div class="expand-hint">▾ 詳細を見る</div>
+      </div>
+      <div class="card-action"><a class="read-link" href="https://www.darkreading.com/cyberattacks-data-breaches/latest-rmm-fueled-phishing-attack-exposes-threat-actor-playbook" target="_blank" rel="noopener noreferrer">READ →</a></div>
+    </article>
 
     <!-- CARDS: 2026-08-04 新着 -->
 
